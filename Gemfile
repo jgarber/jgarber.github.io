@@ -1,10 +1,5 @@
 source "http://rubygems.org"
 
-group :development do
-  gem 'rb-fsevent'
-  gem 'heroku'
-end
-
 gem 'sinatra', '1.2.6'
 gem 'rake'
 gem 'rack'
@@ -18,3 +13,9 @@ gem 'rubypants'
 gem 'stringex'
 gem 'liquid', '2.2.2'
 gem 'coffee-script'
+gem 'thin'
+
+group :development do
+  gem 'rb-fsevent'
+  gem 'heroku'
+end
