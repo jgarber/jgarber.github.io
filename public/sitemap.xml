@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
+    <url>
+        <loc>http://jasongarber.com/blog/2012/01/09/test-code-highlighting/</loc>
+        <lastmod>2012-01-09T11:26:12-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://jasongarber.com/blog/archives/</loc>
+        <lastmod>2012-01-09T11:26:12-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://jasongarber.com/blog/</loc>
+        <lastmod>2012-01-09T11:26:12-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://jasongarber.com/</loc>
+        <lastmod>2012-01-10T11:34:32-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://jasongarber.com/javascripts/scroll-past-header.js</loc>
+        <lastmod>2012-01-10T06:00:46-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://jasongarber.com/ruby-developer/hire-me/</loc>
+        <lastmod>2012-01-09T16:15:16-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://jasongarber.com/ruby-developer/</loc>
+        <lastmod>2012-01-09T16:58:47-05:00</lastmod>
+    </url>
+</urlset>
