@@ -1,0 +1,92 @@
+---
+layout: post
+title: "Deploying Octopress to Heroku with a custom buildpack"
+date: 2012-01-10 16:00
+comments: true
+categories: 
+---
+
+Over the last few years, I've been deploying apps to Heroku more and more. With the advent of the Cedar stack, there's less and less you can't do. Provisioning a virtual server, even with the help of "moonshine":https://github.com/railsmachine/moonshine, isn't as easy as @heroku create --stack cedar@ and *boom*.
+
+When I switched my blog from Radiant CMS to Octopress, I wanted to keep the site hosted on Heroku. The "standard method for deploying Octopress to Heroku":http://octopress.org/docs/deploying/heroku/ involves generating your site, checking in the generated contents (within the public/ folder), and deploying to Heroku. As "Matthew Manning noted":http://www.mwmanning.com/2011/11/29/Run-Your-Jekyll-Site-On-Heroku.html, neither having to check in generated content nor having it generated on-the-fly is ideal. We really need to hook into Heroku's build phase.
+
+The Cedar stack lets you provide a buildpack for generating the app. It's how the stack can support Node.js, Python, PHP, etc. I forked Manning's buildpack and customized it for Octopress. Here's what you need to do to deploy your Octopress site to Heroku:
+
+<!--more-->
+
+h2. Get your repository ready for Heroku
+
+Heroku needs to see the @plugins@, @sass@, and @source@ directories, but they're left out of the Heroku application slug unless you remove them from @.slugignore@.
+
+bc. echo '' > .slugignore
+
+h2. Fix Pygments
+
+Pygments won't work on Heroku--or at least I haven't found a way--so let's switch to a Pygments API hosted on Heroku.
+
+First, remove @pygments.rb@ from the Gemfile. You'll then need to patch @plugins/pygments_code.rb@, removing the require at the top and adding an API call instead of the Pygments library call in two places.
+
+{% codeblock Changes to plugins/pygments_code.rb (pygmentize.diff) %}
+@@ -1,7 +1,9 @@
+-require 'pygments'
++require 'net/http'
++require 'uri'
+ require 'fileutils'
+ require 'digest/md5'
+ 
++PYGMENTIZE_URL = URI.parse('http://pygmentize.herokuapp.com/')
+ PYGMENTS_CACHE_DIR = File.expand_path('../../.pygments-cache', __FILE__)
+ FileUtils.mkdir_p(PYGMENTS_CACHE_DIR)
+ 
+@@ -21,11 +23,11 @@ module HighlightCode
+       if File.exist?(path)
+         highlighted_code = File.read(path)
+       else
+-        highlighted_code = Pygments.highlight(code, :lexer => lang, :formatter => 'html', :options => {:encoding => 'ut
++        highlighted_code = Net::HTTP.post_form(PYGMENTIZE_URL, {'lang'=>lang, 'code'=>code}).body
+         File.open(path, 'w') {|f| f.print(highlighted_code) }
+       end
+     else
+-      highlighted_code = Pygments.highlight(code, :lexer => lang, :formatter => 'html', :options => {:encoding => 'utf-
++      highlighted_code = Net::HTTP.post_form(PYGMENTIZE_URL, {'lang'=>lang, 'code'=>code}).body
+     end
+     highlighted_code
+   end
+{% endcodeblock %}
+
+h2. Rearrange your Gemfile
+
+When Jekyll builds your site, it needs most of the gems in the development group, but it's assumed you won't need them in production. Since Heroku uses @bundle install --without development:test@, it won't have the gems it needs in the build phase. We'll need to pull everything but @rb-fsevent@ out into the default group.
+
+Also add @gem 'heroku'@ inside the development group. If you like, you can add @gem 'thin'@ to use thin for your server instead of WEBrick.
+
+Your Gemfile should now look like this:
+
+{% codeblock Rearranged Gemfile (Gemfile.rb) %}
+source "http://rubygems.org"
+
+gem 'rake'
+gem 'rack'
+gem 'jekyll'
+gem 'rdiscount'
+gem 'RedCloth'
+gem 'haml', '>= 3.1'
+gem 'compass', '>= 0.11'
+gem 'rubypants'
+gem 'stringex'
+gem 'liquid', '2.2.2'
+gem 'sinatra', '1.2.6'
+gem 'thin'
+
+group :development do
+  gem 'rb-fsevent'
+  gem 'heroku'
+end
+{% endcodeblock %}
+
+h2. Create the app on Heroku
+
+bc. heroku create --stack cedar --buildpack git://github.com/jgarber/heroku-buildpack-ruby-octopress.git
+git push heroku master
+
+The site should build cleanly and should work at the app URL given. If not, look at the build output when you pushed to Heroku and also check @heroku logs@.
