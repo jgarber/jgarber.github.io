@@ -22,13 +22,13 @@ module HighlightCode
         highlighted_code = File.read(path)
       else
         request = Net::HTTP.post_form(URI.parse('http://pygmentize.herokuapp.com/'), {'lang'=>lang, 'code'=>code})
-        highlighted_code = "baz"#request.body
+        highlighted_code = request.body
         # highlighted_code = Pygments.highlight(code, :lexer => lang, :formatter => 'html', :options => {:encoding => 'utf-8'})
         File.open(path, 'w') {|f| f.print(highlighted_code) }
       end
     else
       request = Net::HTTP.post_form(URI.parse('http://pygmentize.herokuapp.com/'), {'lang'=>lang, 'code'=>code})
-      highlighted_code = "foo"#request.body
+      highlighted_code = request.body
       # highlighted_code = Pygments.highlight(code, :lexer => lang, :formatter => 'html', :options => {:encoding => 'utf-8'})
     end
     highlighted_code
