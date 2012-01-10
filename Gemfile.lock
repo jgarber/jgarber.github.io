@@ -78,7 +78,6 @@ PLATFORMS
 
 DEPENDENCIES
   RedCloth
-  bundler
   coffee-script
   compass (>= 0.11)
   haml (>= 3.1)
