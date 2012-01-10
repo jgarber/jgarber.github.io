@@ -1,6 +1,5 @@
 source "http://rubygems.org"
 
-gem 'bundler', ">= 1.1.rc.7"
 gem 'sinatra', '1.2.6'
 gem 'rake'
 gem 'rack'
