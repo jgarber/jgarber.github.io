@@ -1,0 +1,23 @@
+---
+layout: page
+title: "Ruby on Rails Developer - Rates and Availability"
+comments: true
+sharing: true
+footer: true
+---
+
+h2(#rates). Rates
+
+I charge $180 per hour and work on a monthly retainer basis.
+
+h2(#availability). Availability
+
+As of January, 2012, I'm accepting new contracts for 10-20 hours per week.
+
+I can work remotely, in person in Philadelphia, or occasionally on-site in New York or Washington.
+
+h2(#recruiters). Recruiters:
+
+I'm flattered that you found me and want to get in touch about your hot new opportunity. Before you do though, please work the numbers and see that I won't be interested in a $115k job in San Francisco. That will save both of us considerable time. Thanks in advance.
+
+If you're a company looking for a full-time Ruby developer (and who isn't these days?), perhaps you'd like to hire me on an hourly basis, or hire me to work on your app *and train a developer on Ruby at the same time*.
