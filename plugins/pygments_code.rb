@@ -1,7 +1,9 @@
 require 'net/http'
+require 'uri'
 require 'fileutils'
 require 'digest/md5'
 
+PYGMENTIZE_URL = URI.parse('http://pygmentize.herokuapp.com/')
 PYGMENTS_CACHE_DIR = File.expand_path('../../.pygments-cache', __FILE__)
 FileUtils.mkdir_p(PYGMENTS_CACHE_DIR)
 
@@ -21,15 +23,11 @@ module HighlightCode
       if File.exist?(path)
         highlighted_code = File.read(path)
       else
-        request = Net::HTTP.post_form(URI.parse('http://pygmentize.herokuapp.com/'), {'lang'=>lang, 'code'=>code})
-        highlighted_code = request.body
-        # highlighted_code = Pygments.highlight(code, :lexer => lang, :formatter => 'html', :options => {:encoding => 'utf-8'})
+        highlighted_code = Net::HTTP.post_form(PYGMENTIZE_URL, {'lang'=>lang, 'code'=>code}).body
         File.open(path, 'w') {|f| f.print(highlighted_code) }
       end
     else
-      request = Net::HTTP.post_form(URI.parse('http://pygmentize.herokuapp.com/'), {'lang'=>lang, 'code'=>code})
-      highlighted_code = request.body
-      # highlighted_code = Pygments.highlight(code, :lexer => lang, :formatter => 'html', :options => {:encoding => 'utf-8'})
+      highlighted_code = Net::HTTP.post_form(PYGMENTIZE_URL, {'lang'=>lang, 'code'=>code}).body
     end
     highlighted_code
   end
