@@ -13,9 +13,9 @@ gem 'rubypants'
 gem 'stringex'
 gem 'liquid', '2.2.2'
 gem 'coffee-script'
-gem 'rb-fsevent'
 gem 'thin'
 
 group :development do
+  gem 'rb-fsevent'
   gem 'heroku'
 end
