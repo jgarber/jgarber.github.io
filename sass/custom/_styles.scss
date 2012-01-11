@@ -14,3 +14,10 @@ body#home {
     }
   }
 }
+
+// Put post date below header
+article header {
+  padding-top: 0.5em;
+  p.meta {
+    position: static; }
+}

@@ -6,9 +6,9 @@ comments: true
 categories: 
 ---
 
-I've had apps on Heroku since 2009, but over the last year or so I've been deploying apps there more and more. With the advent of the Cedar stack, there's less and less you can't do. Compared to provisioning a virtual server, even with the help of "moonshine":https://github.com/railsmachine/moonshine, you can't beat @heroku create --stack cedar@ and *boom*, you have a live site with backups, logging, release management and the running of migrations and asset compilation on deploy. In just another few minutes, you can have SSL, rotating database backups, NewRelic, HopToad, cron, DNS, monitoring, and myriad other addons.
+I've had apps on Heroku since 2009, but over the last year or so I've been deploying apps there more and more. With the advent of the Cedar stack, there's less and less you can't do. Compared to provisioning a virtual server, even with the help of "moonshine":https://github.com/railsmachine/moonshine, you can't beat @heroku create --stack cedar@: *boom*, you have a live site with backups, logging, release management and the running of migrations and asset compilation on deploy. In just another few minutes, you can have SSL, rotating database backups, NewRelic, HopToad, cron, DNS, monitoring, and myriad other addons.
 
-When I switched my blog from Radiant CMS to Octopress, I wanted to keep the site on Heroku. It's free under normal scenarios and if I ever get on HackerNews or Reddit, I just have to scale up my web processes.
+When I switched my blog from Radiant CMS to Octopress, I wanted to keep the site on Heroku. It's free under normal scenarios and if I ever get on HackerNews or Reddit, I just have to scale up my web processes and pay a bit to keep the site responsive. If I were to be so fortunate,  I wouldn't have to scramble to set up load balancing on Linode or even wait while my slice resized. Yay cloud!
 
 The "standard method for deploying Octopress to Heroku":http://octopress.org/docs/deploying/heroku/ involves generating your site, checking in the generated contents (within the @public/@ folder), and deploying to Heroku. As "Matthew Manning noted":http://www.mwmanning.com/2011/11/29/Run-Your-Jekyll-Site-On-Heroku.html, neither having to check in generated content nor having it generated on-the-fly is ideal. We really need to hook into Heroku's build phase.
 
