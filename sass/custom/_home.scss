@@ -1,6 +1,13 @@
 body#home {
   header { display: none; }
-  h1 { text-align: center; }
+  h1#my-name {
+    text-align: center;
+    font-family: 'IM Fell DW Pica', serif;
+    font-weight: normal;
+    color: #46402f;
+    margin-bottom: 0.6em;
+  }
+  
   #content > div, #content article { padding-top: 0; }
   #nav {
     margin: 30px auto;
@@ -145,6 +152,7 @@ body#home {
     margin:0 auto 1em;
     padding-bottom: 1em;
     width:490px;
+    color: #17150f;
   }
   #bio p {
     break-after: column;
