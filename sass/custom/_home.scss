@@ -1,173 +1,177 @@
-#nav {
-  margin: 30px auto;
-  position:relative;
-  float: right;
-  width: 762px;
-}
-.pane {
-  width: 66px;
-  margin-right: 50px;
-  float: left;
-  opacity:0.5;
-  position: relative;
-}
-.pane .innertext {
-  overflow: hidden;
-  position: relative;
-  width: 295px;
-}
-.pane .pane-mask {
-  overflow: hidden;
-  margin-top: -8px;
-  height: 0;
-  width: 0;
-}
+body#home {
+  header { display: none; }
+  h1 { text-align: center; }
+  #content > div, #content article { padding-top: 0; }
+  #nav {
+    margin: 30px auto;
+    position:relative;
+    width: 762px;
+  }
+  .pane {
+    width: 66px;
+    margin-right: 50px;
+    float: left;
+    opacity:0.5;
+    position: relative;
+  }
+  .pane .innertext {
+    overflow: hidden;
+    position: relative;
+    width: 295px;
+  }
+  .pane .pane-mask {
+    overflow: hidden;
+    margin-top: -8px;
+    height: 0;
+    width: 0;
+  }
 
-/* Basic styling, used when JavaScript is unsupported */
-/*
-TLx:28
-TLy:31
-TRx:38
-TRy:31
-BLx:28
-BLy:136
-BRx:38
-BRy:136
-*/
-.cbb {
-  margin:1em 0;
-  padding:0 10px;
-  border:none; /*1px solid #666;*/
-  background:#f8fbd8;
-}
-  /* Top corners and border */
-.bt {
-  height:31px;
-  margin:0 0 0 28px;
-  background:url(http://imgb.jasongarber.com/images/box.png) no-repeat 100% 0;
-}
-.bt div {
-  position:relative;
-  left:-28px;
-  width:28px;
-  height:31px;
-  background:url(http://imgb.jasongarber.com/images/box.png) no-repeat 0 0;
-  font-size:0;
-  line-height:0;
-}
+  /* Basic styling, used when JavaScript is unsupported */
+  /*
+  TLx:28
+  TLy:31
+  TRx:38
+  TRy:31
+  BLx:28
+  BLy:136
+  BRx:38
+  BRy:136
+  */
+  .cbb {
+    margin:1em 0;
+    padding:0 10px;
+    border:none; /*1px solid #666;*/
+    background:#f8fbd8;
+  }
+    /* Top corners and border */
+  .bt {
+    height:31px;
+    margin:0 0 0 28px;
+    background:url(http://imgb.jasongarber.com/images/box.png) no-repeat 100% 0;
+  }
+  .bt div {
+    position:relative;
+    left:-28px;
+    width:28px;
+    height:31px;
+    background:url(http://imgb.jasongarber.com/images/box.png) no-repeat 0 0;
+    font-size:0;
+    line-height:0;
+  }
 
-  /* Bottom corners and border */
-.bb {
-  height:34px;
-  margin:0 0 0 28px;
-  background:url(http://imgb.jasongarber.com/images/box.png) no-repeat 100% 100%;
-}
-.bb div {
-  position:relative;
-  left:-28px;
-  width:28px;
-  height:34px;
-  background:url(http://imgb.jasongarber.com/images/box.png) no-repeat 0 100%;
-  font-size:0;
-  line-height:0;
-}
+    /* Bottom corners and border */
+  .bb {
+    height:34px;
+    margin:0 0 0 28px;
+    background:url(http://imgb.jasongarber.com/images/box.png) no-repeat 100% 100%;
+  }
+  .bb div {
+    position:relative;
+    left:-28px;
+    width:28px;
+    height:34px;
+    background:url(http://imgb.jasongarber.com/images/box.png) no-repeat 0 100%;
+    font-size:0;
+    line-height:0;
+  }
 
-  /* Left border */
-.i1 {
-  padding:0 0 0 6px;
-  background:url(http://imgb.jasongarber.com/images/borders.png) repeat-y 0 0;
-}
-  /* Right border */
-.i2 {
-  padding:0 15px 0 0;
-  background:url(http://imgb.jasongarber.com/images/borders.png) repeat-y 100% 0;
-}
-  /* Wrapper for the content. Use it to set the background colour and insert some padding between the borders and the content. */
-.i3 {
-  display:block;
-  margin:0;
-  padding:1px 10px;
-  background:#f8fbd8;
-  position:relative;
-}
-  /* Make the content wrapper auto clearing so it will contain floats (see http://positioniseverything.net/easyclearing.html). */
-.i3:after {
-  content:"."; 
-  display:block; 
-  height:0; 
-  clear:both; 
-  visibility:hidden;
-}
-.i3 {display:inline-block;}
-.i3 {display:block;}
-/* Default CSS ends here */
+    /* Left border */
+  .i1 {
+    padding:0 0 0 6px;
+    background:url(http://imgb.jasongarber.com/images/borders.png) repeat-y 0 0;
+  }
+    /* Right border */
+  .i2 {
+    padding:0 15px 0 0;
+    background:url(http://imgb.jasongarber.com/images/borders.png) repeat-y 100% 0;
+  }
+    /* Wrapper for the content. Use it to set the background colour and insert some padding between the borders and the content. */
+  .i3 {
+    display:block;
+    margin:0;
+    padding:1px 10px;
+    background:#f8fbd8;
+    position:relative;
+  }
+    /* Make the content wrapper auto clearing so it will contain floats (see http://positioniseverything.net/easyclearing.html). */
+  .i3:after {
+    content:"."; 
+    display:block; 
+    height:0; 
+    clear:both; 
+    visibility:hidden;
+  }
+  .i3 {display:inline-block;}
+  .i3 {display:block;}
+  /* Default CSS ends here */
 
 
-.pane .icon {
-  background: transparent url(http://imga.jasongarber.com/images/icons.png) no-repeat top left;
-  width: 48px;
-  height: 48px;
-  display: block;
-  position: absolute;
-  top: -30px;
-  left: -6px;
-  z-index:1000;
-}
-#twitter.icon { background-position: -60px 0; }
-#github.icon { background-position: -125px 0; }
-#facebook.icon { background-position: -185px 0; }
-#linkedin.icon { background-position: -245px 0; }
-#claimid.icon { background-position: -305px 0; }
-#contact.icon {
-  background-position: -368px 0;
-  margin-right: none;
-}
-.pane h2 {
-  font-size:120%;
-  margin-bottom:20px;
-  margin-left: 40px;
-}
+  .pane .icon {
+    background: transparent url(http://imga.jasongarber.com/images/icons.png) no-repeat top left;
+    width: 48px;
+    height: 48px;
+    display: block;
+    position: absolute;
+    top: -30px;
+    left: -6px;
+    z-index:1000;
+  }
+  #twitter.icon { background-position: -60px 0; }
+  #github.icon { background-position: -125px 0; }
+  #facebook.icon { background-position: -185px 0; }
+  #linkedin.icon { background-position: -245px 0; }
+  #claimid.icon { background-position: -305px 0; }
+  #contact.icon {
+    background-position: -368px 0;
+    margin-right: none;
+  }
+  .pane h2 {
+    font-size:120%;
+    margin-bottom:20px;
+    margin-left: 40px;
+  }
 
-#bird {
-  background: url(http://imga.jasongarber.com/images/bird.png) no-repeat top right;
-  height: 410px;
-  width: 341px;
-  margin: 0 auto;
-}
-div#bio {
-  -moz-column-count: 2;
-  -moz-column-gap: 20px;
-  -webkit-column-count: 2;
-  -webkit-column-gap: 20px;
-  margin:0 auto 1em;
-  padding-bottom: 1em;
-  width:490px;
-}
-#bio p {
-  break-after: column;
-  break-inside: avoid-column;
-}
-#bio sup {
-  font-size:smaller;
-  line-height:normal;
-  vertical-align:super;
-}
+  #bird {
+    background: url(http://imga.jasongarber.com/images/bird.png) no-repeat top right;
+    height: 410px;
+    width: 341px;
+    margin: 0 auto;
+  }
+  div#bio {
+    -moz-column-count: 2;
+    -moz-column-gap: 20px;
+    -webkit-column-count: 2;
+    -webkit-column-gap: 20px;
+    margin:0 auto 1em;
+    padding-bottom: 1em;
+    width:490px;
+  }
+  #bio p {
+    break-after: column;
+    break-inside: avoid-column;
+  }
+  #bio sup {
+    font-size:smaller;
+    line-height:normal;
+    vertical-align:super;
+  }
 
-#wrap {
-  width:762px;
-  margin:0 auto;
-}
+  #wrap {
+    width:762px;
+    margin:0 auto;
+  }
 
-.nav {
-  padding:5px 10px;
-}
-.nav ul {
-  margin:0;
-  padding:0;
-  list-style:none;
-}
-.nav li {
-  display:inline;
-  margin:0;
-  padding:0;
-}
+  .nav {
+    padding:5px 10px;
+  }
+  .nav ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+  .nav li {
+    display:inline;
+    margin:0;
+    padding:0;
+  }
+}  
