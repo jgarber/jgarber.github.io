@@ -159,10 +159,10 @@ body#home {
   }
 
   #bird {
-    background: image-url('bird.png') no-repeat top right;
-    height: 410px;
-    width: 341px;
+    max-width: 500px;
     margin: 0 auto;
+    text-align: center;
+    img { padding: 0 20%; border: none; box-shadow: none; border-radius: none;}
   }
   div#bio {
     margin:0 auto 1em;
