@@ -15,6 +15,7 @@ body#home {
     width: 762px;
   }
   &> div { border-bottom: none; }
+  &> div > div { border-right: none; }
   &> footer {
     background: none;
     border: none;
@@ -164,13 +165,9 @@ body#home {
     margin: 0 auto;
   }
   div#bio {
-    -moz-column-count: 2;
-    -moz-column-gap: 40px;
-    -webkit-column-count: 2;
-    -webkit-column-gap: 20px;
     margin:0 auto 1em;
     padding-bottom: 1em;
-    width:600px;
+    max-width:600px;
     color: #17150f;
   }
   #bio p {
@@ -184,7 +181,7 @@ body#home {
   }
 
   #wrap {
-    width:762px;
+    max-width:762px;
     margin:0 auto;
   }
 
@@ -200,5 +197,13 @@ body#home {
     display:inline;
     margin:0;
     padding:0;
+  }
+  @media only screen and (min-width: 550px) {
+    div#bio {
+      -moz-column-count: 2;
+      -moz-column-gap: 40px;
+      -webkit-column-count: 2;
+      -webkit-column-gap: 20px;
+    }
   }
 }  
