@@ -8,11 +8,11 @@ footer: true
 
 "Hire me":hire-me/ to build your next web application.
 
-I'm an experienced and reliable freelance Ruby developer in Philadelphia, PA. In May, 2005, when Rails was in its infancy, I switched from PHP to Ruby and learned Rails to work on "RosettaStone.com":http://rosettastone.com. I've primarily done Rails development ever since and I've contributed valuable open-source software to the community.
+I'm an experienced and reliable freelance "Ruby":http://ruby-lang.org developer in Philadelphia, PA. In May, 2005, when Rails was in its infancy, I switched from PHP to Ruby and learned Rails to work on "RosettaStone.com":http://rosettastone.com. I've primarily done Rails development ever since and I've contributed valuable open-source software to the community.
 
 h2(#rails-developer). Rails Developer
 
-Most of my work is with Ruby on Rails, the web application framework that is extremely popular with startups and large enterprises alike. I started using Rails in the early days (version 0.12) and few developers can claim the length of experience that I have. My "first contribution to Rails core":https://github.com/rails/rails/commit/3c6b7a219142907416780501dd8e7d068a802bc4 was in 2006 and I released a "form testing library":http://code.google.com/p/form-test-helper/ the same year.
+Most of my work is with "Ruby on Rails":http://rubyonrails.org, the web application framework that is extremely popular with startups and large enterprises alike. I started using Rails in the early days (version 0.12) and few developers can claim the length of experience that I have. My "first contribution to Rails core":https://github.com/rails/rails/commit/3c6b7a219142907416780501dd8e7d068a802bc4 was in 2006 and I released a "form testing library":http://code.google.com/p/form-test-helper/ the same year.
 
 Rails' emphasis on testing hooked me from the start.  I'm a strong advocate of "Behavior-Driven Development":http://cukes.info/ (BDD) and try to never write a line of code without first having written a test to describe the behavior. That way, I don't have to waste hours debugging problems in the browser and I can deploy changes to production with confidence.
 
@@ -30,10 +30,6 @@ h2(#ruby-developer). Ruby Developer
 Rails made the Ruby programming language popular, but it owes some of its success to the beauty of the Ruby language. I've worked a fair bit on non-Rails Ruby projects, mostly in the field of text and data parsing. I'm the developer behind "RedCloth":http://redcloth.org, the popular Textile-parsing library, and have contributed to the "Treetop":https://github.com/nathansobo/treetop and "Parslet":http://kschiess.github.com/parslet/ parsers.
 
 h2(#html-css-javascript). HTML, CSS, and Javascript
-
-{% blockquote %}
-I've been fighting Internet Explorer rendering bugs longer than you've been alive, sonny!
-{% endblockquote %}
 
 My first commercial webpage was for a local athletic gear company in 1996. It was just a couple of pages, hosted on AOL. I've been making web pages in one form or another ever since. Needless to say, I'm an expert HTML and CSS developer, but considering the opportunity cost, I usually outsource design and front-end work, then just touch it up to my satisfaction. I'm a stickler for semantic HTML, clean CSS, and high-performance. I jumped on "HAML":http://haml-lang.com/, "SASS":http://sass-lang.com/, and asset packaging (now baked into Rails 3.1) almost immediately after each was released. I'm glad to see they're gradually gaining popular acceptance. The next thing the world needs to embrace is "SPDY":http://dev.chromium.org/spdy.
 
@@ -65,9 +61,9 @@ h2(#past-projects). Past Projects
 
 h3. Five-Star Basketball
 
-I worked on "fivestarbasketball.com":http://fivestarbasketball.com and redesigned the site (with a designer) with "HTML5 and compass":https://github.com/sporkd/compass-html5-boilerplate on Rails 3.1, added Facebook and regular logins ("devise":https://github.com/plataformatec/devise, "omniauth":https://github.com/intridea/omniauth, and "cancan":https://github.com/ryanb/cancan), PayPal integration, video embedding from multiple providers, search ("thinking-sphinx":https://github.com/freelancing-god/thinking-sphinx), popular article featuring ("impressionist":https://github.com/charlotte-ruby/impressionist), soft-delete of articles ("paranoia":https://github.com/radar/paranoia), article tagging ("acts-as-taggable-on":https://github.com/mbleigh/acts-as-taggable-on, with "my patch":https://github.com/mbleigh/acts-as-taggable-on/pull/203) and a slick jQuery drag-and-drop interface for assigning articles to various content slots in the site.
+I worked on "fivestarbasketball.com":http://fivestarbasketball.com and redesigned the site (with a designer) with "HTML5 and compass":https://github.com/sporkd/compass-html5-boilerplate on Rails 3.1, added Facebook and regular logins ("devise":https://github.com/plataformatec/devise, "omniauth":https://github.com/intridea/omniauth, and "cancan":https://github.com/ryanb/cancan), PayPal integration, video embedding from multiple providers, search ("thinking-sphinx":https://github.com/freelancing-god/thinking-sphinx), popular article featuring ("impressionist":https://github.com/charlotte-ruby/impressionist), soft-delete of articles ("paranoia":https://github.com/radar/paranoia), article tagging ("acts-as-taggable-on":https://github.com/mbleigh/acts-as-taggable-on, with "my patch":https://github.com/mbleigh/acts-as-taggable-on/pull/203) and a slick custom jQuery drag-and-drop interface for assigning articles to the various content slots.
 
-The app is covered with cucumber and rspec and uses "factory-girl":https://github.com/thoughtbot/factory_girl, "shoulda-matchers":https://github.com/thoughtbot/shoulda-matchers, "capybara":https://github.com/jnicklas/capybara and selenium. It's deployed on "Heroku":http://www.heroku.com/ and I used "AirBrake":http://airbrakeapp.com/, "NewRelic":http://newrelic.com/, and "HireFire":http://hirefireapp.com/ to manage resource utilization and keep it performant.
+The app is covered with cucumber and rspec (testing libraries) and uses "factory-girl":https://github.com/thoughtbot/factory_girl, "shoulda-matchers":https://github.com/thoughtbot/shoulda-matchers, "capybara":https://github.com/jnicklas/capybara and selenium. It's deployed on "Heroku":http://www.heroku.com/ and I used "AirBrake":http://airbrakeapp.com/, "NewRelic":http://newrelic.com/, and "HireFire":http://hirefireapp.com/ to manage resource utilization and keep it performant.
 
 h3. OSR Star Pages
 
@@ -79,11 +75,11 @@ The app uses Rails 3.0, "HAML":http://haml-lang.com/, "SASS":http://sass-lang.co
 
 h3. "UK-Based Pharmaceutical"
 
-A UK-based pharmaceutical company hired me to revamp and internationalize their site, fix some problems in their custom e-commerce application, and to do a lot of work to improve their analytics: tracking order sources, optimizing conversion rates, and converting currency for Google Analytics to facilitate source comparison across markets.
+A UK-based pharmaceutical company hired me to revamp and internationalize their site, fix some problems in their Rails e-commerce application, and do a lot of work to improve their analytics: tracking order sources, optimizing conversion rates, and converting currency for Google Analytics so they could compare traffic sources across markets and optimize the return on their ad spends.
 
 h3. Online Star Register
 
-I worked with "OSR":http://osr.org/, an astronomy gift e-commerce site, for several years. I integrated their Radiant CMS website with their PHP e-commerce system, made the site PCI-compliant so they could earn McAfee Secure certification, added many translations (now up to 26) and altered the design for right-to-left languages. We redesigned the site together, transitioned to new hosting, and deployed assets onto a content delivery network (CDN) for improved performance.
+I worked with "OSR":http://osr.org/, an astronomy-themed gift site, for several years. I integrated their Radiant CMS website with their PHP e-commerce system, made the site PCI-compliant so they could earn McAfee Secure certification, added many translations (now up to 26) and altered the design for right-to-left languages. We redesigned the site together, transitioned to new hosting, and deployed assets onto a content delivery network (CDN) for improved performance.
 
 h3. "Physical Therapy CRM"
 
@@ -91,11 +87,11 @@ I implemented many changes for a US-based physical therapy customer relationship
 
 h3. Virginia SHRM state council
 
-The SHRM-VA hired me to create their 2009 conference website (no longer online) using Radiant CMS for the content pages. I evaluated various turnkey event registration solutions and eventually wrote a custom registration module for Radiant because it was more cost-effective for them than giving up a percentage of the registration fee for more than a thousand participants. The app registered users for the conference and integrated with Authorize.net for credit card payment.
+The SHRM-VA hired me to create their 2009 conference website (no longer online) using Radiant CMS for the content pages. I evaluated various turnkey event registration solutions and eventually wrote a custom registration module for Radiant because it was more cost-effective for them than giving up a percentage of the registration fee for more than a thousand participants. The app registered users for the conference and used "ActiveMerchant":http://activemerchant.org/ to accept credit card payment through Authorize.net.
 
 h3. Eastern Mennonite University
 
-Prior to freelancing full-time, I worked for five years as an employee of EMU. I did Ruby on Rails programming for internal applications, a year-long CMS rollout and training, a website redesign, search engine optimization, email campaigns, CPC campaigns, and various special media projects, like the Google-powered campus map, 3D building modeling, and Flash projects.
+Prior to freelancing full-time, I worked for five years as an employee of "EMU":http://emu.edu. I did Ruby on Rails programming for internal applications, a year-long CMS rollout and training, a massive website redesign, search engine optimization, email campaigns, CPC campaigns, and various special media projects, like the Google-powered campus map, 3D building modeling, and Flash projects.
 
 h2(#hiring). Hiring
 

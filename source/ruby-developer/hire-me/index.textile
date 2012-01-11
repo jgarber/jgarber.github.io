@@ -18,6 +18,9 @@ I can work remotely, in person in Philadelphia, or occasionally on-site in New Y
 
 h2(#recruiters). Recruiters:
 
-I'm flattered that you found me and want to get in touch about your hot new opportunity. Before you do though, please work the numbers and see that I won't be interested in a $115k job in San Francisco. That will save both of us considerable time. Thanks in advance.
+If you're a company looking for a full-time Ruby developer (and who isn't these days?), perhaps you'd like to hire me on an hourly basis, or contract with me to work on your app *and train one of your developers at the same time*.
 
-If you're a company looking for a full-time Ruby developer (and who isn't these days?), perhaps you'd like to hire me on an hourly basis, or hire me to work on your app *and train a developer on Ruby at the same time*.
+h2(#contact). Contact Info
+
+{% include custom/contact.html %}
+
