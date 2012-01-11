@@ -6,9 +6,11 @@ comments: true
 categories: 
 ---
 
-Over the last few years, I've been deploying apps to Heroku more and more. With the advent of the Cedar stack, there's less and less you can't do. Provisioning a virtual server, even with the help of "moonshine":https://github.com/railsmachine/moonshine, isn't as easy as @heroku create --stack cedar@ and *boom*.
+I've had apps on Heroku since 2009, but over the last year or so I've been deploying apps there more and more. With the advent of the Cedar stack, there's less and less you can't do. Compared to provisioning a virtual server, even with the help of "moonshine":https://github.com/railsmachine/moonshine, you can't beat @heroku create --stack cedar@ and *boom*, you have a live site with backups, logging, release management and the running of migrations and asset compilation on deploy. In just another few minutes, you can have SSL, rotating database backups, NewRelic, HopToad, cron, DNS, monitoring, and myriad other addons.
 
-When I switched my blog from Radiant CMS to Octopress, I wanted to keep the site hosted on Heroku. The "standard method for deploying Octopress to Heroku":http://octopress.org/docs/deploying/heroku/ involves generating your site, checking in the generated contents (within the public/ folder), and deploying to Heroku. As "Matthew Manning noted":http://www.mwmanning.com/2011/11/29/Run-Your-Jekyll-Site-On-Heroku.html, neither having to check in generated content nor having it generated on-the-fly is ideal. We really need to hook into Heroku's build phase.
+When I switched my blog from Radiant CMS to Octopress, I wanted to keep the site on Heroku. It's free under normal scenarios and if I ever get on HackerNews or Reddit, I just have to scale up my web processes.
+
+The "standard method for deploying Octopress to Heroku":http://octopress.org/docs/deploying/heroku/ involves generating your site, checking in the generated contents (within the @public/@ folder), and deploying to Heroku. As "Matthew Manning noted":http://www.mwmanning.com/2011/11/29/Run-Your-Jekyll-Site-On-Heroku.html, neither having to check in generated content nor having it generated on-the-fly is ideal. We really need to hook into Heroku's build phase.
 
 The Cedar stack lets you provide a buildpack for generating the app. It's how the stack can support Node.js, Python, PHP, etc. I forked Manning's buildpack and customized it for Octopress. Here's what you need to do to deploy your Octopress site to Heroku:
 
@@ -56,7 +58,7 @@ First, remove @pygments.rb@ from the Gemfile. You'll then need to patch @plugins
 
 h2. Rearrange your Gemfile
 
-When Jekyll builds your site, it needs most of the gems in the development group, but it's assumed you won't need them in production. Since Heroku uses @bundle install --without development:test@, it won't have the gems it needs in the build phase. We'll need to pull everything but @rb-fsevent@ out into the default group.
+When Jekyll builds your site, it needs the gems in the development group, but it's assumed you're generating your site before deploying, so you won't need them in production. Since we're pushing the generation step to Heroku and it uses @bundle install --without development:test@, it won't have the gems it needs in the build phase. We'll need to pull everything but @rb-fsevent@ out into the default group.
 
 Also add @gem 'heroku'@ inside the development group. If you like, you can add @gem 'thin'@ to use thin for your server instead of WEBrick.
 
@@ -90,3 +92,5 @@ bc. heroku create --stack cedar --buildpack git://github.com/jgarber/heroku-buil
 git push heroku master
 
 The site should build cleanly and should work at the app URL given. If not, look at the build output when you pushed to Heroku and also check @heroku logs@.
+
+Let me know in the comments if it worked for you and feel free to fork the buildpack.
