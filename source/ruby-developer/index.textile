@@ -99,4 +99,4 @@ Prior to freelancing full-time, I worked for five years as an employee of EMU. I
 
 h2(#hiring). Hiring
 
-Looking for a top-notch Ruby developer? <a href="{{ root_url }}/ruby-developer/">Inquire about hiring me</a> for contract work.
+Looking for a top-notch Ruby developer? <a href="{{ root_url }}/ruby-developer/hire-me">Inquire about hiring me</a> for contract work.
