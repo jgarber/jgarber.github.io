@@ -16,9 +16,15 @@ body#home {
     max-width: 762px;
     min-width: 355px;
   }
-  &> div { border-bottom: none; }
-  &> div > div { border-right: none; }
-  &> footer {
+  > div {
+    background: transparent;
+    border-bottom: none;
+    > div {
+      background: transparent;
+      border-right: none;
+    }
+  }
+  > footer {
     background: none;
     border: none;
     text-align: center;

@@ -6,13 +6,8 @@
 html {
   background: $page-bg image-url('bg-boxes.jpg') top left;
 }
-body#home {
-  > div {
-    background: transparent;
-    > div {
-      background: transparent;
-    }
-  }
+body > header {
+  background: $header-bg image-url('bg-boxes-brown.jpg') top left;
 }
 
 // Put post date below header
