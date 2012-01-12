@@ -2,11 +2,11 @@ body#home {
   header { display: none; }
   h1#my-name {
     text-align: center;
-    font-family: 'IM Fell DW Pica', serif;
+    font-family: 'Crimson Text', serif;
     font-weight: normal;
     color: #46402f;
     margin: 0.6em 0;
-    text-shadow: 1px 1px 1px #FAFCDA, -1px -1px 1px #1a1914;
+    text-shadow: 1px 1px 1px #E4DDBD, -1px -1px 1px #1a1914;
   }
   #content > div, #content article { padding-top: 0; }
   #nav {
@@ -160,9 +160,9 @@ body#home {
 
   #bird {
     max-width: 500px;
-    margin: 0 auto;
+    margin: 0 auto 0;
     text-align: center;
-    img { padding: 0 20%; border: none; box-shadow: none; border-radius: none;}
+    img { padding: 0 12% 0 28%; border: none; box-shadow: none; border-radius: none;}
   }
   div#bio {
     margin:0 auto 1em;
