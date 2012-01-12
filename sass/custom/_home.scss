@@ -170,10 +170,14 @@ body#home {
     padding-bottom: 1em;
     max-width:600px;
     color: #17150f;
+    column-fill: balance
   }
   #bio p {
-    break-after: column;
+    margin: 0 0.5em 1.5em;
+    -webkit-column-break-inside: avoid;
+    -moz-column-break-inside: avoid;
     break-inside: avoid-column;
+    display: inline-block; /* hack for browsers that support columns but not break control */
   }
   #bio sup {
     font-size:smaller;
@@ -202,9 +206,8 @@ body#home {
   @media only screen and (min-width: 550px) {
     div#bio {
       -moz-column-count: 2;
-      -moz-column-gap: 40px;
       -webkit-column-count: 2;
-      -webkit-column-gap: 20px;
+      column-count: 2
     }
   }
 }  
