@@ -25,10 +25,12 @@
     var o = $.extend(defaults, options);
     var Width = 'width';
     var Left = 'left';
+
+    var container = $(this);
+    var kwicks = container.children();
+    var minWidthForActivation = (o.min * kwicks.size()) + (o.spacing * (kwicks.size() - 1));
     
     return this.each(function() {
-      var container = $(this);
-      var kwicks = container.children();
       kwicks.find('.pane-mask').width('auto');
       var normWidth = o.min; //kwicks.eq(0).css(Width).replace(/px/,'');
       // FIXME: normWidth no longer applies; now both min and max and figure out the container from that
@@ -93,45 +95,47 @@
         });
         
         kwick.bind(o.event, function() {
+          if (container.width() > minWidthForActivation) {
           // calculate previous width and left values
-          var prevWidths = []; // prevWidths = previous Widths
-          var prevLefts = []; // prevLefts = previous Lefts
-          var prevOpacities = [];
-          var prevHeights = [];
-          for(j = 0; j < kwicks.size(); j++) {
-            prevWidths[j] = kwicks.eq(j).css(Width).replace(/px/, '');
-            prevLefts[j] = kwicks.eq(j).css(Left).replace(/px/, '');
-            prevOpacities[j] = kwicks.eq(j).css('opacity');
-            prevHeights[j] = kwicks.eq(j).find('.pane-mask').css('height').replace(/px/, '');
+            var prevWidths = []; // prevWidths = previous Widths
+            var prevLefts = []; // prevLefts = previous Lefts
+            var prevOpacities = [];
+            var prevHeights = [];
+            for(j = 0; j < kwicks.size(); j++) {
+              prevWidths[j] = kwicks.eq(j).css(Width).replace(/px/, '');
+              prevLefts[j] = kwicks.eq(j).css(Left).replace(/px/, '');
+              prevOpacities[j] = kwicks.eq(j).css('opacity');
+              prevHeights[j] = kwicks.eq(j).find('.pane-mask').css('height').replace(/px/, '');
+            }
+            var aniObj = {};
+            aniObj[Width] = o.max;
+            var maxDif = o.max - prevWidths[i];
+            var prevWidthsMaxDifRatio = prevWidths[i]/maxDif;
+            kwicks.not(kwick).stop().removeClass('active');
+            var paneMask = kwick.find('.pane-mask');
+            kwick.addClass('active').animate(aniObj, {
+              step: function(now) {
+                // calculate animation completeness as percentage
+                var percentage = maxDif != 0 ? now/maxDif - prevWidthsMaxDifRatio : 1;
+                paneMask.height(paneMask.find('.innertext').height() * percentage);
+                // adjust other elements based on percentage
+                kwicks.each(function(j) {
+                  kwicks.eq(i).css('opacity', 0.36 * percentage + 0.5);
+                  if(j != i) {
+                    kwicks.eq(j).css('opacity', prevOpacities[j] - ((prevOpacities[j] - 0.5) * percentage));
+                    kwicks.eq(j).css(Width, prevWidths[j] - ((prevWidths[j] - o.min) * percentage) + 'px');
+                    kwicks.eq(j).find('.pane-mask').css('height', prevHeights[j] - (prevHeights[j] * percentage) + 'px')
+                  }
+                  if(j > 0 && j < kwicks.size() - 1) { // if not the first or last kwick
+                    kwicks.eq(j).css(Left, prevLefts[j] - ((prevLefts[j] - preCalcLefts[i][j]) * percentage) + 'px');
+                  }
+                });
+              },
+              duration: o.duration,
+              easing: o.easing
+            });
+            return false;
           }
-          var aniObj = {};
-          aniObj[Width] = o.max;
-          var maxDif = o.max - prevWidths[i];
-          var prevWidthsMaxDifRatio = prevWidths[i]/maxDif;
-          kwicks.not(kwick).stop().removeClass('active');
-          var paneMask = kwick.find('.pane-mask');
-          kwick.addClass('active').animate(aniObj, {
-            step: function(now) {
-              // calculate animation completeness as percentage
-              var percentage = maxDif != 0 ? now/maxDif - prevWidthsMaxDifRatio : 1;
-              paneMask.height(paneMask.find('.innertext').height() * percentage);
-              // adjust other elements based on percentage
-              kwicks.each(function(j) {
-                kwicks.eq(i).css('opacity', 0.36 * percentage + 0.5);
-                if(j != i) {
-                  kwicks.eq(j).css('opacity', prevOpacities[j] - ((prevOpacities[j] - 0.5) * percentage));
-                  kwicks.eq(j).css(Width, prevWidths[j] - ((prevWidths[j] - o.min) * percentage) + 'px');
-                  kwicks.eq(j).find('.pane-mask').css('height', prevHeights[j] - (prevHeights[j] * percentage) + 'px')
-                }
-                if(j > 0 && j < kwicks.size() - 1) { // if not the first or last kwick
-                  kwicks.eq(j).css(Left, prevLefts[j] - ((prevLefts[j] - preCalcLefts[i][j]) * percentage) + 'px');
-                }
-              });
-            },
-            duration: o.duration,
-            easing: o.easing
-          });
-          return false;
         });
       });
       if(!o.sticky) {
