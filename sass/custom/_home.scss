@@ -9,10 +9,12 @@ body#home {
     text-shadow: 1px 1px 1px #E4DDBD, -1px -1px 1px #1a1914;
   }
   #content > div, #content article { padding-top: 0; }
+  #content > div > article { padding-left: 0; padding-right: 0; }
   #nav {
     margin: 30px auto;
     position:relative;
-    width: 762px;
+    max-width: 762px;
+    min-width: 492px;
   }
   &> div { border-bottom: none; }
   &> div > div { border-right: none; }
@@ -23,7 +25,6 @@ body#home {
   }
   .pane {
     width: 66px;
-    margin-right: 50px;
     float: left;
     opacity:0.5;
     position: relative;

@@ -19,7 +19,7 @@
       defaultKwick: 0,
       event: 'mouseenter',
       duration: 500,
-      spacing: 5, // spacing when expanded; normal spacing comes from margin-right
+      spacing: 5, // spacing when expanded; normal spacing is calculated
       min: 48
     };
     var o = $.extend(defaults, options);
@@ -27,12 +27,13 @@
     var Left = 'left';
     
     return this.each(function() {
-      container = $(this);
+      var container = $(this);
       var kwicks = container.children();
       kwicks.find('.pane-mask').width('auto');
       var normWidth = o.min; //kwicks.eq(0).css(Width).replace(/px/,'');
       // FIXME: normWidth no longer applies; now both min and max and figure out the container from that
-      var normSpacing = kwicks.eq(0).css('margin-right').replace(/px/,'');
+      // var normSpacing = kwicks.eq(0).css('margin-right').replace(/px/,'');
+      var normSpacing = (container.width() - (kwicks.size() * normWidth)) / (kwicks.size() - 1);
 
       // set width of container ul
       var restingWidth = (o.min * kwicks.size()) + (normSpacing * (kwicks.size() - 1));
