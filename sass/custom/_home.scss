@@ -177,7 +177,6 @@ body#home {
     -webkit-column-break-inside: avoid;
     -moz-column-break-inside: avoid;
     break-inside: avoid-column;
-    display: inline-block; /* hack for browsers that support columns but not break control */
   }
   #bio sup {
     font-size:smaller;
