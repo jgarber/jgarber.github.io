@@ -10,9 +10,11 @@ footer: true
 
 I'm an experienced and reliable freelance "Ruby":http://ruby-lang.org developer in Philadelphia, PA. In May, 2005, when Rails was in its infancy, I switched from PHP to Ruby and learned Rails to work on "RosettaStone.com":http://rosettastone.com. I've primarily done Rails development ever since and I've contributed valuable open-source software to the community.
 
+"Rails Developer":#rails-developer • "Ruby Developer":#ruby-developer • "HTML, CSS, and Javascript":#html-css-javascript • "Increasing Conversions":#increasing-conversions • "Business Experience and Communications":#business • "Past Projects":#past-projects
+
 h2(#rails-developer). Rails Developer
 
-Most of my work is with "Ruby on Rails":http://rubyonrails.org, the web application framework that is extremely popular with startups and large enterprises alike. I started using Rails in the early days (version 0.12) and few developers can claim the length of experience that I have. My "first contribution to Rails core":https://github.com/rails/rails/commit/3c6b7a219142907416780501dd8e7d068a802bc4 was in 2006 and I released a "form testing library":http://code.google.com/p/form-test-helper/ the same year.
+Most of my work is with "Ruby on Rails":http://rubyonrails.org, the web application framework that is extremely popular with startups and large enterprises alike. I started using Rails in the early days (version 0.12) and few developers can claim the length of experience that I have. My "first contribution to Rails core":https://github.com/rails/rails/commit/3c6b7a219142907416780501dd8e7d068a802bc4 was in 2006 and I released "form testing":http://code.google.com/p/form-test-helper/ and "spam protection":http://code.google.com/p/form-spam-protection/ libraries the same year.
 
 Rails' emphasis on testing hooked me from the start.  I'm a strong advocate of "Behavior-Driven Development":http://cukes.info/ (BDD) and try to never write a line of code without first having written a test to describe the behavior. That way, I don't have to waste hours debugging problems in the browser and I can deploy changes to production with confidence.
 
