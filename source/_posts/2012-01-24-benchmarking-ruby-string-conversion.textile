@@ -8,6 +8,8 @@ categories: Ruby
 
 I have a class (@Parslet::Slice@, to be precise) that inherits from String but needs to be converted back to a string. Which is faster, @String#to_s@ or @String()@? My hunch is the latter, but I can find out for sure in about a minute:
 
+<!--more-->
+
 {% gist 1670877 %}
 
 With Ruby 1.9:
