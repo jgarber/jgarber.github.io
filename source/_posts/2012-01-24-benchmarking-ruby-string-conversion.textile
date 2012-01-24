@@ -1,0 +1,46 @@
+---
+layout: post
+title: "Benchmarking Ruby String Conversion"
+date: 2012-01-24 11:14
+comments: true
+categories: Ruby
+---
+
+I have a class (@Parslet::Slice@, to be precise) that inherits from String but needs to be converted back to a string. Which is faster, @String#to_s@ or @String()@? My hunch is the latter, but I can find out for sure in about a minute:
+
+{% gist 1670877 %}
+
+With Ruby 1.9:
+
+{% codeblock Results %}
+ruby which_string_coercion_is_faster.rb ↵
+Rehearsal -----------------------------------------------
+''.to_s       0.970000   0.000000   0.970000 (  0.968759)
+"".to_s       0.960000   0.000000   0.960000 (  0.960182)
+String(str)   0.920000   0.000000   0.920000 (  0.920623)
+str.to_s      2.250000   0.010000   2.260000 (  2.249877)
+-------------------------------------- total: 5.110000sec
+
+                  user     system      total        real
+''.to_s       0.930000   0.000000   0.930000 (  0.931371)
+"".to_s       0.940000   0.000000   0.940000 (  0.934964)
+String(str)   0.910000   0.000000   0.910000 (  0.913435)
+str.to_s      2.250000   0.010000   2.260000 (  2.252326)
+{% endcodeblock %}
+
+Similar results on 1.8:
+
+{% codeblock Results %}
+Rehearsal -----------------------------------------------
+''.to_s       1.470000   0.000000   1.470000 (  1.475513)
+"".to_s       1.540000   0.000000   1.540000 (  1.540667)
+String(str)   1.510000   0.000000   1.510000 (  1.509818)
+str.to_s      2.710000   0.000000   2.710000 (  2.713870)
+-------------------------------------- total: 7.230000sec
+
+                  user     system      total        real
+''.to_s       1.500000   0.000000   1.500000 (  1.497413)
+"".to_s       1.520000   0.000000   1.520000 (  1.512449)
+String(str)   1.540000   0.000000   1.540000 (  1.536261)
+str.to_s      2.690000   0.000000   2.690000 (  2.700433)
+{% endcodeblock %}
