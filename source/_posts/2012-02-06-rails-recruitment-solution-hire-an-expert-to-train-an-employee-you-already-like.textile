@@ -8,7 +8,7 @@ categories: [Rails, Ruby, recruiters, hiring, talent, best practices]
 
 Like most well-qualified Ruby developers, recruiters and hiring managers contact me frequently about their open web developer positions. The secret is out that you'll get more bang for your buck with Ruby on Rails than the Java and .NET web frameworks, so small and large companies alike are clamoring for experienced Ruby developers. I read a year or more ago that there's a shortage of at least 1,500 Ruby developers in the United States alone. That number has probably doubled or tripled by now. Everyone faces the same frustration: top Ruby talent is hard to come by.
 
-This works out well for someone like me who started with Ruby in 2005, when Rails was in its infancy. I have nearly seven years of experience with Rails, ten years of writing web applications, and 15 years of HTML, CSS, and Javascript. You can find workers aplenty who list Rails on their résumé but have really only dipped a toe in the water, which doesn't cut it. There's definitely a "Ruby way" and you can tell just by looking at someone's code to what degree they get it. Even without looking at code samples, when I look through candidates on oDesk or eLance, I can safely assume the ones who title themselves things like "Senior Ruby/PHP/Java/Drupal/Coldfusion developer" are not competent Rubyists. I pass over candidates if they so much as mention PHP in their description.
+This works out well for someone like me who started with Ruby in 2005, when Rails was in its infancy. I have nearly seven years of experience with Rails, ten years of writing web applications, and 15 years of HTML, CSS, and Javascript. You can find workers aplenty who list Rails on their résumé but have really only dipped a toe in the water, which doesn't cut it. There's definitely a "Ruby way" and you can tell just by looking at someone's code to what degree they get it. Even without looking at code samples, when I look through candidates on oDesk or eLance, I can safely assume the ones who title themselves things like "Senior Ruby/PHP/Java/Drupal/Coldfusion developer" are not competent Rubyists--probably not competent anythingists. I pass over candidates if they so much as mention PHP in their description.
 
 h2. Why is Ruby expertise so important?
 
@@ -19,6 +19,7 @@ h3. These are the experts; They're not interested.
 You can fairly easily find Ruby experts by:
 
 * looking for the authors of "popular and mature open-source Ruby projects":http://workingwithrails.com/browse/rubygems/usage,
+* tracking down the leaders of local Ruby meetups,
 * checking out who speaks at Ruby conferences, and
 * investigating who writes books for the Ruby community.
 
@@ -26,16 +27,16 @@ Chances are, they're unavailable, prohibitively expensive, and not interested in
 
 h3. But they _can_ be persuaded
 
-What experts *can't resist*, especially in the fanatical Ruby community, is *proselytizing*--disseminating information and winning others over to their side. They're much more likely to take a gig that involves training smart developers who just haven't "seen the light" than they are to just take the job themselves.
+What experts *can't resist*, especially in the fanatical Ruby community, is *proselytizing*--disseminating information and winning others over to their side. They're much more likely to take a gig that involves training other smart developers who just haven't "seen the light" than they are to just take the job themselves.
 
 *If you already have developers that you like, hire an expert to train them on Ruby.* That doesn't mean three months of classes in the conference room. Experts like hands-on work and seeing that things are done right. That's how they got to be the experts, after all! Put them on pair programming and code reviews to transfer their Ruby expertise to your best people. Develop Rubyists from within. You can always hire more Javaheads.
 
-h2. Ending up with loyal, talented Ruby developers
+h2. Ending up with talented, loyal Ruby developers and a successful project
 
 Hire one or two Ruby experts to start your new project, apprentice your best developers, and after two or three months, taper off their involvement. They'll have started the project with the right tools, set the standard for what good Ruby code looks like, solved the initial design problems, and equipped your developers to carry on. The project won't be done--you might not even have a beta version deployed--but hopefully the project will be on-track for a solid finish and there will be good feelings all around.
 
 Speaking for myself, I love the initial design phase, love watching others catch the Ruby bug, and love leveraging collaboration to produce more than I could alone. Oh--and I like being in charge, getting paid well, and moving on when the novelty has worn off!
 
-So, recruiters, no more whining about how you can't acquire top Ruby talent. It's there and it's available if you're using the right bait. We're not interested in full-time $120k + benefits... because _it's not about the money!_
+So, recruiters, no more whining about how you can't acquire top Ruby talent. It's there and it's available if you're using the right bait. We're not interested in full-time $120k + benefits because a.) we can probably do better freelancing, b.) who wants to work full-time?, and c.) _it's not about the money!_
 
-Sell your clients on needing to invest in top talent, leveraging existing loyal employees, and saving money and they'll think you're brilliant. (You don't need to tell them where the idea came from!)
+The company hired you to hire developers, but what they really need is successful projects. (The old selling drills vs. selling holes analogy.) Sell them on needing to invest in expertise, but say you'll save them money by apprenticing existing developers and they'll think you're brilliant. (You don't need to tell them where the idea came from!) You really are brilliant, because guess who gets to find the replacement for their Javahead-turned-Ruybist...
