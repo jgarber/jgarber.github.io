@@ -3,7 +3,7 @@ layout: post
 title: "Deploying Octopress to Heroku with a custom buildpack"
 date: 2012-01-10 16:00
 comments: true
-categories: 
+categories: [Ruby, CMS, Heroku]
 ---
 
 I've had apps on Heroku since 2009, but over the last year or so I've been deploying apps there more and more. With the advent of the Cedar stack, there's less and less you can't do. Compared to provisioning a virtual server, even with the help of "moonshine":https://github.com/railsmachine/moonshine, you can't beat @heroku create --stack cedar@: *boom*, you have a live site with backups, logging, release management and the running of migrations and asset compilation on deploy. In just another few minutes, you can have SSL, rotating database backups, NewRelic, HopToad, cron, DNS, monitoring, and myriad other addons.
