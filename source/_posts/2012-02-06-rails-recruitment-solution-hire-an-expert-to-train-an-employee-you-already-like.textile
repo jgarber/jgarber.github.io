@@ -8,6 +8,8 @@ categories: [Rails, Ruby, recruiters, hiring, talent, best practices]
 
 Like most well-qualified Ruby developers, recruiters and hiring managers contact me frequently about their open web developer positions. The secret is out that you'll get more bang for your buck with Ruby on Rails than the Java and .NET web frameworks, so small and large companies alike are clamoring for experienced Ruby developers. I read a year or more ago that there's a shortage of at least 1,500 Ruby developers in the United States alone. That number has probably doubled or tripled by now. Everyone faces the same frustration: top Ruby talent is hard to come by.
 
+<!--more-->
+
 This works out well for someone like me who started with Ruby in 2005, when Rails was in its infancy. I have nearly seven years of experience with Rails, ten years of writing web applications, and 15 years of HTML, CSS, and Javascript. You can find workers aplenty who list Rails on their résumé but have really only dipped a toe in the water, which doesn't cut it. There's definitely a "Ruby way" and you can tell just by looking at someone's code to what degree they get it. Even without looking at code samples, when I look through candidates on oDesk or eLance, I can safely assume the ones who title themselves things like "Senior Ruby/PHP/Java/Drupal/Coldfusion developer" are not competent Rubyists--probably not competent anythingists. I pass over candidates if they so much as mention PHP in their description.
 
 h2. Why is Ruby expertise so important?
