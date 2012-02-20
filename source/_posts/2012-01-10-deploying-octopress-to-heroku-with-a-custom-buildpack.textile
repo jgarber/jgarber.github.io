@@ -94,3 +94,9 @@ git push heroku master
 The site should build cleanly and should work at the app URL given. If not, look at the build output when you pushed to Heroku and also check @heroku logs@.
 
 Let me know in the comments if it worked for you and feel free to fork the buildpack.
+
+---
+
+h3. Update: Plain Jekyll supported by the buildpack as well.
+
+"Mat Schaffer":https://github.com/matschaffer added support for vanilla Jekyll sites as well. Very elegantly done.
