@@ -8,7 +8,7 @@ footer: true
 
 "Hire me":hire-me/ to build your next web application.
 
-I'm an experienced and reliable freelance "Ruby":http://ruby-lang.org developer in Philadelphia, PA. In May, 2005, when Rails was in its infancy, I switched from PHP to Ruby and learned Rails to work on "RosettaStone.com":http://rosettastone.com. I've primarily done Rails development ever since and I've contributed valuable open-source software to the community.
+I'm an experienced and reliable freelance "Ruby":http://ruby-lang.org developer in Philadelphia, PA. In May, 2005, while Rails was still in its infancy, I switched from PHP to Ruby and learned Rails to work on "RosettaStone.com":http://rosettastone.com. I've primarily done Rails development ever since and I've contributed valuable open-source software to the community.
 
 "Rails Developer":#rails-developer • "Ruby Developer":#ruby-developer • "HTML, CSS, and Javascript":#html-css-javascript • "Increasing Conversions":#increasing-conversions • "Business Experience and Communications":#business • "Past Projects":#past-projects
 
@@ -57,23 +57,33 @@ Seldom do you find a businessperson who understands code or a techie who underst
 
 Communication barriers often plague development projects. Business people and coders don't know how to speak each others' languages or see value propositions, deadlines, and interfaces from each others' point of view.
 
-I'm proud of my business savvy, the ability with which I can explain complex issues to stakeholders, and the honesty and transparency with which I operate. I select projects that maximally leverage my project management, business, communication, and user-experience skills to multiply the value of the product I'm building. Startups are my favorites because of the room to innovate.
+I'm proud of my business savvy, my ability to explain complex issues to stakeholders, and the honesty and transparency with which I operate. I select projects that maximally leverage my project management, business, communication, and user-experience skills to multiply the value of the product I'm building. Startups are my favorites because of the room to innovate.
 
 h2(#past-projects). Past Projects
 
+h3. Bestions
+
+!(screenshot). /images/bestions.jpg!:http://bestions.com
+
+"Bestions":http://bestions.com asked me to join their team just a couple of weeks before launch to help them hit their target. I did some profiling to dramatically speed up the app, added Solr indexing to power the search on the site, rewrote the question parser from a state-machine to a PEG ("Parslet":http://kschiess.github.com/parslet/) parser for more robust question normalization, and helped fix numerous bugs prior to and following the site's public launch.
+
 h3. Five-Star Basketball
 
-I worked on "fivestarbasketball.com":http://fivestarbasketball.com and redesigned the site (with a designer) with "HTML5 and compass":https://github.com/sporkd/compass-html5-boilerplate on Rails 3.1, added Facebook and regular logins ("devise":https://github.com/plataformatec/devise, "omniauth":https://github.com/intridea/omniauth, and "cancan":https://github.com/ryanb/cancan), PayPal integration, video embedding from multiple providers, search ("thinking-sphinx":https://github.com/freelancing-god/thinking-sphinx), popular article featuring ("impressionist":https://github.com/charlotte-ruby/impressionist), soft-delete of articles ("paranoia":https://github.com/radar/paranoia), article tagging ("acts-as-taggable-on":https://github.com/mbleigh/acts-as-taggable-on, with "my patch":https://github.com/mbleigh/acts-as-taggable-on/pull/203) and a slick custom jQuery drag-and-drop interface for assigning articles to the various content slots.
+!(screenshot). /images/five-star.jpg!:http://fivestarbasketball.com
+
+"Five-Star Basketball":http://fivestarbasketball.com is known for their training camps which since 1966 have trained some of the world's top basketball youth. Five-Star alumni include Michael Jordan, Grant Hill, LeBron James and Kevin Durant. They hired me to redesign the site (along with a designer). I used "HTML5 and compass":https://github.com/sporkd/compass-html5-boilerplate on Rails 3.1, added Facebook and regular logins ("devise":https://github.com/plataformatec/devise, "omniauth":https://github.com/intridea/omniauth, and "cancan":https://github.com/ryanb/cancan), PayPal integration, video embedding from multiple providers, search ("thinking-sphinx":https://github.com/freelancing-god/thinking-sphinx), popular article featuring ("impressionist":https://github.com/charlotte-ruby/impressionist), soft-delete of articles ("paranoia":https://github.com/radar/paranoia), article tagging ("acts-as-taggable-on":https://github.com/mbleigh/acts-as-taggable-on, with "my patch":https://github.com/mbleigh/acts-as-taggable-on/pull/203) and a slick custom jQuery drag-and-drop interface for assigning articles to the various content slots.
 
 The app is covered with cucumber and rspec (testing libraries) and uses "factory-girl":https://github.com/thoughtbot/factory_girl, "shoulda-matchers":https://github.com/thoughtbot/shoulda-matchers, "capybara":https://github.com/jnicklas/capybara and selenium. It's deployed on "Heroku":http://www.heroku.com/ and I used "AirBrake":http://airbrakeapp.com/, "NewRelic":http://newrelic.com/, and "HireFire":http://hirefireapp.com/ to manage resource utilization and keep it performant.
 
 h3. OSR Star Pages
 
+!(screenshot). /images/osr-stars.jpg!:http://stars.osr.org
+
 OSR hired me again to write their "Star Pages app":http://stars.osr.org/. Customers and gift recipients can log into the application and write messages, upload photos and videos, and customize a star page to celebrate or memorialize an event or loved one. Then they can invite others to visit the page and leave messages for the recipient.
 
 The admin interface is just a series of controls inline in the page, so the user can immediately see the effects of their changes. If they add a photo and crop it, it shows up immediately in the slide show. Various switches and buttons instantly hide parts of the interface, change colors, turn off commenting, etc.
 
-The app uses Rails 3.0, "HAML":http://haml-lang.com/, "SASS":http://sass-lang.com/, and  "RedCloth":http://redcloth.org. The data is pulled from their e-commerce system through an API that I wrote. It has an HTML5 uploader and stores the user's photos on Amazon S3. Spam prevention is transparent, and the app leans heavily on jQuery, jQuery-UI, and the Google Earth and Maps APIs, and is heavily internationalizated with the Rails 3 i18n API. We track pageviews and interactive events with Google Analytics.
+The app uses Rails 3.0, "HAML":http://haml-lang.com/, "SASS":http://sass-lang.com/, and  "RedCloth":http://redcloth.org. The data is pulled from their e-commerce system through an API that I wrote. It has an HTML5 uploader and stores the user's photos on Amazon S3. Spam prevention is unobtrusive, and the app leans heavily on jQuery, jQuery-UI, and the Google Earth and Maps APIs. It is heavily internationalizated with the Rails 3 i18n API. We track pageviews and interactive events with Google Analytics.
 
 h3. "UK-Based Pharmaceutical"
 
