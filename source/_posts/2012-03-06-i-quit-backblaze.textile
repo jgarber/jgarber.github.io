@@ -1,0 +1,17 @@
+---
+layout: post
+title: "I quit Backblaze"
+date: 2012-03-06 08:34
+comments: true
+categories: 
+---
+
+Three reasons I quit Backblaze:
+
+# Poor "Backup Bouncer test results":http://www.haystacksoftware.com/arq/backblaze-backup-bouncer-test.txt. When I restore files to my Mac, I want all the metadata too. I'm a programmer so ownership, permissions, timestamps, and symlinks are important to me on my development machine.
+# They say they won't store my private key anywhere, but I have to enter it on their site in order to restore files. I don't want decrypted files anywhere but my computer.
+# I've switched to SSDs and needed to move some infrequently-used photo libraries to an external hard drive. I can't be sure I'll plug it in every 30 days. The idea that my backup of those precious photos would be deleted if I didn't scares me.
+
+I tried out "Arq":http://www.haystacksoftware.com/arq/ and liked it. It has the benefits of Backblaze plus performs well in these three areas. Amazon's S3 reduced-redundancy pricing is a little more expensive for the amount of data that I have (85GB), but the improved peace-of-mind is worth it to me.
+
+If Backblaze ever fixed those things, I'd probably come back because otherwise, it was a good service.
