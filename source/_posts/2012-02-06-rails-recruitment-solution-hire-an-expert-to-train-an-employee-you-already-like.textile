@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Ruby recruitment solution: Hire an expert to train developers you already have and like"
-date: 2012-03-20 08:08
+date: 2012-02-20 08:08
 comments: true
 categories: [Rails, Ruby, recruiters, hiring, talent, best practices]
 ---
