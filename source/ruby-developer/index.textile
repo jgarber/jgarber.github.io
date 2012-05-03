@@ -27,7 +27,6 @@ Favorite tools to use with Ruby on Rails:
 * Pow
 * Bundler
 * SimpleForm
-* Twitter Bootstrap
 
 h2(#ruby-developer). Ruby Developer
 
@@ -39,6 +38,7 @@ My first commercial webpage was for a local athletic gear company in 1996. It wa
 
 Favorite front-end tools:
 
+* Twitter Bootstrap
 * SASS
 * HAML
 * jQuery
