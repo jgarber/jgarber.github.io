@@ -63,6 +63,12 @@ I'm proud of my business savvy, my ability to explain complex issues to stakehol
 
 h2(#past-projects). Past Projects
 
+h3. QFive
+
+!(screenshot). /images/qfive.jpg!:http://qfive.com
+
+"QFive":http://qfive.com/ is a social platform for the athletic community. So far my team has overhauled the user interface, streamlined performance, and added new ways for users to discover and follow content. We've also helped QFive build their team by evaluating candidates and training new designers and developers.
+
 h3. Bestions
 
 !(screenshot). /images/bestions.jpg!:http://bestions.com
