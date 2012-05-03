@@ -26,6 +26,8 @@ Favorite tools to use with Ruby on Rails:
 * Heroku
 * Pow
 * Bundler
+* SimpleForm
+* Twitter Bootstrap
 
 h2(#ruby-developer). Ruby Developer
 
