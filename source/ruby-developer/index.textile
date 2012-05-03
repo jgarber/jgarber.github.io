@@ -6,9 +6,9 @@ sharing: true
 footer: true
 ---
 
-"Hire me":hire-me/ to build your next web application.
+I'm an experienced and reliable freelance "Ruby":http://ruby-lang.org developer in Philadelphia, PA. "Hire me":hire-me/ to build your next web application.
 
-I'm an experienced and reliable freelance "Ruby":http://ruby-lang.org developer in Philadelphia, PA. In May, 2005, while Rails was still in its infancy, I switched from PHP to Ruby and learned Rails to work on "RosettaStone.com":http://rosettastone.com. I've primarily done Rails development ever since and I've contributed valuable open-source software to the community.
+In May, 2005, while Rails was still in its infancy, I switched from PHP to Ruby and learned Rails to work on "RosettaStone.com":http://rosettastone.com. I've primarily done Rails development ever since and I've contributed valuable open-source software to the community.
 
 "Rails Developer":#rails-developer • "Ruby Developer":#ruby-developer • "HTML, CSS, and Javascript":#html-css-javascript • "Increasing Conversions":#increasing-conversions • "Business Experience and Communications":#business • "Past Projects":#past-projects
 
