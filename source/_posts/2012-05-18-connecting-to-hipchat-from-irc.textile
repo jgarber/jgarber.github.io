@@ -1,0 +1,32 @@
+---
+layout: post
+title: "Connecting to HipChat from IRC"
+date: 2012-05-18 12:39
+comments: true
+categories: 
+---
+
+My friends at "IndyHall":http://www.indyhall.org/ are always talking on HipChat, but I too often forget to open HipChat in my browser and I'm not interested in running their Adobe AIR app. I have been on IRC a lot lately thanks to the Philly Ruby community, so getting my IndyHall hipchats on IRC has been an itch I've needed to scratch for awhile.
+
+<!--more-->
+
+"Steven Merrill":http://treehouseagency.com/about-us/team/steven-merrill has a nice "writeup":http://treehouseagency.com/blog/steven-merrill/2011/12/15/using-hipchat-through-irc-client-bitlbee on using HipChat with IRC through "BitlBee":http://www.bitlbee.org/. I started installing BitlBee to run on my Mac, but then realized there are "public servers running BitlBee":http://www.bitlbee.org/main.php/servers.html thanks to kind people around the world. I picked "IRC.net":http://www.irc.net/ since Pittsburgh is close to Philly.
+
+Here's how to set it up: (replace the words in CAPS with your info)
+
+# Connect to the IRC server: @irc.net:6667@
+# Join the @&bitlbee@ room if you're not already in it
+# Generate a secure password and register it with bitlbee: @register PASSWORD@
+# In a browser tab, open the "XMPP Account Settings":https://www.hipchat.com/account/xmpp page in your HipChat account. You'll need some of this information.
+# In your IRC client, send <code>account add jabber USERNAME@chat.hipchat.com 'PASSWORD'</code> using your HipChat Jabber ID and HipChat password
+# @account hipchat set nick_source full_name@
+# @account hipchat set resource bot@
+# @account hipchat on@
+# @/join &hipchat@
+# <code>chat add hipchat ROOM_JABBERNAME@CONFERENCE_SERVER #CHANNELNAME</code>. Conference Server will probably be @conf.hipchat.com@. Give it whatever channel name you want.
+# Before you can join, you must set your nick to match the Room Nickname setting in your HipChat XMPP settings.@channel #CHANNELNAME set nick 'ROOM_NICKNAME'@
+# @/join #CHANNELNAME@
+# Start chatting!
+# When you're ready to sign out of HipChat, use account off. @account hipchat off@
+
+Thanks to Steven for the instructions. I wouldn't have figured out BitlBee for a long time without his blog post.
