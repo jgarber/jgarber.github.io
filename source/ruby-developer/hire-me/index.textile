@@ -18,7 +18,7 @@ I can work remotely, in person in Philadelphia, or occasionally on-site in New Y
 
 h2(#recruiters). Recruiters:
 
-If you're a company looking for a full-time Ruby developer (and who isn't these days?), perhaps you'd like to hire me on an hourly basis, or contract with me to work on your app *and train one of your developers at the same time*.
+If you're a company looking for a full-time Ruby developer (and who isn't these days?), perhaps you'd like to hire me on an hourly basis, or "contract with me to work on your app *and train one of your developers at the same time*":/blog/2012/02/20/rails-recruitment-solution-hire-an-expert-to-train-an-employee-you-already-like/.
 
 h2(#contact). Contact Info
 
