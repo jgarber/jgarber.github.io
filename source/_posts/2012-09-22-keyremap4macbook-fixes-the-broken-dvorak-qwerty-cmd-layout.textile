@@ -12,11 +12,13 @@ And it has been. My hands just never get tired of typing, which is good because 
 # Shortcut keys are less convenient to use. Cut, copy, and paste are X, C, and V for a reason. You can get used to the new positions, but they never quite feel as handy.
 # Sharing or borrowing other computers becomes more difficult.
 
+<!--more-->
+
 The first problem I solved early on by using a keyboard layout that is Dvorak except when you're holding down the command key. On a Mac, this is the "Dvorak - Qwerty ⌘" input source.
 
 Since I learned touch-typing on Qwerty, I can switch between the layouts in my head with some effort or just look at the keys as I type, so the second problem isn't a very big one for infrequent and short-term Qwerty use. For the computer I shared with my wife for three or four years, we got used to switching input modes from the menubar or by shortcut key.
 
-This year, I almost quit Dvorak when I discovered "Apple's Dvorak - Qwerty ⌘ layout is broken":https://groups.google.com/forum/#!msg/keyremap4macbook/QNZ3LGsKNFE/Yg-jlbAoL-QJ and there's "no way to get to some shortcut keys":https://github.com/textmate/textmate/issues/241. That was a minor frustration compared to how it made "pair programming more complicated":../pair-programming-when-you-type-on-different-keyboard-layouts/.
+This year, I almost quit Dvorak when I discovered "Apple's Dvorak - Qwerty ⌘ layout is broken":https://groups.google.com/forum/#!msg/keyremap4macbook/QNZ3LGsKNFE/Yg-jlbAoL-QJ and there's "no way to get to some shortcut keys":https://github.com/textmate/textmate/issues/241. That was a minor frustration compared to how it made "pair programming more complicated":/blog/2012/09/22/pair-programming-when-you-type-on-different-keyboard-layouts/.
 
 "KeyRemap4MacBook":http://pqrs.org/macosx/keyremap4macbook/ solved these problems. I've dropped Dvorak-Qwerty ⌘ and now just use the Dvorak input source with KeyRemap4MacBook converting my ⌘ keypresses.  ⌘ + and - makes my text bigger and smaller and I can @<Ctrl-W>@ in vim again--two glitches peculiar to Dvorak - Qwerty ⌘.
 

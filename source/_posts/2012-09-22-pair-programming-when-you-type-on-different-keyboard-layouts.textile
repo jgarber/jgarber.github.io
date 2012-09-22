@@ -11,9 +11,11 @@ Pairing with two different keyboard layouts means you have to switch input modes
 
 I hated that my choice of keyboard layout was a burden on my pairing partners, so eventually I found a software solution: "KeyRemap4MacBook":http://pqrs.org/macosx/keyremap4macbook/
 
-I've dropped Dvorak-Qwerty ⌘, which "is broken":../keyremap4macbook-fixes-the-broken-dvorak-qwerty-cmd-layout/, and now just use the Dvorak input source with KeyRemap4MacBook converting my ⌘ keypresses.
+I've dropped Dvorak-Qwerty ⌘, which "is broken":/blog/2012/09/22/keyremap4macbook-fixes-the-broken-dvorak-qwerty-cmd-layout/, and now just use the Dvorak input source with KeyRemap4MacBook converting my ⌘ keypresses.
 
 I also made one of the keyboards at each pairing station "mine" and then set KeyRemap4MacBook to convert the Qwerty keypresses of the others to Dvorak, but only when my computer is in Dvorak input mode.
+
+<!--more-->
 
 So I still have "U.S." (Qwerty) as an input source on my computer, and in that case KeyRemap4MacBook does nothing, but when I switch it to Dvorak, my built-in keyboard and one keyboard at each pairing station act as Dvorak. The others act as Qwerty, so my pairing partners don't even notice that my computer is set to Dvorak. In either mode, they type Qwerty.
 
