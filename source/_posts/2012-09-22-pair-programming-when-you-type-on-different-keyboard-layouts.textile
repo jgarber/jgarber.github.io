@@ -21,4 +21,6 @@ So I still have "U.S." (Qwerty) as an input source on my computer, and in that c
 
 My "private.xml file":https://gist.github.com/3494247, which is how you make custom mappings in KeyRemap4Macbook, contains the device_only and device_not filters that limit the mappings to a certain set of keyboards at work, where our multitude of bluetooth devices are named after well-known Rubyists. These bluetooth keyboards are all identical models, so KeyRemap4MacBook couldn't differentiate them until the author, Takayama Fumihiko, graciously added that feature.
 
+<script src="https://gist.github.com/3494247.js?file=private.xml"></script>
+
 To restrict a remapping to a specific device among several identical ones, you need to find its location id by running @$ ioreg -rk "LocationID"@. DeviceLocation only works with KeyRemap4MacBook >= "7.8.13":http://pqrs.org/macosx/keyremap4macbook/files/KeyRemap4MacBook-7.8.13.dmg. If your keyboards are different models, then you only need to specify the DeviceProduct, which is easier.

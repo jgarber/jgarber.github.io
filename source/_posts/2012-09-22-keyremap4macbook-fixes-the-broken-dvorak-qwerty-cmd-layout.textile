@@ -23,3 +23,5 @@ This year, I almost quit Dvorak when I discovered "Apple's Dvorak - Qwerty ⌘ l
 "KeyRemap4MacBook":http://pqrs.org/macosx/keyremap4macbook/ solved these problems. I've dropped Dvorak-Qwerty ⌘ and now just use the Dvorak input source with KeyRemap4MacBook converting my ⌘ keypresses.  ⌘ + and - makes my text bigger and smaller and I can @<Ctrl-W>@ in vim again--two glitches peculiar to Dvorak - Qwerty ⌘.
 
 My "private.xml file":https://gist.github.com/3494247, which is how you make custom mappings in KeyRemap4Macbook, contains the mapping, along with some device_only and device_not filters that limit it to a certain set of keyboards at work, where our multitude of bluetooth devices are named after well-known Rubyists.
+
+<script src="https://gist.github.com/3494247.js?file=private.xml"></script>
