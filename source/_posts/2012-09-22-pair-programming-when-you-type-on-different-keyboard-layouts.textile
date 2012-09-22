@@ -1,0 +1,22 @@
+---
+layout: post
+title: "Pair programming when you type on different keyboard layouts"
+date: 2012-09-22 09:00
+comments: true
+categories: [Dvorak, Pair programming]
+---
+At "work":http://mashion.net we're often "pair programming":http://en.wikipedia.org/wiki/Pair_programming and we have the ideal "pairing rig":http://matschaffer.com/2012/07/mashion-pairing-rig/, but one thing wasn't ideal: I'm the only one who types on the "Dvorak keyboard layout":http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard.
+
+Pairing with two different keyboard layouts means you have to switch input modes a lot. Usually it involves a little bewilderment as vim scrambles your code before you remember that you're in the wrong mode.
+
+I hated that my choice of keyboard layout was a burden on my pairing partners, so eventually I found a software solution: "KeyRemap4MacBook":http://pqrs.org/macosx/keyremap4macbook/
+
+I've dropped Dvorak-Qwerty ⌘, which "is broken":../keyremap4macbook-fixes-the-broken-dvorak-qwerty-cmd-layout/, and now just use the Dvorak input source with KeyRemap4MacBook converting my ⌘ keypresses.
+
+I also made one of the keyboards at each pairing station "mine" and then set KeyRemap4MacBook to convert the Qwerty keypresses of the others to Dvorak, but only when my computer is in Dvorak input mode.
+
+So I still have "U.S." (Qwerty) as an input source on my computer, and in that case KeyRemap4MacBook does nothing, but when I switch it to Dvorak, my built-in keyboard and one keyboard at each pairing station act as Dvorak. The others act as Qwerty, so my pairing partners don't even notice that my computer is set to Dvorak. In either mode, they type Qwerty.
+
+My "private.xml file":https://gist.github.com/3494247, which is how you make custom mappings in KeyRemap4Macbook, contains the device_only and device_not filters that limit the mappings to a certain set of keyboard at work, where our multitude of bluetooth devices are named after well-known Rubyists. These bluetooth keyboards are all identical models, so KeyRemap4MacBook couldn't differentiate them until the author, Takayama Fumihiko, graciously added that feature.
+
+To restrict a remapping to a specific device among several identical ones, you need to find its location id by running @$ ioreg -rk "LocationID"@. DeviceLocation only works with KeyRemap4MacBook >= "7.8.13":http://pqrs.org/macosx/keyremap4macbook/files/KeyRemap4MacBook-7.8.13.dmg. If your keyboards are different models, then you only need to specify the DeviceProduct, which is easier.
