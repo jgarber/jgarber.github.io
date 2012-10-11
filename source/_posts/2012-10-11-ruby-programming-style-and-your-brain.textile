@@ -1,0 +1,30 @@
+---
+layout: post
+title: "Ruby Programming Style and Your Brain"
+date: 2012-10-11 08:01
+comments: true
+categories: ["Ruby", "best practices"]
+---
+
+Last week someone was looking over my shoulder as I typed a command to run a script. It was something mundane, like @./script/test@. He said, "you know, you don't have to type the dot slash," and I thought, "Wow, he's right; I've been typing those extra characters for years!"
+
+Just a little later, I ran a different command in the script directory and this time I didn't use the dot slash. @sc@ @Tab ↹@
+
+bc. SCREEN_NO        scandeps.pl      schemagen        script         
+sc               scandeps5.12.pl  scp              scselect       
+sc_auth          sccmap           screen           scss           
+sc_usage         sched            screencapture    scutil 
+
+Oh, right! Tab completion works much better with just the tiniest bit of context, so if I use the dot slash and script is the only thing in that directory that starts with @sc@, I end up typing the whole command faster. Of course, by the time I realized this there was no longer someone looking over my shoulder!
+
+We programmers develop a million of these little tricks over the years and often don't realize it when we do. At least I wasn't aware enough at that particular moment to explain to my backseat driver why the dot slash flew off my fingers. Maybe I didn't even come up with that trick on my own. Sometimes we inherit best practices from others' experience.
+
+*Ruby coding style is no exception.* You don't have to parenthesize your arguments when you call a method, but if you usually don't, there will be some times when you do--method chaining, for instance--and you'll have to go back and put them in. Or consider why we prefer @||@ to @or@ and @&&@ to @and@. You can use @or@ and @and@, but you have to keep the order of operations in your head, and that's one more thing to keep track of. @&&@ is generally the operator prescedence that you're intending.
+
+Douglas Crockford talks about "Javascript Programming Style":http://vimeo.com/25606006 (got to love the bit at 13:34!) and how there are some things the language allows that you just shouldn't do. Though Ruby is a better-designed language and there are fewer dark, spooky corners than Javascript, there are best practices that will keep you out of trouble, or at least be more efficient and make changing the code easier. Thus, a canonical Ruby style has emerged over the last half-decade and, though there are variations here and there, it's pretty much this: "GitHub's Ruby Style Guide":https://github.com/styleguide/ruby
+
+That's not to say GitHub sets the standard for Ruby development. They just forked Bozhidar Batsov's style guide, and he developed it out of his experience, various Ruby books, and no doubt reading thousands of programs over his career. If you had a thousand Ruby coders write style guides and then averaged them, I'd wager it would be very close to GitHub's.
+
+I don't know that we need a Ruby Lint analysis program like Javascript has. The pitfalls are less precipitous and you're test-driving your code anyway, right? Still, hat tip to Codegram for "Pelusa":http://codegram.github.com/pelusa/. For me, embodying the canonical style is good enough. Just be aware of why each element of this style is better than the alternatives so you can defend and maintain the cohesive style that we've worked so hard to develop.
+
+Having a backseat driver isn't all bad. I did a @cd ..@ followed by @cd that-same-directory@ to pick up some automatic per-directory settings (RVM, probably) and he suggested @cd .@ instead. Great! An obviously possible combination, but something that han never occurred to me. Even spectator programming (as opposed to pair programming, which has been rocking my socks all year) has its advantages.
