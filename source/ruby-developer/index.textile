@@ -34,7 +34,7 @@ Rails made the Ruby programming language popular, but it owes some of its succes
 
 h2(#html-css-javascript). HTML, CSS, and Javascript
 
-My first commercial webpage was for a local athletic gear company in 1996. It was just a couple of pages, hosted on AOL. I've been making web pages in one form or another ever since. Needless to say, I'm an expert HTML and CSS developer, but considering the opportunity cost, I usually outsource design and front-end work, then just touch it up to my satisfaction. I'm a stickler for semantic HTML, clean CSS, and high-performance. I jumped on "HAML":http://haml-lang.com/, "SASS":http://sass-lang.com/, and asset packaging (now baked into Rails 3.1) almost immediately after each was released. I'm glad to see they're gradually gaining popular acceptance. The next thing the world needs to embrace is "SPDY":http://dev.chromium.org/spdy.
+My first commercial webpage was for a local athletic gear company in 1996. It was just a couple of pages, hosted on AOL. I've been making web pages in one form or another ever since. Needless to say, I'm an expert HTML and CSS developer but usually outsource design and front-end work, then just touch it up to my satisfaction. I'm a stickler for semantic HTML, clean CSS, and high-performance. I jumped on "HAML":http://haml-lang.com/, "SASS":http://sass-lang.com/, and asset packaging (now baked into Rails 3.1) almost immediately after each was released and they've steadily gained popular acceptance. The next thing the world needs to embrace is "SPDY":http://dev.chromium.org/spdy.
 
 Favorite front-end tools:
 
@@ -42,9 +42,11 @@ Favorite front-end tools:
 * SASS
 * HAML
 * jQuery
+* jQuery UI
 * Coffeescript
 * Modernizr.js
 * Spine.js
+* Ember.js
 * Sprockets
 * Firebug
 * Photoshop & Illustrator
@@ -62,6 +64,10 @@ Communication barriers often plague development projects. Business people and co
 I'm proud of my business savvy, my ability to explain complex issues to stakeholders, and the honesty and transparency with which I operate. I select projects that maximally leverage my project management, business, communication, and user-experience skills to multiply the value of the product I'm building. Startups are my favorites because of the room to innovate.
 
 h2(#past-projects). Past Projects
+
+h3. High-throughput transaction processing
+
+I spent six months helping a startup develop a complex product that is capable of processing many thousands of transactions a second. It has an API built in Ruby, a front end built on Ember.js, and is backed by an infinitely-scalable NoSQL database. It scales up beautifully and will be the backbone for many high-volume companies' financial data in 2013.
 
 h3. QFive
 
