@@ -1,0 +1,39 @@
+---
+layout: post
+title: "Thief card game"
+date: 2013-02-11 11:30
+comments: true
+categories:
+---
+
+My extended family has been playing a card game called Thief for the past several years. It's been passed along orally through the network of grandparents and retirees, but we cousins have really enjoyed playing it too! The stealing element is what makes it so competetive and fun. Trash talk is a key feature of the game.
+
+I can't find the rules anywhere on the Web, so I asked my mom to write them down. Reply in the comments with questions or corrections to the rules. If you know this game by another name, I'd love to know and have some official rules to consult.
+
+h2. Object:
+
+Have the highest number of points when all the cards are played.
+
+h2. Scoring:
+
+|_. Card |_. Points |
+| 3-9 | 5 |
+| 10-King | 10 |
+| Ace | 15 |
+| 2 | 25 |
+| Joker | 50 |
+
+
+Deuces & jokers are *wild*.
+
+h2. Playing:
+
+Shuffle two decks of cards with jokers. Deal 3 cards per person. Stack the rest of the cards face down for the draw pile. Turn one face up for the discard pile.
+
+On your turn, make a pair from the cards in your hand or from one in your hand and one from the discard pile and lay the pair in front of you.  If you cannot make a pair, discard one card and draw a new card. You may then make a pair with the card you drew and one in your hand or the one you discarded. Continue making pairs as you are able, drawing as necessary to keep three cards in your hand at all times. Each new pair should be laid crosswise on top of your personal pile.
+
+At any time during your turn, you may steal the top set of cards from another player's pile with a matching card or a wild card, but only if you didn't have to discard to play. They may counter with a matching card or wild card to keep the set. Continue countering back and forth as long as you are able. Each card played to steal or keep is added to the set. With several steal attempts, what starts as a pair of threes may contain multiple wild cards, making the set highly desired. You'd probably want to steal this early in your turn and then cover it with other pairs to bury it.
+
+Your turn continues for as long as you can steal cards or make pairs. Then, indicate to the next player that it is their turn.
+
+Play ends when all the cards have been drawn from the pile. The game ends when each person has dealt one final hand. Each player adds up the points in her pile to determine the winner.
