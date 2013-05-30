@@ -6,7 +6,7 @@ sharing: true
 footer: true
 ---
 
-I'm an experienced and reliable freelance "Ruby":http://ruby-lang.org developer in Philadelphia, PA. "Hire me":/ruby-developer/hire-me to build your next web application.
+I'm a software engineer and co-founder at "PromptWorks":http://www.promptworks.com/ in Philadelphia, PA. PromptWorks is the premier Philadelphia software consulting shop, specializing in Ruby, JavaScript and related technologies. In addition to helping businesses build new web apps and APIs, we solve problems with existing apps like scaling, testing and automating development operations.
 
 In May, 2005, while Rails was still in its infancy, I switched from PHP to Ruby and learned Rails to work on "RosettaStone.com":http://rosettastone.com. I've primarily done Rails development ever since and I've contributed valuable open-source software to the community.
 
@@ -44,6 +44,7 @@ Favorite front-end tools:
 * jQuery
 * jQuery UI
 * Coffeescript
+* Middleman
 * Modernizr.js
 * Spine.js
 * Ember.js

@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Announcing PromptWorks"
+date: 2013-05-30 16:52
+comments: true
+categories: ["Ruby", Rails, consulting]
+---
+
+I've joined "Mike Nicholaides":http://ablegray.com/ and "Greg Sterndale":http://gregsterndale.com/ to form a new consultancy:
+
+<a href="http://www.promptworks.com/"><img src="/images/promptworks-logo.png" alt="PromptWorks" /></a>
+
+"PromptWorks":http://www.promptworks.com/ is the premier Philadelphia software consulting shop, specializing in Ruby, JavaScript and related technologies. With a collective 30 years of software experience, we are industry veterans with unmatched technical chops. In addition to helping businesses build new web apps and APIs, we solve problems with existing apps like scaling, testing and automating development operations.
