@@ -6,9 +6,9 @@ sharing: true
 footer: true
 ---
 
-I'm a software engineer and co-founder at "PromptWorks":http://www.promptworks.com/ in Philadelphia, PA. PromptWorks is the premier Philadelphia software consulting shop, specializing in Ruby, JavaScript and related technologies. In addition to helping businesses build new web apps and APIs, we solve problems with existing apps like scaling, testing and automating development operations.
+I'm a software engineer and co-founder at "PromptWorks":http://www.promptworks.com/ in Philadelphia, PA. PromptWorks is the premier Philadelphia software consulting shop specializing in Ruby, JavaScript and related technologies. In addition to helping businesses build new web apps and APIs, we solve problems with existing projects like scaling, automated testing, and infrastructure automation.
 
-In May, 2005, while Rails was still in its infancy, I switched from PHP to Ruby and learned Rails to work on "RosettaStone.com":http://rosettastone.com. I've primarily done Rails development ever since and I've contributed valuable open-source software to the community.
+In May, 2005, while Rails was still in its infancy, I switched to Ruby and learned Rails to work on "RosettaStone.com":http://rosettastone.com. My first contribution to Rails core was in 2006 and I released plugins for acceptance testing and CSRF protection that year. I've done Ruby development ever since and have contributed valuable open-source software to the community. I'm the developer behind RedCloth, a popular Rubygem.
 
 "Rails Developer":#rails-developer • "Ruby Developer":#ruby-developer • "HTML, CSS, and Javascript":#html-css-javascript • "Increasing Conversions":#increasing-conversions • "Business Experience and Communications":#business • "Past Projects":#past-projects
 
