@@ -1,0 +1,11 @@
+---
+layout: post
+title: "Speaking at Madison Ruby in August"
+date: 2013-07-10 11:03
+comments: true
+categories: ['Ruby', 'talks']
+---
+
+I'll be giving a talk on Chef at "Madison Ruby":http://madisonruby.org/ in Madison, WI, August 23-24.
+
+<a href="http://madisonruby.org/"><img src="/images/madison-ruby-jason-garber.png" alt="Jason Garber speaking at Madison Ruby, August 23-24, 2013" /></a>
