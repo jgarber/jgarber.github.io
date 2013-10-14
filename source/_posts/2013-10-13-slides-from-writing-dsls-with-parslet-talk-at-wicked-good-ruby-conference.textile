@@ -1,0 +1,146 @@
+---
+layout: post
+title: "Slides from Writing DSLs with Parslet at Wicked Good Ruby Conference"
+date: 2013-10-13 14:40
+comments: true
+categories: ["Ruby", "speaking", "talks"]
+---
+
+A well-designed DSL improves programmer productivity and communication with domain experts. The Ruby community has produced a number of very popular external DSLs--Coffeescript, HAML, SASS, and Cucumber to name a few.
+
+Parslet makes it easy to write these kinds of DSLs in pure Ruby. In this talk you’ll learn the basics, feel out the limitations of several approaches and find some common solutions. In no time, you’ll have the power to make a great new DSL, slurp in obscure file formats, modify or fork other people’s grammars (like Gherkin, TOML, or JSON), or even write your own programming language!
+
+<script async class="speakerdeck-embed" data-id="441b68c016a7013186827a1b357e9aaa" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script>
+
+
+Hello, everyone. I’m Jason Garber and I’m an engineer and co-founder at PromptWorks in Philadelphia. We’re a Ruby and Javascript development consultancy and the three principals have been working with Ruby since 2005.
+We practice test-driven development, we test all the effing time (cheers, Bryan), and all the other things that make us buzzword-compliant.
+
+It's a great place to work and we have a fantastic team. You should ask us about our pairing setup. It’s awesome.
+
+The Ruby community is thriving in Philadelphia; We’ve doubled in size in the past year. We love having speakers and guests from other cities, so please come. The view from the 45th floor where we have our meetups is spectacular.
+
+This talk is about parsing, but first I’d like to frame it by talking about DSLs.
+Domain-Specific Languages are those computer languages that are targeted to a particular problem domain rather than general-purpose languages that can be applied to any kind of software problem.
+
+People find DSLs valuable because a well-designed DSL can be much easier to program in, which improves your productivity, and much easier to read, which helps someone new understand your code more easily.
+
+In some cases it also improves communication with domain experts. If you’re doubtful that any non-programmer can read DSLs much less write code with them, that’s very understandable and I’d be glad to discuss it over a beer.
+
+About a decade ago, when Java and C# were dominant, developers found themselves writing a lot of XML. Despite its noisy syntax, it let them define their own vocabulary and provided a strong hierarchic structure. It was ugly, but obviously provided value to its host language.
+Then Rails came along and blew everybody’s minds with its fluent, dynamic Ruby code. No more XML sit-ups, DHH proclaimed. It was like programming in a specialized language, almost to the point that saying you were a Rails developer didn’t necessarily mean you were any good at Ruby.
+We talk a lot about Domain-Specific Languages in the Ruby community in part because Ruby is a language that facilitates writing them so well. You can express a lot of things, especially configuration, much better with a DSL than you could if you only had functions and primitives at your disposal. If you’ve ever tried to write a DSL in JavaScript, you can appreciate how nice Ruby is for making DSLs.
+Let’s see if you can identify some Ruby DSLs. Let’s start with an easy one. Shout it out when you know it.
+•	Rails Router
+•	RSpec
+•	Capybara
+•	Rake
+•	Sinatra
+•	Parslet – the subject of this talk
+
+All of these are all what Martin Fowler calls internal DSLs. Some people also call them embedded DSLs. They use Ruby itself to make programming in Ruby easier and DRY up repetition.
+There’s also something called external DSLs. External DSLs have their own custom syntax and you write a full parser to process them. Unix is full of external DSLs.
+Let’s see which of these you recognize.
+•	Nginx config
+•	Regular expressions
+•	SQL
+•	AWK
+•	SLIM
+•	Cucumber
+•	Puppet
+•	Markdown
+•	TOML - Tom's Obvious, Minimal Language
+•	LilyPond
+•	PostScript
+•	SCSS – an excellent example of communicating with domain experts, most people who program CSS don't consider themselves to be programming
+
+Can you imagine styling HTML elements without CSS syntax?
+External DSLs have to be parsed, and the traditional solution is ANTLR or YACC or RACC. You write your grammar, then you compile it to a parser, then you test it on some input and see if it parses correctly.
+How many people are familiar with Textile? It’s a DSL that’s a shortcut to HTML. It has most of the same elements as HTML, but in a format that’s easier to write and a little easier on the eyes too.
+I worked for a number of years on the Ruby parser for Textile called RedCloth...
+Why The Lucky Stiff started it in 2004 as a direct port from PHP Textile.
+It was just basically a few hundred lines of gsubs. That was a mess and we all new it. It was a mess in PHP, of course, but _why gradually added tests and fixed bugs. Still, it was prone to regressions and was really unreliable from version to version.
+Regular expressions aren’t designed for the kind of parsing that it was trying to do. And, they were slow. Each of the gsubs had to run over the input separately, which is obviously really inefficient.
+
+So, in 2007 he started a rewrite in Ragel and called it SuperRedCloth.
+Here’s some Ragel from SuperRedCloth. Ragel is a language that generates finite state machines in C, Java, or Ruby. Zed Shaw famously used it to write Mongrel.
+SuperRedCloth was compiled as a Ruby C extension and it was about 40 times faster than the previous RedCloth.
+As _why’s commits started trailing off, I started contributing and after awhile,
+he turned the project over to me. I released the rewrite as RedCloth version 4.0 and kept hacking on it for a few years, even long after _why disappeared.
+The problem, though, was that it started out relatively clean (for C code) and fast, but got increasingly hard to add features, fix bugs, and not slow it down. Ragel didn’t handle the complexity I was throwing at it very well or maybe I just didn’t know what I was doing.
+Either way, it wasn’t fun to figure out what was going on inside the generated state machine. The generated code is mostly just tables of numbers.
+Worst of all, I had very few contributors. It’s been on GitHub since 2008, but hardly anyone ever sends me pull requests. A couple hundred people filed bugs, but only about a dozen made contributions. It’s just too hard to work with this stuff.
+So, I set out to rewrite RedCloth. I wanted something that was native Ruby—no more waiting for the gem to compile; no more cross-compilation for Windows and JRuby—and I wanted something that people could contribute to more easily.
+I experimented with a variety of approaches: Going back to regular expressions but doing it smarter; I toyed with a custom parser; and I spent the most time building a parser in Treetop.
+Treetop was quite popular for awhile. Cucumber used it for parsing Gherkin syntax. It had its own DSL for the grammar, which it then parsed and generated a Ruby parser. I got quite a ways but discovered a couple of problems:
+
+One, it was slow. I contributed some patches to make it faster, but it still was nowhere near as fast as it needed to be.
+
+There were also some problems with parsing some edge cases. I just couldn’t figure out how to do it. And, since I could only test end-to-end, figuring out what the parser was doing was really difficult. Eventually, I gave up.
+
+I also looked at Citrus by Michael J. I. Jackson, which uses a similar grammar to Treetop but doesn’t generate the parser; it keeps it in memory. I had actually started a similar project, but didn’t make it very far.
+
+Then one evening I was checking my email from a café in Nicaragua, when I read about a new library from Kaspar Schiess called Parslet and I got very excited.
+Parslet is an internal DSL to construct your parser. We just make a parser class that inherits from Parslet, then specify a rule with a block. In that block, we’re going to match a digit one or more times. We have to declare the root rule of the parser and we can use it right away. There’s no compilation, there’s no new syntax to learn. You just have to learn the Parslet DSL.
+
+The parsing DSL in Parslet consists of just three methods, which create instances of subclasses of Parslet::Atom. To match a string, you use str.
+The atom is a parser, so you can just call the parse method on it.
+The result is an object that looks like a string, but is actually a Parslet::Slice. It’s basically a string that knows its offset from the input string.
+The second kind of Parslet atom matches a single character. It’s like a regular expression that only matches a single character. It can use regex metacharacters and POSIX bracket expressions as well.
+And finally, there’s an atom that matches any character.
+Parslet has defined methods for sequences and alternation.  The double greater-than means the one atom is followed by the other.
+The vertical pipe means it first tries to match the expression on the left and if that fails, tries the expression on the right.
+Precedence works logically. You can use parentheses to change it.
+Atoms can be repeated. The default repeats 0 or more times.
+The next one repeats foo one or more times.
+The next one repeats one two three times.
+This one is the same as the default
+Maybe is just zero or one, but it returns nil instead of an empty array.
+Parslet can also do positive and negative lookahead. Here we’re expecting to match the word Java, but we want to make sure it’s not Java all by itself; it has to have Script after it. We’re not, however, consuming those characters just yet.
+
+It’s just the opposite for absent?. This will match multiple digits, but only if it doesn’t start with zeroes.
+
+That was the first step: defining the grammar
+Now we have to pick out the parts we want. Thankfully, it’s really easy.
+By default, atoms just return their slice. If you want to annotate it, just use the as method on it. It makes the name you give it the key in the hash.
+When you capture a repetition, you just get one slice in your hash.
+When you repeat a capture, you get several hashes.
+When you have multiple captures, they get combined into the same hash and the unlabeled strings are discarded.
+Let’s practice reading an example of a Textile table parser.
+If you’re not familiar with Textile, here’s how you make a table and beside it is the HTML it puts out. The first line is optional unless you need to specify a CSS id or class.
+We start by making a rule for a table that starts with the word ‘table’, is potentially followed by some attributes, which get captured with a name, then that’s followed by a newline. Except, all of that is optional. Then it’s followed by one or more table rows, which are the content of the table.
+You can do all the usual Ruby things in these parsers: method extraction, class inheritance, composition, duck punching…whatever. Here we’re making a method that takes an argument and wraps it in parentheses strings.
+Here I have an HTML tag parser and then I make a subclass that only matches block HTML tags. It does it by overriding the :tag_name rule. And what constitutes an inline tag name? Well, we have a constant that contains an array of them, which we map and reduce into a set of all the possibilities for inline tags. Anything we can do in Ruby, we can do in Parslet because it’s an internal DSL.
+Here’s something cool: pop open IRB and you can not only instantiate the HTML tag parser we just wrote, you can actually dive into it and introspect on its rules. And every Parslet atom is a parser in its own right, so I can try parsing something with just the open_tag rule. And if parsing fails, I get a nice error message telling me what it was trying to match at the time and what character caused it to fail.
+I can dump out a tree of the failure for debugging purposes. So here I’m trying to parse an image tag with the block HTML tag parser. The error message tells me it has to be an open tag, a close tag, a self-closing tag, or a comment tag. All four options in the alternation failed and it shows me how it failed in each branch. Failure isn’t always a problem. For example, it’s not surprising that it failed to match the comment_tag rule at the bottom. The problem is it exhausted all its options, so it gives me this tree to help me decipher what should have parsed but didn’t and why.
+So, it’s nice to have all of Ruby at our disposal as well as Parslet. It’s cool to get a REPL for free, and of course, I like writing Ruby, but there’s something more important happening here. Unlike the other PEG parsers I’d tried, because it’s Ruby, everything’s an object, objects send messages to other objects, methods return objects, and we can inspect those objects.
+But what’s the awesome implication for all this. Something I couldn’t do with the other parsers? This is another time you can shout at me.
+I’ll give you a hint: it’s big deal in the Ruby community.
+
+I can unit-test them! That’s amazing! For the first time, I have visibility into my parser at the atomic level. Debugging becomes orders of magnitude easier. I can TDD from the outside in! And with parsers, that’s super important because there can be some crazy unexpected complexity.
+And when I run my specs, it shows me nice detail about my failures so I can fix them easily.
+The last thing you do when you’re creating an external DSL is transforming the parse tree.
+Honestly, Parslet Transformations are my least favorite part of it. They sure beat having to deal with deeply nested hashes manually, but something still doesn’t feel quite perfect.
+Here we are transforming the numbers we captured into integers.
+We can add a second rule that matches a plus, a left, and a right and adds them. One plus two is three.
+Here’s what we’re doing in RedCloth. I’m transforming the parse tree into an AST using my own AST classes.
+It’s pure ruby, so you might think that it’s slow. Well, I haven’t tested it extensively, but so far it’s pretty fast. Not as fast as the C code, of course, but it’s an acceptable tradeoff.
+And probably, if your parser is slow, there are just a few bottlenecks. Parslet has a nice new feature to fix those called accelerators.
+This line right here has to loop over every character to make sure it doesn’t contain the ERB end code.
+But we can apply an Accelerator to the parser and any instance of repeatedly checking for absence followed by an any will be replaced with an optimized version. It’s nothing you have to replace in your parser; it find the applicable places for you.
+Another way you can extend Parslet is with custom Atoms. You just have to pass a slice in and return whether it matched or not. I used this technique to parse questions like, “Who makes...?”
+The code looked a little like this. Parsing natural language is really, really hard, but Parslet and my limited scope made it bearable.
+
+When Ruby isn’t quite fluent enough for you to build the DSL you really want, don’t be afraid to make your own. Parslet makes it easy.
+ You could be the next Hampton Catlin or Jeremy Ashkenas!
+So, in conclusion: DSLs are awesome. They help you write better code and communicate domain rules. Internal DSLs are great because you can use all the tools of the host language, but sometimes you need an external DSL.
+
+Parsing is another one of those dark corners where the light of automated testing and clean code has a hard time reaching. With Parslet, I think it’s possible to keep your parser from evolving into a bloated mess using the same tools and strategies you already use to keep your other Ruby code clean.
+
+When you need to parse some complex data, especially a DSL, stop and think before you reach for a regular expression.
+
+Thanks very much for listening. I hope you enjoyed it.
+We have a few minutes for questions.
+
+
+
