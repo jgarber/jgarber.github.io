@@ -1,0 +1,13 @@
+---
+layout: post
+title: "Video of Conference Talk on Small-Time Automated Server Provisioning"
+date: 2013-10-29 13:54
+comments: true
+categories: ["Ruby", "speaking", "talks"]
+---
+
+The video of my talk at Madison Ruby is online. It covers automated deployment when you have fewer servers than fingers using Chef Solo, Vagrant, and Knife Solo.
+
+It is is licensed under "Creative Commons Attribution ShareAlike 3.0":http://creativecommons.org/licenses/by-sa/3.0/. I owe a big thank-you to "Confreaks":http://www.confreaks.com/ and "Madison Ruby":http://madisonruby.org/ for making it available online.
+
+<iframe width="640" height="480" src="//www.youtube.com/embed/eaI3OrSFdlM?rel=0" frameborder="0" allowfullscreen></iframe>
