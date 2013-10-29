@@ -6,7 +6,9 @@ comments: true
 categories: ["Ruby", "speaking", "talks"]
 ---
 
-The video of my talk at Madison Ruby is online. It covers automated deployment when you have fewer servers than fingers using Chef Solo, Vagrant, and Knife Solo.
+The video of my talk at Madison Ruby is online. Automated infrastructure is intimidating but very important, so I encourage conference attendees to dip their toe in the water with a simpler subset of the Chef stack.
+
+bq. Chef is a great tool for managing a vast and complicated server infrastructure, but what if you have fewer servers than fingers? What if you just want a simple little box to host a Rack app? Maybe a staging server to match or a CI server? With little or no prior knowledge of Chef, you can set up a server fairly quickly if you know the right way to set up your kitchen. (They don’t make it obvious. I’ve lost a few fingers in the process.) We’ll walk through the basics of Vagrant, Chef-solo, Knife-solo, using community cookbooks, and writing your own simple cookbooks.
 
 It is is licensed under "Creative Commons Attribution ShareAlike 3.0":http://creativecommons.org/licenses/by-sa/3.0/. I owe a big thank-you to "Confreaks":http://www.confreaks.com/ and "Madison Ruby":http://madisonruby.org/ for making it available online.
 
