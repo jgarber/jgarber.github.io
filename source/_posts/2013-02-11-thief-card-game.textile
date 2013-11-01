@@ -10,6 +10,8 @@ My extended family has been playing a card game called Thief for the past severa
 
 I can't find the rules anywhere on the Web, so I asked my mom to write them down. Reply in the comments with questions or corrections to the rules. If you know this game by another name, I'd love to know and have some official rules to consult.
 
+<!--more-->
+
 h2. Object:
 
 Have the highest number of points when all the cards are played.
