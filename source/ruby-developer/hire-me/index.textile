@@ -1,36 +1,20 @@
 ---
 layout: page
-title: "Ruby on Rails Developer - Rates and Availability"
+title: "Ruby on Rails Developer - Hiring and Availability"
 comments: true
 sharing: true
 footer: true
 ---
 
-h2(#rates). Rates
-
-I charge $180 per hour and work on a monthly retainer basis.
-
 h2(#availability). Availability
 
-<!--Please contact me for current availability. I'm currently engaged in other contracts but may have the capacity or can find resources in my network to help you out.-->
-I'm currently available for new projects! I can work remotely, in person in Philadelphia, or occasionally on-site in the Philly suburbs, New York, or Washington D.C.
-
-<notextile>
-<link href="http://cdn-images.mailchimp.com/embedcode/slim-081711.css" rel="stylesheet" type="text/css">
-<div id="mc_embed_signup">
-<form action="http://jasongarber.us6.list-manage2.com/subscribe/post?u=8a72e27354debcdcc6859748c&amp;id=c822c8f68a" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-	<label for="mce-EMAIL">Sign up for availability updates</label>
-	<input type="email" value="" name="EMAIL" class="email" id="mce-EMAIL" placeholder="email address" required>
-	<div class="clear"><input type="submit" value="Sign up" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-</form>
-</div>
-</notextile>
+PromptWorks is available for new projects. We can work remotely, in person in Philadelphia, or occasionally on-site in the Philly suburbs, New York, or Washington D.C.
 
 h2(#recruiters). Recruiters:
 
-If you're a company looking for a full-time Ruby developer (and who isn't these days?), perhaps you'd like to hire me on an hourly basis, or "contract with me to work on your app *and train one of your developers at the same time*":/blog/2012/02/20/rails-recruitment-solution-hire-an-expert-to-train-an-employee-you-already-like/.
+If you're a company looking for a full-time Ruby or Javascript developer (and who isn't these days?), perhaps you'd like to hire us on an hourly basis, or "contract with us to work on your app *and train one of your developers at the same time*":/blog/2012/02/20/rails-recruitment-solution-hire-an-expert-to-train-an-employee-you-already-like/.
 
 h2(#contact). Contact Info
 
-{% include custom/contact.html %}
+{% include custom/contact_promptworks.html %}
 
