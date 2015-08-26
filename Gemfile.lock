@@ -1,5 +1,5 @@
 GEM
-  remote: http://rubygems.org/
+  remote: https://rubygems.org/
   specs:
     RedCloth (4.2.8)
     addressable (2.2.6)
@@ -18,7 +18,7 @@ GEM
       sass (~> 3.1)
     daemons (1.1.4)
     directory_watcher (1.4.0)
-    eventmachine (0.12.10)
+    eventmachine (1.0.8)
     execjs (1.2.11)
       multi_json (~> 1.0)
     fast-stemmer (1.0.0)
