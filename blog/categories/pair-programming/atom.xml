@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: Pair programming | Jason Garber, Ruby developer in Philadelphia]]></title>
-  <link href="http://username.github.com/jgarber/blog/categories/pair-programming/atom.xml" rel="self"/>
-  <link href="http://username.github.com/jgarber/"/>
-  <updated>2015-08-27T10:19:07-04:00</updated>
-  <id>http://username.github.com/jgarber/</id>
+  <link href="http://jgarber.github.com/jgarber/blog/categories/pair-programming/atom.xml" rel="self"/>
+  <link href="http://jgarber.github.com/jgarber/"/>
+  <updated>2015-08-27T10:50:28-04:00</updated>
+  <id>http://jgarber.github.com/jgarber/</id>
   <author>
     <name><![CDATA[Jason Garber]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Pair programming when you type on different keyboard layouts]]></title>
-    <link href="http://username.github.com/jgarber/blog/2012/09/22/pair-programming-when-you-type-on-different-keyboard-layouts/"/>
+    <link href="http://jgarber.github.com/jgarber/blog/2012/09/22/pair-programming-when-you-type-on-different-keyboard-layouts/"/>
     <updated>2012-09-22T09:00:00-04:00</updated>
-    <id>http://username.github.com/jgarber/blog/2012/09/22/pair-programming-when-you-type-on-different-keyboard-layouts</id>
+    <id>http://jgarber.github.com/jgarber/blog/2012/09/22/pair-programming-when-you-type-on-different-keyboard-layouts</id>
     <content type="html"><![CDATA[<p>At "work":http://mashion.net we're often "pair programming":http://en.wikipedia.org/wiki/Pair_programming and we have the ideal "pairing rig":http://matschaffer.com/2012/07/mashion-pairing-rig/, but one thing wasn't ideal: I'm the only one who types on the "Dvorak keyboard layout":http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard.</p>
 
 <p>Pairing with two different keyboard layouts means you have to switch input modes a lot. Usually it involves a little bewilderment as vim scrambles your code before you remember that you're in the wrong mode.</p>

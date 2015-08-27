@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: CMS | Jason Garber, Ruby developer in Philadelphia]]></title>
-  <link href="http://username.github.com/jgarber/blog/categories/cms/atom.xml" rel="self"/>
-  <link href="http://username.github.com/jgarber/"/>
-  <updated>2015-08-27T10:19:07-04:00</updated>
-  <id>http://username.github.com/jgarber/</id>
+  <link href="http://jgarber.github.com/jgarber/blog/categories/cms/atom.xml" rel="self"/>
+  <link href="http://jgarber.github.com/jgarber/"/>
+  <updated>2015-08-27T10:50:28-04:00</updated>
+  <id>http://jgarber.github.com/jgarber/</id>
   <author>
     <name><![CDATA[Jason Garber]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Deploying Octopress to Heroku with a custom buildpack]]></title>
-    <link href="http://username.github.com/jgarber/blog/2012/01/10/deploying-octopress-to-heroku-with-a-custom-buildpack/"/>
+    <link href="http://jgarber.github.com/jgarber/blog/2012/01/10/deploying-octopress-to-heroku-with-a-custom-buildpack/"/>
     <updated>2012-01-10T16:00:00-05:00</updated>
-    <id>http://username.github.com/jgarber/blog/2012/01/10/deploying-octopress-to-heroku-with-a-custom-buildpack</id>
+    <id>http://jgarber.github.com/jgarber/blog/2012/01/10/deploying-octopress-to-heroku-with-a-custom-buildpack</id>
     <content type="html"><![CDATA[<p>I've had apps on Heroku since 2009, but over the last year or so I've been deploying apps there more and more. With the advent of the Cedar stack, there's less and less you can't do. Compared to provisioning a virtual server, even with the help of "moonshine":https://github.com/railsmachine/moonshine, you can't beat @heroku create --stack cedar@: <em>boom</em>, you have a live site with backups, logging, release management and the running of migrations and asset compilation on deploy. In just another few minutes, you can have SSL, rotating database backups, NewRelic, HopToad, cron, DNS, monitoring, and myriad other addons.</p>
 
 <p>When I switched my blog from Radiant CMS to Octopress, I wanted to keep the site on Heroku. It's free under normal scenarios and if I ever get on HackerNews or Reddit, I just have to scale up my web processes and pay a bit to keep the site responsive. If I were to be so fortunate,  I wouldn't have to scramble to set up load balancing on Linode or even wait while my slice resized. Yay cloud!</p>

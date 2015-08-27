@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: speaking | Jason Garber, Ruby developer in Philadelphia]]></title>
-  <link href="http://username.github.com/jgarber/blog/categories/speaking/atom.xml" rel="self"/>
-  <link href="http://username.github.com/jgarber/"/>
-  <updated>2015-08-27T10:19:07-04:00</updated>
-  <id>http://username.github.com/jgarber/</id>
+  <link href="http://jgarber.github.com/jgarber/blog/categories/speaking/atom.xml" rel="self"/>
+  <link href="http://jgarber.github.com/jgarber/"/>
+  <updated>2015-08-27T10:50:28-04:00</updated>
+  <id>http://jgarber.github.com/jgarber/</id>
   <author>
     <name><![CDATA[Jason Garber]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Video of my talk on writing DSLs with Parslet]]></title>
-    <link href="http://username.github.com/jgarber/blog/2013/11/01/video-of-my-talk-on-writing-dsls-with-parslet/"/>
+    <link href="http://jgarber.github.com/jgarber/blog/2013/11/01/video-of-my-talk-on-writing-dsls-with-parslet/"/>
     <updated>2013-11-01T13:16:00-04:00</updated>
-    <id>http://username.github.com/jgarber/blog/2013/11/01/video-of-my-talk-on-writing-dsls-with-parslet</id>
+    <id>http://jgarber.github.com/jgarber/blog/2013/11/01/video-of-my-talk-on-writing-dsls-with-parslet</id>
     <content type="html"><![CDATA[<p>The video of my talk from "Wicked Good Ruby Conf":http://wickedgoodruby.com/ in Boston is online.</p>
 
 <p>bq.. A well-designed DSL improves programmer productivity and communication with domain experts. The Ruby community has produced a number of very popular external DSLs--Coffeescript, HAML, SASS, and Cucumber to name a few.</p>
@@ -29,37 +29,37 @@
 </ol>
 
 
-<iframe width="640" height="480" src="http://username.github.com/jgarber//www.youtube-nocookie.com/embed/ET_POMJNWNs?rel=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="http://jgarber.github.com/jgarber//www.youtube-nocookie.com/embed/ET_POMJNWNs?rel=0" frameborder="0" allowfullscreen></iframe>
 
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Video of Conference Talk on Small-Time Automated Server Provisioning]]></title>
-    <link href="http://username.github.com/jgarber/blog/2013/10/29/video-of-conference-talk-on-small-time-automated-server-provisioning/"/>
+    <link href="http://jgarber.github.com/jgarber/blog/2013/10/29/video-of-conference-talk-on-small-time-automated-server-provisioning/"/>
     <updated>2013-10-29T13:54:00-04:00</updated>
-    <id>http://username.github.com/jgarber/blog/2013/10/29/video-of-conference-talk-on-small-time-automated-server-provisioning</id>
+    <id>http://jgarber.github.com/jgarber/blog/2013/10/29/video-of-conference-talk-on-small-time-automated-server-provisioning</id>
     <content type="html"><![CDATA[<p>The video of my talk at Madison Ruby is online. Automated infrastructure is intimidating but very important, so I encourage conference attendees to dip their toe in the water with a simpler subset of the Chef stack.</p>
 
 <p>bq. Chef is a great tool for managing a vast and complicated server infrastructure, but what if you have fewer servers than fingers? What if you just want a simple little box to host a Rack app? Maybe a staging server to match or a CI server? With little or no prior knowledge of Chef, you can set up a server fairly quickly if you know the right way to set up your kitchen. (They don’t make it obvious. I’ve lost a few fingers in the process.) We’ll walk through the basics of Vagrant, Chef-solo, Knife-solo, using community cookbooks, and writing your own simple cookbooks.</p>
 
 <p>It is is licensed under "Creative Commons Attribution ShareAlike 3.0":http://creativecommons.org/licenses/by-sa/3.0/. I owe a big thank-you to "Confreaks":http://www.confreaks.com/ and "Madison Ruby":http://madisonruby.org/ for making it available online.</p>
 
-<iframe width="640" height="480" src="http://username.github.com/jgarber//www.youtube.com/embed/eaI3OrSFdlM?rel=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="640" height="480" src="http://jgarber.github.com/jgarber//www.youtube.com/embed/eaI3OrSFdlM?rel=0" frameborder="0" allowfullscreen></iframe>
 
 ]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Slides from Writing DSLs with Parslet at Wicked Good Ruby Conference]]></title>
-    <link href="http://username.github.com/jgarber/blog/2013/10/13/slides-from-writing-dsls-with-parslet-talk-at-wicked-good-ruby-conference/"/>
+    <link href="http://jgarber.github.com/jgarber/blog/2013/10/13/slides-from-writing-dsls-with-parslet-talk-at-wicked-good-ruby-conference/"/>
     <updated>2013-10-13T14:40:00-04:00</updated>
-    <id>http://username.github.com/jgarber/blog/2013/10/13/slides-from-writing-dsls-with-parslet-talk-at-wicked-good-ruby-conference</id>
+    <id>http://jgarber.github.com/jgarber/blog/2013/10/13/slides-from-writing-dsls-with-parslet-talk-at-wicked-good-ruby-conference</id>
     <content type="html"><![CDATA[<p>A well-designed DSL improves programmer productivity and communication with domain experts. The Ruby community has produced a number of very popular external DSLs--Coffeescript, HAML, SASS, and Cucumber to name a few.</p>
 
 <p>Parslet makes it easy to write these kinds of DSLs in pure Ruby. In this talk you’ll learn the basics, feel out the limitations of several approaches and find some common solutions. In no time, you’ll have the power to make a great new DSL, slurp in obscure file formats, modify or fork other people’s grammars (like Gherkin, TOML, or JSON), or even write your own programming language!</p>
 
-<script async class="speakerdeck-embed" data-id="441b68c016a7013186827a1b357e9aaa" data-ratio="1.77777777777778" src="http://username.github.com/jgarber//speakerdeck.com/assets/embed.js"></script>
+<script async class="speakerdeck-embed" data-id="441b68c016a7013186827a1b357e9aaa" data-ratio="1.77777777777778" src="http://jgarber.github.com/jgarber//speakerdeck.com/assets/embed.js"></script>
 
 
 

@@ -2,114 +2,114 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>
-            http://username.github.com/jgarber/blog/2012/01/10/deploying-octopress-to-heroku-with-a-custom-buildpack/
+            http://jgarber.github.com/jgarber/blog/2012/01/10/deploying-octopress-to-heroku-with-a-custom-buildpack/
         </loc>
         <lastmod>2015-08-26T17:28:20-04:00</lastmod>
     </url>
     <url>
         <loc>
-            http://username.github.com/jgarber/blog/2012/01/24/benchmarking-ruby-string-conversion/
+            http://jgarber.github.com/jgarber/blog/2012/01/24/benchmarking-ruby-string-conversion/
         </loc>
         <lastmod>2015-08-26T17:28:20-04:00</lastmod>
     </url>
     <url>
         <loc>
-            http://username.github.com/jgarber/blog/2012/02/20/rails-recruitment-solution-hire-an-expert-to-train-an-employee-you-already-like/
+            http://jgarber.github.com/jgarber/blog/2012/02/20/rails-recruitment-solution-hire-an-expert-to-train-an-employee-you-already-like/
         </loc>
         <lastmod>2015-08-26T17:28:20-04:00</lastmod>
     </url>
     <url>
-        <loc>http://username.github.com/jgarber/blog/2012/03/06/i-quit-backblaze/</loc>
+        <loc>http://jgarber.github.com/jgarber/blog/2012/03/06/i-quit-backblaze/</loc>
         <lastmod>2015-08-26T17:28:20-04:00</lastmod>
     </url>
     <url>
         <loc>
-            http://username.github.com/jgarber/blog/2012/05/18/connecting-to-hipchat-from-irc/
-        </loc>
-        <lastmod>2015-08-26T17:28:20-04:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://username.github.com/jgarber/blog/2012/09/22/keyremap4macbook-fixes-the-broken-dvorak-qwerty-cmd-layout/
+            http://jgarber.github.com/jgarber/blog/2012/05/18/connecting-to-hipchat-from-irc/
         </loc>
         <lastmod>2015-08-26T17:28:20-04:00</lastmod>
     </url>
     <url>
         <loc>
-            http://username.github.com/jgarber/blog/2012/09/22/pair-programming-when-you-type-on-different-keyboard-layouts/
+            http://jgarber.github.com/jgarber/blog/2012/09/22/keyremap4macbook-fixes-the-broken-dvorak-qwerty-cmd-layout/
         </loc>
         <lastmod>2015-08-26T17:28:20-04:00</lastmod>
     </url>
     <url>
         <loc>
-            http://username.github.com/jgarber/blog/2012/10/11/ruby-programming-style-and-your-brain/
-        </loc>
-        <lastmod>2015-08-26T17:28:20-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://username.github.com/jgarber/blog/2013/02/11/thief-card-game/</loc>
-        <lastmod>2015-08-26T17:28:20-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://username.github.com/jgarber/blog/2013/05/30/announcing-promptworks/</loc>
-        <lastmod>2015-08-26T17:28:20-04:00</lastmod>
-    </url>
-    <url>
-        <loc>
-            http://username.github.com/jgarber/blog/2013/07/10/speaking-at-madison-ruby-in-august/
+            http://jgarber.github.com/jgarber/blog/2012/09/22/pair-programming-when-you-type-on-different-keyboard-layouts/
         </loc>
         <lastmod>2015-08-26T17:28:20-04:00</lastmod>
     </url>
     <url>
         <loc>
-            http://username.github.com/jgarber/blog/2013/10/13/slides-from-writing-dsls-with-parslet-talk-at-wicked-good-ruby-conference/
+            http://jgarber.github.com/jgarber/blog/2012/10/11/ruby-programming-style-and-your-brain/
+        </loc>
+        <lastmod>2015-08-26T17:28:20-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://jgarber.github.com/jgarber/blog/2013/02/11/thief-card-game/</loc>
+        <lastmod>2015-08-26T17:28:20-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://jgarber.github.com/jgarber/blog/2013/05/30/announcing-promptworks/</loc>
+        <lastmod>2015-08-26T17:28:20-04:00</lastmod>
+    </url>
+    <url>
+        <loc>
+            http://jgarber.github.com/jgarber/blog/2013/07/10/speaking-at-madison-ruby-in-august/
         </loc>
         <lastmod>2015-08-26T17:28:20-04:00</lastmod>
     </url>
     <url>
         <loc>
-            http://username.github.com/jgarber/blog/2013/10/29/video-of-conference-talk-on-small-time-automated-server-provisioning/
+            http://jgarber.github.com/jgarber/blog/2013/10/13/slides-from-writing-dsls-with-parslet-talk-at-wicked-good-ruby-conference/
         </loc>
         <lastmod>2015-08-26T17:28:20-04:00</lastmod>
     </url>
     <url>
         <loc>
-            http://username.github.com/jgarber/blog/2013/11/01/video-of-my-talk-on-writing-dsls-with-parslet/
+            http://jgarber.github.com/jgarber/blog/2013/10/29/video-of-conference-talk-on-small-time-automated-server-provisioning/
         </loc>
-        <lastmod>2015-08-26T17:28:20-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://username.github.com/jgarber/articles/2007/06/23/convert-excel-to-csv/</loc>
         <lastmod>2015-08-26T17:28:20-04:00</lastmod>
     </url>
     <url>
         <loc>
-            http://username.github.com/jgarber/articles/2007/07/23/stay-away-from-toyota-financial-services/
+            http://jgarber.github.com/jgarber/blog/2013/11/01/video-of-my-talk-on-writing-dsls-with-parslet/
         </loc>
         <lastmod>2015-08-26T17:28:20-04:00</lastmod>
     </url>
     <url>
-        <loc>http://username.github.com/jgarber/blog/archives/</loc>
+        <loc>http://jgarber.github.com/jgarber/articles/2007/06/23/convert-excel-to-csv/</loc>
         <lastmod>2015-08-26T17:28:20-04:00</lastmod>
     </url>
     <url>
-        <loc>http://username.github.com/jgarber/blog/</loc>
+        <loc>
+            http://jgarber.github.com/jgarber/articles/2007/07/23/stay-away-from-toyota-financial-services/
+        </loc>
         <lastmod>2015-08-26T17:28:20-04:00</lastmod>
     </url>
     <url>
-        <loc>http://username.github.com/jgarber/</loc>
+        <loc>http://jgarber.github.com/jgarber/blog/archives/</loc>
         <lastmod>2015-08-26T17:28:20-04:00</lastmod>
     </url>
     <url>
-        <loc>http://username.github.com/jgarber/javascripts/scroll-past-header.js</loc>
+        <loc>http://jgarber.github.com/jgarber/blog/</loc>
         <lastmod>2015-08-26T17:28:20-04:00</lastmod>
     </url>
     <url>
-        <loc>http://username.github.com/jgarber/ruby-developer/hire-me/</loc>
+        <loc>http://jgarber.github.com/jgarber/</loc>
         <lastmod>2015-08-26T17:28:20-04:00</lastmod>
     </url>
     <url>
-        <loc>http://username.github.com/jgarber/ruby-developer/</loc>
+        <loc>http://jgarber.github.com/jgarber/javascripts/scroll-past-header.js</loc>
+        <lastmod>2015-08-26T17:28:20-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://jgarber.github.com/jgarber/ruby-developer/hire-me/</loc>
+        <lastmod>2015-08-26T17:28:20-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://jgarber.github.com/jgarber/ruby-developer/</loc>
         <lastmod>2015-08-26T17:28:20-04:00</lastmod>
     </url>
 </urlset>

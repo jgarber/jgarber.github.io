@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Category: hiring | Jason Garber, Ruby developer in Philadelphia]]></title>
-  <link href="http://username.github.com/jgarber/blog/categories/hiring/atom.xml" rel="self"/>
-  <link href="http://username.github.com/jgarber/"/>
-  <updated>2015-08-27T10:19:07-04:00</updated>
-  <id>http://username.github.com/jgarber/</id>
+  <link href="http://jgarber.github.com/jgarber/blog/categories/hiring/atom.xml" rel="self"/>
+  <link href="http://jgarber.github.com/jgarber/"/>
+  <updated>2015-08-27T10:50:28-04:00</updated>
+  <id>http://jgarber.github.com/jgarber/</id>
   <author>
     <name><![CDATA[Jason Garber]]></name>
     
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[Ruby recruitment solution: Hire an expert to train developers you already have and like]]></title>
-    <link href="http://username.github.com/jgarber/blog/2012/02/20/rails-recruitment-solution-hire-an-expert-to-train-an-employee-you-already-like/"/>
+    <link href="http://jgarber.github.com/jgarber/blog/2012/02/20/rails-recruitment-solution-hire-an-expert-to-train-an-employee-you-already-like/"/>
     <updated>2012-02-20T08:08:00-05:00</updated>
-    <id>http://username.github.com/jgarber/blog/2012/02/20/rails-recruitment-solution-hire-an-expert-to-train-an-employee-you-already-like</id>
+    <id>http://jgarber.github.com/jgarber/blog/2012/02/20/rails-recruitment-solution-hire-an-expert-to-train-an-employee-you-already-like</id>
     <content type="html"><![CDATA[<p>Like most well-qualified Ruby developers, recruiters and hiring managers contact me frequently about their open web developer positions. The secret is out that you'll get more bang for your buck with Ruby on Rails than the Java and .NET web frameworks, so small and large companies alike are clamoring for experienced Ruby developers. I read a year or more ago that there's a shortage of at least 1,500 Ruby developers in the United States alone. That number has probably doubled or tripled by now. Everyone faces the same frustration: top Ruby talent is hard to come by.</p>
 
 <!--more-->

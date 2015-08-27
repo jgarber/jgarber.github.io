@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[Jason Garber, Ruby developer in Philadelphia]]></title>
-  <link href="http://username.github.com/jgarber/atom.xml" rel="self"/>
-  <link href="http://username.github.com/jgarber/"/>
-  <updated>2015-08-27T10:19:07-04:00</updated>
-  <id>http://username.github.com/jgarber/</id>
+  <link href="http://jgarber.github.com/jgarber/atom.xml" rel="self"/>
+  <link href="http://jgarber.github.com/jgarber/"/>
+  <updated>2015-08-27T10:50:28-04:00</updated>
+  <id>http://jgarber.github.com/jgarber/</id>
   <author>
     <name><![CDATA[Jason Garber]]></name>
     
@@ -15,39 +15,39 @@
   
   <entry>
     <title type="html"><![CDATA[Video of my talk on writing DSLs with Parslet]]></title>
-    <link href="http://username.github.com/jgarber/blog/2013/11/01/video-of-my-talk-on-writing-dsls-with-parslet/"/>
+    <link href="http://jgarber.github.com/jgarber/blog/2013/11/01/video-of-my-talk-on-writing-dsls-with-parslet/"/>
     <updated>2013-11-01T13:16:00-04:00</updated>
-    <id>http://username.github.com/jgarber/blog/2013/11/01/video-of-my-talk-on-writing-dsls-with-parslet</id>
+    <id>http://jgarber.github.com/jgarber/blog/2013/11/01/video-of-my-talk-on-writing-dsls-with-parslet</id>
     <content type="html"><![CDATA[<p>The video of my talk from <a href="http://wickedgoodruby.com/">Wicked Good Ruby Conf</a> in Boston is online.</p>
 <blockquote>
 <p>A well-designed <span class="caps">DSL</span> improves programmer productivity and communication with domain experts. The Ruby community has produced a number of very popular external DSLs&#8212;Coffeescript, <span class="caps">HAML</span>, <span class="caps">SASS</span>, and Cucumber to name a few.</p>
 <p>Parslet makes it easy to write these kinds of DSLs in pure Ruby. In this talk you’ll learn the basics, feel out the limitations of several approaches and find some common solutions. In no time, you’ll have the power to make a great new <span class="caps">DSL</span>, slurp in obscure file formats, modify or fork other people’s grammars (like Gherkin, <span class="caps">TOML</span>, or <span class="caps">JSON</span>), or even write your own programming language!</p>
 </blockquote>
 <p>It is is licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0</a>. I owe a big thank-you to <a href="http://www.confreaks.com/">Confreaks</a> and Wicked Good Ruby Conf for making it available online.</p>
-<p><iframe width="640" height="480" src="http://username.github.com/jgarber//www.youtube-nocookie.com/embed/ET_POMJNWNs?rel=0" frameborder="0" allowfullscreen></iframe></p>]]></content>
+<p><iframe width="640" height="480" src="http://jgarber.github.com/jgarber//www.youtube-nocookie.com/embed/ET_POMJNWNs?rel=0" frameborder="0" allowfullscreen></iframe></p>]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Video of Conference Talk on Small-Time Automated Server Provisioning]]></title>
-    <link href="http://username.github.com/jgarber/blog/2013/10/29/video-of-conference-talk-on-small-time-automated-server-provisioning/"/>
+    <link href="http://jgarber.github.com/jgarber/blog/2013/10/29/video-of-conference-talk-on-small-time-automated-server-provisioning/"/>
     <updated>2013-10-29T13:54:00-04:00</updated>
-    <id>http://username.github.com/jgarber/blog/2013/10/29/video-of-conference-talk-on-small-time-automated-server-provisioning</id>
+    <id>http://jgarber.github.com/jgarber/blog/2013/10/29/video-of-conference-talk-on-small-time-automated-server-provisioning</id>
     <content type="html"><![CDATA[<p>The video of my talk at Madison Ruby is online. Automated infrastructure is intimidating but very important, so I encourage conference attendees to dip their toe in the water with a simpler subset of the Chef stack.</p>
 <blockquote>
 <p>Chef is a great tool for managing a vast and complicated server infrastructure, but what if you have fewer servers than fingers? What if you just want a simple little box to host a Rack app? Maybe a staging server to match or a CI server? With little or no prior knowledge of Chef, you can set up a server fairly quickly if you know the right way to set up your kitchen. (They don’t make it obvious. I’ve lost a few fingers in the process.) We’ll walk through the basics of Vagrant, Chef-solo, Knife-solo, using community cookbooks, and writing your own simple cookbooks.</p>
 </blockquote>
 <p>It is is licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0</a>. I owe a big thank-you to <a href="http://www.confreaks.com/">Confreaks</a> and <a href="http://madisonruby.org/">Madison Ruby</a> for making it available online.</p>
-<p><iframe width="640" height="480" src="http://username.github.com/jgarber//www.youtube.com/embed/eaI3OrSFdlM?rel=0" frameborder="0" allowfullscreen></iframe></p>]]></content>
+<p><iframe width="640" height="480" src="http://jgarber.github.com/jgarber//www.youtube.com/embed/eaI3OrSFdlM?rel=0" frameborder="0" allowfullscreen></iframe></p>]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Slides from Writing DSLs with Parslet at Wicked Good Ruby Conference]]></title>
-    <link href="http://username.github.com/jgarber/blog/2013/10/13/slides-from-writing-dsls-with-parslet-talk-at-wicked-good-ruby-conference/"/>
+    <link href="http://jgarber.github.com/jgarber/blog/2013/10/13/slides-from-writing-dsls-with-parslet-talk-at-wicked-good-ruby-conference/"/>
     <updated>2013-10-13T14:40:00-04:00</updated>
-    <id>http://username.github.com/jgarber/blog/2013/10/13/slides-from-writing-dsls-with-parslet-talk-at-wicked-good-ruby-conference</id>
+    <id>http://jgarber.github.com/jgarber/blog/2013/10/13/slides-from-writing-dsls-with-parslet-talk-at-wicked-good-ruby-conference</id>
     <content type="html"><![CDATA[<p>A well-designed <span class="caps">DSL</span> improves programmer productivity and communication with domain experts. The Ruby community has produced a number of very popular external DSLs&#8212;Coffeescript, <span class="caps">HAML</span>, <span class="caps">SASS</span>, and Cucumber to name a few.</p>
 <p>Parslet makes it easy to write these kinds of DSLs in pure Ruby. In this talk you’ll learn the basics, feel out the limitations of several approaches and find some common solutions. In no time, you’ll have the power to make a great new <span class="caps">DSL</span>, slurp in obscure file formats, modify or fork other people’s grammars (like Gherkin, <span class="caps">TOML</span>, or <span class="caps">JSON</span>), or even write your own programming language!</p>
-<script async class="speakerdeck-embed" data-id="441b68c016a7013186827a1b357e9aaa" data-ratio="1.77777777777778" src="http://username.github.com/jgarber//speakerdeck.com/assets/embed.js"></script><p><!--more--></p>
+<script async class="speakerdeck-embed" data-id="441b68c016a7013186827a1b357e9aaa" data-ratio="1.77777777777778" src="http://jgarber.github.com/jgarber//speakerdeck.com/assets/embed.js"></script><p><!--more--></p>
 <p>Hello, everyone. I’m Jason Garber and I’m an engineer and co-founder at PromptWorks in Philadelphia. We’re a Ruby and Javascript development consultancy and the three principals have been working with Ruby since 2005.<br />
 We practice test-driven development, we test all the effing time (cheers, Bryan), and all the other things that make us buzzword-compliant.</p>
 <p>It&#8217;s a great place to work and we have a fantastic team. You should ask us about our pairing setup. It’s awesome.</p>
@@ -159,28 +159,28 @@ We have a few minutes for questions.</p>]]></content>
   
   <entry>
     <title type="html"><![CDATA[Speaking at Madison Ruby in August]]></title>
-    <link href="http://username.github.com/jgarber/blog/2013/07/10/speaking-at-madison-ruby-in-august/"/>
+    <link href="http://jgarber.github.com/jgarber/blog/2013/07/10/speaking-at-madison-ruby-in-august/"/>
     <updated>2013-07-10T11:03:00-04:00</updated>
-    <id>http://username.github.com/jgarber/blog/2013/07/10/speaking-at-madison-ruby-in-august</id>
+    <id>http://jgarber.github.com/jgarber/blog/2013/07/10/speaking-at-madison-ruby-in-august</id>
     <content type="html"><![CDATA[<p>I&#8217;ll be giving a talk on Chef at <a href="http://madisonruby.org/">Madison Ruby</a> in Madison, WI, August 23-24.</p>
-<p><a href="http://madisonruby.org/"><img src="http://username.github.com/jgarber/images/madison-ruby-jason-garber.png" alt="Jason Garber speaking at Madison Ruby, August 23-24, 2013" /></a></p>]]></content>
+<p><a href="http://madisonruby.org/"><img src="http://jgarber.github.com/jgarber/images/madison-ruby-jason-garber.png" alt="Jason Garber speaking at Madison Ruby, August 23-24, 2013" /></a></p>]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Announcing PromptWorks]]></title>
-    <link href="http://username.github.com/jgarber/blog/2013/05/30/announcing-promptworks/"/>
+    <link href="http://jgarber.github.com/jgarber/blog/2013/05/30/announcing-promptworks/"/>
     <updated>2013-05-30T16:52:00-04:00</updated>
-    <id>http://username.github.com/jgarber/blog/2013/05/30/announcing-promptworks</id>
+    <id>http://jgarber.github.com/jgarber/blog/2013/05/30/announcing-promptworks</id>
     <content type="html"><![CDATA[<p>I&#8217;ve joined <a href="http://ablegray.com/">Mike Nicholaides</a> and <a href="http://gregsterndale.com/">Greg Sterndale</a> to form a new consultancy:</p>
-<p><a href="http://www.promptworks.com/"><img src="http://username.github.com/jgarber/images/promptworks-logo.png" alt="PromptWorks" /></a></p>
+<p><a href="http://www.promptworks.com/"><img src="http://jgarber.github.com/jgarber/images/promptworks-logo.png" alt="PromptWorks" /></a></p>
 <p><a href="http://www.promptworks.com/">PromptWorks</a> is the premier Philadelphia software consulting shop, specializing in Ruby, JavaScript and related technologies. With a collective 30 years of software experience, we are industry veterans with unmatched technical chops. In addition to helping businesses build new web apps and APIs, we solve problems with existing apps like scaling, testing and automating development operations.</p>]]></content>
   </entry>
   
   <entry>
     <title type="html"><![CDATA[Thief card game]]></title>
-    <link href="http://username.github.com/jgarber/blog/2013/02/11/thief-card-game/"/>
+    <link href="http://jgarber.github.com/jgarber/blog/2013/02/11/thief-card-game/"/>
     <updated>2013-02-11T11:30:00-05:00</updated>
-    <id>http://username.github.com/jgarber/blog/2013/02/11/thief-card-game</id>
+    <id>http://jgarber.github.com/jgarber/blog/2013/02/11/thief-card-game</id>
     <content type="html"><![CDATA[<p>My extended family has been playing a card game called Thief for the past several years. It&#8217;s been passed along orally through the network of grandparents and retirees, but we cousins have really enjoyed playing it too! The stealing element is what makes it so competetive and fun. Trash talk is a key feature of the game.</p>
 <p>I can&#8217;t find the rules anywhere on the Web, so I asked my mom to write them down. Reply in the comments with questions or corrections to the rules. If you know this game by another name, I&#8217;d love to know and have some official rules to consult.</p>
 <p><!--more--></p>
@@ -224,9 +224,9 @@ We have a few minutes for questions.</p>]]></content>
   
   <entry>
     <title type="html"><![CDATA[Ruby Programming Style and Your Brain]]></title>
-    <link href="http://username.github.com/jgarber/blog/2012/10/11/ruby-programming-style-and-your-brain/"/>
+    <link href="http://jgarber.github.com/jgarber/blog/2012/10/11/ruby-programming-style-and-your-brain/"/>
     <updated>2012-10-11T08:01:00-04:00</updated>
-    <id>http://username.github.com/jgarber/blog/2012/10/11/ruby-programming-style-and-your-brain</id>
+    <id>http://jgarber.github.com/jgarber/blog/2012/10/11/ruby-programming-style-and-your-brain</id>
     <content type="html"><![CDATA[<p>Last week someone was looking over my shoulder as I typed a command to run a script. It was something mundane, like <code>./script/test</code>. He said, &#8220;you know, you don&#8217;t have to type the dot slash,&#8221; and I thought, &#8220;Wow, he&#8217;s right; I&#8217;ve been typing those extra characters for years!&#8221;</p>
 <p>Just a little later, I ran a different command in the script directory and this time I didn&#8217;t use the dot slash. <code>sc</code> <code>Tab ↹</code></p>
 <pre><code>SCREEN_NO        scandeps.pl      schemagen        script         
@@ -244,13 +244,13 @@ sc_usage         sched            screencapture    scutil </code></pre>
   
   <entry>
     <title type="html"><![CDATA[Pair programming when you type on different keyboard layouts]]></title>
-    <link href="http://username.github.com/jgarber/blog/2012/09/22/pair-programming-when-you-type-on-different-keyboard-layouts/"/>
+    <link href="http://jgarber.github.com/jgarber/blog/2012/09/22/pair-programming-when-you-type-on-different-keyboard-layouts/"/>
     <updated>2012-09-22T09:00:00-04:00</updated>
-    <id>http://username.github.com/jgarber/blog/2012/09/22/pair-programming-when-you-type-on-different-keyboard-layouts</id>
+    <id>http://jgarber.github.com/jgarber/blog/2012/09/22/pair-programming-when-you-type-on-different-keyboard-layouts</id>
     <content type="html"><![CDATA[<p>At <a href="http://mashion.net">work</a> we&#8217;re often <a href="http://en.wikipedia.org/wiki/Pair_programming">pair programming</a> and we have the ideal <a href="http://matschaffer.com/2012/07/mashion-pairing-rig/">pairing rig</a>, but one thing wasn&#8217;t ideal: I&#8217;m the only one who types on the <a href="http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard">Dvorak keyboard layout</a>.</p>
 <p>Pairing with two different keyboard layouts means you have to switch input modes a lot. Usually it involves a little bewilderment as vim scrambles your code before you remember that you&#8217;re in the wrong mode.</p>
 <p>I hated that my choice of keyboard layout was a burden on my pairing partners, so eventually I found a software solution: <a href="http://pqrs.org/macosx/keyremap4macbook/">KeyRemap4MacBook</a></p>
-<p>I&#8217;ve dropped Dvorak-Qwerty ⌘, which <a href="http://username.github.com/jgarber/blog/2012/09/22/keyremap4macbook-fixes-the-broken-dvorak-qwerty-cmd-layout/">is broken</a>, and now just use the Dvorak input source with KeyRemap4MacBook converting my ⌘ keypresses.</p>
+<p>I&#8217;ve dropped Dvorak-Qwerty ⌘, which <a href="http://jgarber.github.com/jgarber/blog/2012/09/22/keyremap4macbook-fixes-the-broken-dvorak-qwerty-cmd-layout/">is broken</a>, and now just use the Dvorak input source with KeyRemap4MacBook converting my ⌘ keypresses.</p>
 <p>I also made one of the keyboards at each pairing station &#8220;mine&#8221; and then set KeyRemap4MacBook to convert the Qwerty keypresses of the others to Dvorak, but only when my computer is in Dvorak input mode.</p>
 <p><!--more--></p>
 <p>So I still have &#8220;U.S.&#8221; (Qwerty) as an input source on my computer, and in that case KeyRemap4MacBook does nothing, but when I switch it to Dvorak, my built-in keyboard and one keyboard at each pairing station act as Dvorak. The others act as Qwerty, so my pairing partners don&#8217;t even notice that my computer is set to Dvorak. In either mode, they type Qwerty.</p>
@@ -260,9 +260,9 @@ sc_usage         sched            screencapture    scutil </code></pre>
   
   <entry>
     <title type="html"><![CDATA[KeyRemap4MacBook fixes the broken 'Dvorak - Qwerty ⌘' layout]]></title>
-    <link href="http://username.github.com/jgarber/blog/2012/09/22/keyremap4macbook-fixes-the-broken-dvorak-qwerty-cmd-layout/"/>
+    <link href="http://jgarber.github.com/jgarber/blog/2012/09/22/keyremap4macbook-fixes-the-broken-dvorak-qwerty-cmd-layout/"/>
     <updated>2012-09-22T08:00:00-04:00</updated>
-    <id>http://username.github.com/jgarber/blog/2012/09/22/keyremap4macbook-fixes-the-broken-dvorak-qwerty-cmd-layout</id>
+    <id>http://jgarber.github.com/jgarber/blog/2012/09/22/keyremap4macbook-fixes-the-broken-dvorak-qwerty-cmd-layout</id>
     <content type="html"><![CDATA[<p>I switched to the <a href="http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard">Dvorak keyboard layout</a> over Christmas break in 2001, figuring that if I were to spend the next 80 years typing, a couple weeks re-learning to touch type would be worth it.</p>
 <p>And it has been. My hands just never get tired of typing, which is good because I spend all day at it. There are only two problems with being in the minority on this:</p>
 <ol>
@@ -272,7 +272,7 @@ sc_usage         sched            screencapture    scutil </code></pre>
 <p><!--more--></p>
 <p>The first problem I solved early on by using a keyboard layout that is Dvorak except when you&#8217;re holding down the command key. On a Mac, this is the &#8220;Dvorak &#8211; Qwerty ⌘&#8221; input source.</p>
 <p>Since I learned touch-typing on Qwerty, I can switch between the layouts in my head with some effort or just look at the keys as I type, so the second problem isn&#8217;t a very big one for infrequent and short-term Qwerty use. For the computer I shared with my wife for three or four years, we got used to switching input modes from the menubar or by shortcut key.</p>
-<p>This year, I almost quit Dvorak when I discovered <a href="https://groups.google.com/forum/#!msg/keyremap4macbook/QNZ3LGsKNFE/Yg-jlbAoL-QJ">Apple&#8217;s Dvorak &#8211; Qwerty ⌘ layout is broken</a> and there&#8217;s <a href="https://github.com/textmate/textmate/issues/241">no way to get to some shortcut keys</a>. That was a minor frustration compared to how it made <a href="http://username.github.com/jgarber/blog/2012/09/22/pair-programming-when-you-type-on-different-keyboard-layouts/">pair programming more complicated</a>.</p>
+<p>This year, I almost quit Dvorak when I discovered <a href="https://groups.google.com/forum/#!msg/keyremap4macbook/QNZ3LGsKNFE/Yg-jlbAoL-QJ">Apple&#8217;s Dvorak &#8211; Qwerty ⌘ layout is broken</a> and there&#8217;s <a href="https://github.com/textmate/textmate/issues/241">no way to get to some shortcut keys</a>. That was a minor frustration compared to how it made <a href="http://jgarber.github.com/jgarber/blog/2012/09/22/pair-programming-when-you-type-on-different-keyboard-layouts/">pair programming more complicated</a>.</p>
 <p><a href="http://pqrs.org/macosx/keyremap4macbook/">KeyRemap4MacBook</a> solved these problems. I&#8217;ve dropped Dvorak-Qwerty ⌘ and now just use the Dvorak input source with KeyRemap4MacBook converting my ⌘ keypresses.  ⌘ + and &#8211; makes my text bigger and smaller and I can <code>&lt;Ctrl-W&gt;</code> in vim again&#8212;two glitches peculiar to Dvorak &#8211; Qwerty ⌘.</p>
 <p>My <a href="https://gist.github.com/3494247">private.xml file</a>, which is how you make custom mappings in KeyRemap4Macbook, contains the mapping, along with some device_only and device_not filters that limit it to a certain set of keyboards at work, where our multitude of bluetooth devices are named after well-known Rubyists.</p>
 <script src="https://gist.github.com/3494247.js?file=private.xml"></script>]]></content>
@@ -280,9 +280,9 @@ sc_usage         sched            screencapture    scutil </code></pre>
   
   <entry>
     <title type="html"><![CDATA[Connecting to HipChat from IRC]]></title>
-    <link href="http://username.github.com/jgarber/blog/2012/05/18/connecting-to-hipchat-from-irc/"/>
+    <link href="http://jgarber.github.com/jgarber/blog/2012/05/18/connecting-to-hipchat-from-irc/"/>
     <updated>2012-05-18T12:39:00-04:00</updated>
-    <id>http://username.github.com/jgarber/blog/2012/05/18/connecting-to-hipchat-from-irc</id>
+    <id>http://jgarber.github.com/jgarber/blog/2012/05/18/connecting-to-hipchat-from-irc</id>
     <content type="html"><![CDATA[<p>My friends at <a href="http://www.indyhall.org/">IndyHall</a> are always talking on HipChat, but I too often forget to open HipChat in my browser and I&#8217;m not interested in running their Adobe <span class="caps">AIR</span> app. I have been on <span class="caps">IRC</span> a lot lately thanks to the Philly Ruby community, so getting my IndyHall hipchats on <span class="caps">IRC</span> has been an itch I&#8217;ve needed to scratch for awhile.</p>
 <p><!--more--></p>
 <p><a href="http://treehouseagency.com/about-us/team/steven-merrill">Steven Merrill</a> has a nice <a href="http://treehouseagency.com/blog/steven-merrill/2011/12/15/using-hipchat-through-irc-client-bitlbee">writeup</a> on using HipChat with <span class="caps">IRC</span> through <a href="http://www.bitlbee.org/">BitlBee</a>. I started installing BitlBee to run on my Mac, but then realized there are <a href="http://www.bitlbee.org/main.php/servers.html">public servers running BitlBee</a> thanks to kind people around the world. I picked <a href="http://www.irc.net/"><span class="caps">IRC</span>.net</a> since Pittsburgh is close to Philly.</p>
@@ -308,9 +308,9 @@ sc_usage         sched            screencapture    scutil </code></pre>
   
   <entry>
     <title type="html"><![CDATA[I quit Backblaze]]></title>
-    <link href="http://username.github.com/jgarber/blog/2012/03/06/i-quit-backblaze/"/>
+    <link href="http://jgarber.github.com/jgarber/blog/2012/03/06/i-quit-backblaze/"/>
     <updated>2012-03-06T08:34:00-05:00</updated>
-    <id>http://username.github.com/jgarber/blog/2012/03/06/i-quit-backblaze</id>
+    <id>http://jgarber.github.com/jgarber/blog/2012/03/06/i-quit-backblaze</id>
     <content type="html"><![CDATA[<p>Three reasons I quit Backblaze, the cloud backup service that lets you back up an unlimited amount of data from a single computer:</p>
 <ol>
 	<li>Poor <a href="http://www.haystacksoftware.com/arq/backblaze-backup-bouncer-test.txt">Backup Bouncer test results</a>. When I restore files to my Mac, I want all the metadata too. I&#8217;m a programmer so ownership, permissions, timestamps, and symlinks are important to me on my development machine.</li>
@@ -323,9 +323,9 @@ sc_usage         sched            screencapture    scutil </code></pre>
   
   <entry>
     <title type="html"><![CDATA[Ruby recruitment solution: Hire an expert to train developers you already have and like]]></title>
-    <link href="http://username.github.com/jgarber/blog/2012/02/20/rails-recruitment-solution-hire-an-expert-to-train-an-employee-you-already-like/"/>
+    <link href="http://jgarber.github.com/jgarber/blog/2012/02/20/rails-recruitment-solution-hire-an-expert-to-train-an-employee-you-already-like/"/>
     <updated>2012-02-20T08:08:00-05:00</updated>
-    <id>http://username.github.com/jgarber/blog/2012/02/20/rails-recruitment-solution-hire-an-expert-to-train-an-employee-you-already-like</id>
+    <id>http://jgarber.github.com/jgarber/blog/2012/02/20/rails-recruitment-solution-hire-an-expert-to-train-an-employee-you-already-like</id>
     <content type="html"><![CDATA[<p>Like most well-qualified Ruby developers, recruiters and hiring managers contact me frequently about their open web developer positions. The secret is out that you&#8217;ll get more bang for your buck with Ruby on Rails than the Java and .<span class="caps">NET</span> web frameworks, so small and large companies alike are clamoring for experienced Ruby developers. I read a year or more ago that there&#8217;s a shortage of at least 1,500 Ruby developers in the United States alone. That number has probably doubled or tripled by now. Everyone faces the same frustration: top Ruby talent is hard to come by.</p>
 <p><!--more--></p>
 <p>This works out well for someone like me who started with Ruby in 2005, when Rails was in its infancy. I have nearly seven years of experience with Rails, ten years of writing web applications, and 15 years of <span class="caps">HTML</span>, <span class="caps">CSS</span>, and Javascript. You can find workers aplenty who list Rails on their résumé but have really only dipped a toe in the water, which doesn&#8217;t cut it. There&#8217;s definitely a &#8220;Ruby way&#8221; and you can tell just by looking at someone&#8217;s code to what degree they get it. Even without looking at code samples, when I look through candidates on oDesk or eLance, I can safely assume the ones who title themselves things like &#8220;Senior Ruby/<span class="caps">PHP</span>/Java/Drupal/Coldfusion developer&#8221; are not competent Rubyists&#8212;probably not competent anythingists. I pass over candidates if they so much as mention <span class="caps">PHP</span> in their description.</p>
@@ -352,9 +352,9 @@ sc_usage         sched            screencapture    scutil </code></pre>
   
   <entry>
     <title type="html"><![CDATA[Benchmarking Ruby String Conversion]]></title>
-    <link href="http://username.github.com/jgarber/blog/2012/01/24/benchmarking-ruby-string-conversion/"/>
+    <link href="http://jgarber.github.com/jgarber/blog/2012/01/24/benchmarking-ruby-string-conversion/"/>
     <updated>2012-01-24T11:14:00-05:00</updated>
-    <id>http://username.github.com/jgarber/blog/2012/01/24/benchmarking-ruby-string-conversion</id>
+    <id>http://jgarber.github.com/jgarber/blog/2012/01/24/benchmarking-ruby-string-conversion</id>
     <content type="html"><![CDATA[<p>I have a class (<code>Parslet::Slice</code>, to be precise) that inherits from String but needs to be converted back to a string. Which is faster, <code>String#to_s</code> or <code>String()</code>? My hunch is the latter, but I can find out for sure in about a minute:</p>
 <p><!--more--></p>
 <div><script src='https://gist.github.com/1670877.js?file='></script><br />
@@ -444,9 +444,9 @@ end</code></pre></noscript></div>
   
   <entry>
     <title type="html"><![CDATA[Deploying Octopress to Heroku with a custom buildpack]]></title>
-    <link href="http://username.github.com/jgarber/blog/2012/01/10/deploying-octopress-to-heroku-with-a-custom-buildpack/"/>
+    <link href="http://jgarber.github.com/jgarber/blog/2012/01/10/deploying-octopress-to-heroku-with-a-custom-buildpack/"/>
     <updated>2012-01-10T16:00:00-05:00</updated>
-    <id>http://username.github.com/jgarber/blog/2012/01/10/deploying-octopress-to-heroku-with-a-custom-buildpack</id>
+    <id>http://jgarber.github.com/jgarber/blog/2012/01/10/deploying-octopress-to-heroku-with-a-custom-buildpack</id>
     <content type="html"><![CDATA[<p>I&#8217;ve had apps on Heroku since 2009, but over the last year or so I&#8217;ve been deploying apps there more and more. With the advent of the Cedar stack, there&#8217;s less and less you can&#8217;t do. Compared to provisioning a virtual server, even with the help of <a href="https://github.com/railsmachine/moonshine">moonshine</a>, you can&#8217;t beat <code>heroku create --stack cedar</code>: <strong>boom</strong>, you have a live site with backups, logging, release management and the running of migrations and asset compilation on deploy. In just another few minutes, you can have <span class="caps">SSL</span>, rotating database backups, NewRelic, HopToad, cron, <span class="caps">DNS</span>, monitoring, and myriad other addons.</p>
 <p>When I switched my blog from Radiant <span class="caps">CMS</span> to Octopress, I wanted to keep the site on Heroku. It&#8217;s free under normal scenarios and if I ever get on HackerNews or Reddit, I just have to scale up my web processes and pay a bit to keep the site responsive. If I were to be so fortunate,  I wouldn&#8217;t have to scramble to set up load balancing on Linode or even wait while my slice resized. Yay cloud!</p>
 <p>The <a href="http://octopress.org/docs/deploying/heroku/">standard method for deploying Octopress to Heroku</a> involves generating your site, checking in the generated contents (within the <code>public/</code> folder), and deploying to Heroku. As <a href="http://www.mwmanning.com/2011/11/29/Run-Your-Jekyll-Site-On-Heroku.html">Matthew Manning noted</a>, neither having to check in generated content nor having it generated on-the-fly is ideal. We really need to hook into Heroku&#8217;s build phase.</p>
