@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: consulting | Jason Garber, Ruby developer in Philadelphia]]></title>
+  <link href="http://username.github.com/jgarber/blog/categories/consulting/atom.xml" rel="self"/>
+  <link href="http://username.github.com/jgarber/"/>
+  <updated>2015-08-27T10:19:07-04:00</updated>
+  <id>http://username.github.com/jgarber/</id>
+  <author>
+    <name><![CDATA[Jason Garber]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Announcing PromptWorks]]></title>
+    <link href="http://username.github.com/jgarber/blog/2013/05/30/announcing-promptworks/"/>
+    <updated>2013-05-30T16:52:00-04:00</updated>
+    <id>http://username.github.com/jgarber/blog/2013/05/30/announcing-promptworks</id>
+    <content type="html"><![CDATA[<p>I've joined "Mike Nicholaides":http://ablegray.com/ and "Greg Sterndale":http://gregsterndale.com/ to form a new consultancy:</p>
+
+<p><a href="http://www.promptworks.com/"><img src="http://username.github.com/jgarber/images/promptworks-logo.png" alt="PromptWorks" /></a></p>
+
+<p>"PromptWorks":http://www.promptworks.com/ is the premier Philadelphia software consulting shop, specializing in Ruby, JavaScript and related technologies. With a collective 30 years of software experience, we are industry veterans with unmatched technical chops. In addition to helping businesses build new web apps and APIs, we solve problems with existing apps like scaling, testing and automating development operations.</p>
+]]></content>
+  </entry>
+  
+</feed>

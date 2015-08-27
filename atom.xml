@@ -1,0 +1,567 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Jason Garber, Ruby developer in Philadelphia]]></title>
+  <link href="http://username.github.com/jgarber/atom.xml" rel="self"/>
+  <link href="http://username.github.com/jgarber/"/>
+  <updated>2015-08-27T10:19:07-04:00</updated>
+  <id>http://username.github.com/jgarber/</id>
+  <author>
+    <name><![CDATA[Jason Garber]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Video of my talk on writing DSLs with Parslet]]></title>
+    <link href="http://username.github.com/jgarber/blog/2013/11/01/video-of-my-talk-on-writing-dsls-with-parslet/"/>
+    <updated>2013-11-01T13:16:00-04:00</updated>
+    <id>http://username.github.com/jgarber/blog/2013/11/01/video-of-my-talk-on-writing-dsls-with-parslet</id>
+    <content type="html"><![CDATA[<p>The video of my talk from <a href="http://wickedgoodruby.com/">Wicked Good Ruby Conf</a> in Boston is online.</p>
+<blockquote>
+<p>A well-designed <span class="caps">DSL</span> improves programmer productivity and communication with domain experts. The Ruby community has produced a number of very popular external DSLs&#8212;Coffeescript, <span class="caps">HAML</span>, <span class="caps">SASS</span>, and Cucumber to name a few.</p>
+<p>Parslet makes it easy to write these kinds of DSLs in pure Ruby. In this talk you’ll learn the basics, feel out the limitations of several approaches and find some common solutions. In no time, you’ll have the power to make a great new <span class="caps">DSL</span>, slurp in obscure file formats, modify or fork other people’s grammars (like Gherkin, <span class="caps">TOML</span>, or <span class="caps">JSON</span>), or even write your own programming language!</p>
+</blockquote>
+<p>It is is licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0</a>. I owe a big thank-you to <a href="http://www.confreaks.com/">Confreaks</a> and Wicked Good Ruby Conf for making it available online.</p>
+<p><iframe width="640" height="480" src="http://username.github.com/jgarber//www.youtube-nocookie.com/embed/ET_POMJNWNs?rel=0" frameborder="0" allowfullscreen></iframe></p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Video of Conference Talk on Small-Time Automated Server Provisioning]]></title>
+    <link href="http://username.github.com/jgarber/blog/2013/10/29/video-of-conference-talk-on-small-time-automated-server-provisioning/"/>
+    <updated>2013-10-29T13:54:00-04:00</updated>
+    <id>http://username.github.com/jgarber/blog/2013/10/29/video-of-conference-talk-on-small-time-automated-server-provisioning</id>
+    <content type="html"><![CDATA[<p>The video of my talk at Madison Ruby is online. Automated infrastructure is intimidating but very important, so I encourage conference attendees to dip their toe in the water with a simpler subset of the Chef stack.</p>
+<blockquote>
+<p>Chef is a great tool for managing a vast and complicated server infrastructure, but what if you have fewer servers than fingers? What if you just want a simple little box to host a Rack app? Maybe a staging server to match or a CI server? With little or no prior knowledge of Chef, you can set up a server fairly quickly if you know the right way to set up your kitchen. (They don’t make it obvious. I’ve lost a few fingers in the process.) We’ll walk through the basics of Vagrant, Chef-solo, Knife-solo, using community cookbooks, and writing your own simple cookbooks.</p>
+</blockquote>
+<p>It is is licensed under <a href="http://creativecommons.org/licenses/by-sa/3.0/">Creative Commons Attribution ShareAlike 3.0</a>. I owe a big thank-you to <a href="http://www.confreaks.com/">Confreaks</a> and <a href="http://madisonruby.org/">Madison Ruby</a> for making it available online.</p>
+<p><iframe width="640" height="480" src="http://username.github.com/jgarber//www.youtube.com/embed/eaI3OrSFdlM?rel=0" frameborder="0" allowfullscreen></iframe></p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Slides from Writing DSLs with Parslet at Wicked Good Ruby Conference]]></title>
+    <link href="http://username.github.com/jgarber/blog/2013/10/13/slides-from-writing-dsls-with-parslet-talk-at-wicked-good-ruby-conference/"/>
+    <updated>2013-10-13T14:40:00-04:00</updated>
+    <id>http://username.github.com/jgarber/blog/2013/10/13/slides-from-writing-dsls-with-parslet-talk-at-wicked-good-ruby-conference</id>
+    <content type="html"><![CDATA[<p>A well-designed <span class="caps">DSL</span> improves programmer productivity and communication with domain experts. The Ruby community has produced a number of very popular external DSLs&#8212;Coffeescript, <span class="caps">HAML</span>, <span class="caps">SASS</span>, and Cucumber to name a few.</p>
+<p>Parslet makes it easy to write these kinds of DSLs in pure Ruby. In this talk you’ll learn the basics, feel out the limitations of several approaches and find some common solutions. In no time, you’ll have the power to make a great new <span class="caps">DSL</span>, slurp in obscure file formats, modify or fork other people’s grammars (like Gherkin, <span class="caps">TOML</span>, or <span class="caps">JSON</span>), or even write your own programming language!</p>
+<script async class="speakerdeck-embed" data-id="441b68c016a7013186827a1b357e9aaa" data-ratio="1.77777777777778" src="http://username.github.com/jgarber//speakerdeck.com/assets/embed.js"></script><p><!--more--></p>
+<p>Hello, everyone. I’m Jason Garber and I’m an engineer and co-founder at PromptWorks in Philadelphia. We’re a Ruby and Javascript development consultancy and the three principals have been working with Ruby since 2005.<br />
+We practice test-driven development, we test all the effing time (cheers, Bryan), and all the other things that make us buzzword-compliant.</p>
+<p>It&#8217;s a great place to work and we have a fantastic team. You should ask us about our pairing setup. It’s awesome.</p>
+<p>The Ruby community is thriving in Philadelphia; We’ve doubled in size in the past year. We love having speakers and guests from other cities, so please come. The view from the 45th floor where we have our meetups is spectacular.</p>
+<p>This talk is about parsing, but first I’d like to frame it by talking about DSLs.<br />
+Domain-Specific Languages are those computer languages that are targeted to a particular problem domain rather than general-purpose languages that can be applied to any kind of software problem.</p>
+<p>People find DSLs valuable because a well-designed <span class="caps">DSL</span> can be much easier to program in, which improves your productivity, and much easier to read, which helps someone new understand your code more easily.</p>
+<p>In some cases it also improves communication with domain experts. If you’re doubtful that any non-programmer can read DSLs much less write code with them, that’s very understandable and I’d be glad to discuss it over a beer.</p>
+<p>About a decade ago, when Java and C# were dominant, developers found themselves writing a lot of <span class="caps">XML</span>. Despite its noisy syntax, it let them define their own vocabulary and provided a strong hierarchic structure. It was ugly, but obviously provided value to its host language.<br />
+Then Rails came along and blew everybody’s minds with its fluent, dynamic Ruby code. No more <span class="caps">XML</span> sit-ups, <span class="caps">DHH</span> proclaimed. It was like programming in a specialized language, almost to the point that saying you were a Rails developer didn’t necessarily mean you were any good at Ruby.<br />
+We talk a lot about Domain-Specific Languages in the Ruby community in part because Ruby is a language that facilitates writing them so well. You can express a lot of things, especially configuration, much better with a <span class="caps">DSL</span> than you could if you only had functions and primitives at your disposal. If you’ve ever tried to write a <span class="caps">DSL</span> in JavaScript, you can appreciate how nice Ruby is for making DSLs.<br />
+Let’s see if you can identify some Ruby DSLs. Let’s start with an easy one. Shout it out when you know it.<br />
+•	Rails Router<br />
+•	RSpec<br />
+•	Capybara<br />
+•	Rake<br />
+•	Sinatra<br />
+•	Parslet – the subject of this talk</p>
+<p>All of these are all what Martin Fowler calls internal DSLs. Some people also call them embedded DSLs. They use Ruby itself to make programming in Ruby easier and <span class="caps">DRY</span> up repetition.<br />
+There’s also something called external DSLs. External DSLs have their own custom syntax and you write a full parser to process them. Unix is full of external DSLs.<br />
+Let’s see which of these you recognize.<br />
+•	Nginx config<br />
+•	Regular expressions<br />
+•	<span class="caps">SQL</span><br />
+•	<span class="caps">AWK</span><br />
+•	<span class="caps">SLIM</span><br />
+•	Cucumber<br />
+•	Puppet<br />
+•	Markdown<br />
+•	<span class="caps">TOML</span> &#8211; Tom&#8217;s Obvious, Minimal Language<br />
+•	LilyPond<br />
+•	PostScript<br />
+•	<span class="caps">SCSS</span> – an excellent example of communicating with domain experts, most people who program <span class="caps">CSS</span> don&#8217;t consider themselves to be programming</p>
+<p>Can you imagine styling <span class="caps">HTML</span> elements without <span class="caps">CSS</span> syntax?<br />
+External DSLs have to be parsed, and the traditional solution is <span class="caps">ANTLR</span> or <span class="caps">YACC</span> or <span class="caps">RACC</span>. You write your grammar, then you compile it to a parser, then you test it on some input and see if it parses correctly.<br />
+How many people are familiar with Textile? It’s a <span class="caps">DSL</span> that’s a shortcut to <span class="caps">HTML</span>. It has most of the same elements as <span class="caps">HTML</span>, but in a format that’s easier to write and a little easier on the eyes too.<br />
+I worked for a number of years on the Ruby parser for Textile called RedCloth&#8230;<br />
+Why The Lucky Stiff started it in 2004 as a direct port from <span class="caps">PHP</span> Textile.<br />
+It was just basically a few hundred lines of gsubs. That was a mess and we all new it. It was a mess in <span class="caps">PHP</span>, of course, but _why gradually added tests and fixed bugs. Still, it was prone to regressions and was really unreliable from version to version.<br />
+Regular expressions aren’t designed for the kind of parsing that it was trying to do. And, they were slow. Each of the gsubs had to run over the input separately, which is obviously really inefficient.</p>
+<p>So, in 2007 he started a rewrite in Ragel and called it SuperRedCloth.<br />
+Here’s some Ragel from SuperRedCloth. Ragel is a language that generates finite state machines in C, Java, or Ruby. Zed Shaw famously used it to write Mongrel.<br />
+SuperRedCloth was compiled as a Ruby C extension and it was about 40 times faster than the previous RedCloth.<br />
+As _why’s commits started trailing off, I started contributing and after awhile,<br />
+he turned the project over to me. I released the rewrite as RedCloth version 4.0 and kept hacking on it for a few years, even long after _why disappeared.<br />
+The problem, though, was that it started out relatively clean (for C code) and fast, but got increasingly hard to add features, fix bugs, and not slow it down. Ragel didn’t handle the complexity I was throwing at it very well or maybe I just didn’t know what I was doing.<br />
+Either way, it wasn’t fun to figure out what was going on inside the generated state machine. The generated code is mostly just tables of numbers.<br />
+Worst of all, I had very few contributors. It’s been on GitHub since 2008, but hardly anyone ever sends me pull requests. A couple hundred people filed bugs, but only about a dozen made contributions. It’s just too hard to work with this stuff.<br />
+So, I set out to rewrite RedCloth. I wanted something that was native Ruby—no more waiting for the gem to compile; no more cross-compilation for Windows and JRuby—and I wanted something that people could contribute to more easily.<br />
+I experimented with a variety of approaches: Going back to regular expressions but doing it smarter; I toyed with a custom parser; and I spent the most time building a parser in Treetop.<br />
+Treetop was quite popular for awhile. Cucumber used it for parsing Gherkin syntax. It had its own <span class="caps">DSL</span> for the grammar, which it then parsed and generated a Ruby parser. I got quite a ways but discovered a couple of problems:</p>
+<p>One, it was slow. I contributed some patches to make it faster, but it still was nowhere near as fast as it needed to be.</p>
+<p>There were also some problems with parsing some edge cases. I just couldn’t figure out how to do it. And, since I could only test end-to-end, figuring out what the parser was doing was really difficult. Eventually, I gave up.</p>
+<p>I also looked at Citrus by Michael J. I. Jackson, which uses a similar grammar to Treetop but doesn’t generate the parser; it keeps it in memory. I had actually started a similar project, but didn’t make it very far.</p>
+<p>Then one evening I was checking my email from a café in Nicaragua, when I read about a new library from Kaspar Schiess called Parslet and I got very excited.<br />
+Parslet is an internal <span class="caps">DSL</span> to construct your parser. We just make a parser class that inherits from Parslet, then specify a rule with a block. In that block, we’re going to match a digit one or more times. We have to declare the root rule of the parser and we can use it right away. There’s no compilation, there’s no new syntax to learn. You just have to learn the Parslet <span class="caps">DSL</span>.</p>
+<p>The parsing <span class="caps">DSL</span> in Parslet consists of just three methods, which create instances of subclasses of Parslet::Atom. To match a string, you use str.<br />
+The atom is a parser, so you can just call the parse method on it.<br />
+The result is an object that looks like a string, but is actually a Parslet::Slice. It’s basically a string that knows its offset from the input string.<br />
+The second kind of Parslet atom matches a single character. It’s like a regular expression that only matches a single character. It can use regex metacharacters and <span class="caps">POSIX</span> bracket expressions as well.<br />
+And finally, there’s an atom that matches any character.<br />
+Parslet has defined methods for sequences and alternation.  The double greater-than means the one atom is followed by the other.<br />
+The vertical pipe means it first tries to match the expression on the left and if that fails, tries the expression on the right.<br />
+Precedence works logically. You can use parentheses to change it.<br />
+Atoms can be repeated. The default repeats 0 or more times.<br />
+The next one repeats foo one or more times.<br />
+The next one repeats one two three times.<br />
+This one is the same as the default<br />
+Maybe is just zero or one, but it returns nil instead of an empty array.<br />
+Parslet can also do positive and negative lookahead. Here we’re expecting to match the word Java, but we want to make sure it’s not Java all by itself; it has to have Script after it. We’re not, however, consuming those characters just yet.</p>
+<p>It’s just the opposite for absent?. This will match multiple digits, but only if it doesn’t start with zeroes.</p>
+<p>That was the first step: defining the grammar<br />
+Now we have to pick out the parts we want. Thankfully, it’s really easy.<br />
+By default, atoms just return their slice. If you want to annotate it, just use the as method on it. It makes the name you give it the key in the hash.<br />
+When you capture a repetition, you just get one slice in your hash.<br />
+When you repeat a capture, you get several hashes.<br />
+When you have multiple captures, they get combined into the same hash and the unlabeled strings are discarded.<br />
+Let’s practice reading an example of a Textile table parser.<br />
+If you’re not familiar with Textile, here’s how you make a table and beside it is the <span class="caps">HTML</span> it puts out. The first line is optional unless you need to specify a <span class="caps">CSS</span> id or class.<br />
+We start by making a rule for a table that starts with the word ‘table’, is potentially followed by some attributes, which get captured with a name, then that’s followed by a newline. Except, all of that is optional. Then it’s followed by one or more table rows, which are the content of the table.<br />
+You can do all the usual Ruby things in these parsers: method extraction, class inheritance, composition, duck punching…whatever. Here we’re making a method that takes an argument and wraps it in parentheses strings.<br />
+Here I have an <span class="caps">HTML</span> tag parser and then I make a subclass that only matches block <span class="caps">HTML</span> tags. It does it by overriding the :tag_name rule. And what constitutes an inline tag name? Well, we have a constant that contains an array of them, which we map and reduce into a set of all the possibilities for inline tags. Anything we can do in Ruby, we can do in Parslet because it’s an internal <span class="caps">DSL</span>.<br />
+Here’s something cool: pop open <span class="caps">IRB</span> and you can not only instantiate the <span class="caps">HTML</span> tag parser we just wrote, you can actually dive into it and introspect on its rules. And every Parslet atom is a parser in its own right, so I can try parsing something with just the open_tag rule. And if parsing fails, I get a nice error message telling me what it was trying to match at the time and what character caused it to fail.<br />
+I can dump out a tree of the failure for debugging purposes. So here I’m trying to parse an image tag with the block <span class="caps">HTML</span> tag parser. The error message tells me it has to be an open tag, a close tag, a self-closing tag, or a comment tag. All four options in the alternation failed and it shows me how it failed in each branch. Failure isn’t always a problem. For example, it’s not surprising that it failed to match the comment_tag rule at the bottom. The problem is it exhausted all its options, so it gives me this tree to help me decipher what should have parsed but didn’t and why.<br />
+So, it’s nice to have all of Ruby at our disposal as well as Parslet. It’s cool to get a <span class="caps">REPL</span> for free, and of course, I like writing Ruby, but there’s something more important happening here. Unlike the other <span class="caps">PEG</span> parsers I’d tried, because it’s Ruby, everything’s an object, objects send messages to other objects, methods return objects, and we can inspect those objects.<br />
+But what’s the awesome implication for all this. Something I couldn’t do with the other parsers? This is another time you can shout at me.<br />
+I’ll give you a hint: it’s big deal in the Ruby community.</p>
+<p>I can unit-test them! That’s amazing! For the first time, I have visibility into my parser at the atomic level. Debugging becomes orders of magnitude easier. I can <span class="caps">TDD</span> from the outside in! And with parsers, that’s super important because there can be some crazy unexpected complexity.<br />
+And when I run my specs, it shows me nice detail about my failures so I can fix them easily.<br />
+The last thing you do when you’re creating an external <span class="caps">DSL</span> is transforming the parse tree.<br />
+Honestly, Parslet Transformations are my least favorite part of it. They sure beat having to deal with deeply nested hashes manually, but something still doesn’t feel quite perfect.<br />
+Here we are transforming the numbers we captured into integers.<br />
+We can add a second rule that matches a plus, a left, and a right and adds them. One plus two is three.<br />
+Here’s what we’re doing in RedCloth. I’m transforming the parse tree into an <span class="caps">AST</span> using my own <span class="caps">AST</span> classes.<br />
+It’s pure ruby, so you might think that it’s slow. Well, I haven’t tested it extensively, but so far it’s pretty fast. Not as fast as the C code, of course, but it’s an acceptable tradeoff.<br />
+And probably, if your parser is slow, there are just a few bottlenecks. Parslet has a nice new feature to fix those called accelerators.<br />
+This line right here has to loop over every character to make sure it doesn’t contain the <span class="caps">ERB</span> end code.<br />
+But we can apply an Accelerator to the parser and any instance of repeatedly checking for absence followed by an any will be replaced with an optimized version. It’s nothing you have to replace in your parser; it find the applicable places for you.<br />
+Another way you can extend Parslet is with custom Atoms. You just have to pass a slice in and return whether it matched or not. I used this technique to parse questions like, “Who makes&#8230;?”<br />
+The code looked a little like this. Parsing natural language is really, really hard, but Parslet and my limited scope made it bearable.</p>
+<p>When Ruby isn’t quite fluent enough for you to build the <span class="caps">DSL</span> you really want, don’t be afraid to make your own. Parslet makes it easy.<br />
+ You could be the next Hampton Catlin or Jeremy Ashkenas!<br />
+So, in conclusion: DSLs are awesome. They help you write better code and communicate domain rules. Internal DSLs are great because you can use all the tools of the host language, but sometimes you need an external <span class="caps">DSL</span>.</p>
+<p>Parsing is another one of those dark corners where the light of automated testing and clean code has a hard time reaching. With Parslet, I think it’s possible to keep your parser from evolving into a bloated mess using the same tools and strategies you already use to keep your other Ruby code clean.</p>
+<p>When you need to parse some complex data, especially a <span class="caps">DSL</span>, stop and think before you reach for a regular expression.</p>
+<p>Thanks very much for listening. I hope you enjoyed it.<br />
+We have a few minutes for questions.</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Speaking at Madison Ruby in August]]></title>
+    <link href="http://username.github.com/jgarber/blog/2013/07/10/speaking-at-madison-ruby-in-august/"/>
+    <updated>2013-07-10T11:03:00-04:00</updated>
+    <id>http://username.github.com/jgarber/blog/2013/07/10/speaking-at-madison-ruby-in-august</id>
+    <content type="html"><![CDATA[<p>I&#8217;ll be giving a talk on Chef at <a href="http://madisonruby.org/">Madison Ruby</a> in Madison, WI, August 23-24.</p>
+<p><a href="http://madisonruby.org/"><img src="http://username.github.com/jgarber/images/madison-ruby-jason-garber.png" alt="Jason Garber speaking at Madison Ruby, August 23-24, 2013" /></a></p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Announcing PromptWorks]]></title>
+    <link href="http://username.github.com/jgarber/blog/2013/05/30/announcing-promptworks/"/>
+    <updated>2013-05-30T16:52:00-04:00</updated>
+    <id>http://username.github.com/jgarber/blog/2013/05/30/announcing-promptworks</id>
+    <content type="html"><![CDATA[<p>I&#8217;ve joined <a href="http://ablegray.com/">Mike Nicholaides</a> and <a href="http://gregsterndale.com/">Greg Sterndale</a> to form a new consultancy:</p>
+<p><a href="http://www.promptworks.com/"><img src="http://username.github.com/jgarber/images/promptworks-logo.png" alt="PromptWorks" /></a></p>
+<p><a href="http://www.promptworks.com/">PromptWorks</a> is the premier Philadelphia software consulting shop, specializing in Ruby, JavaScript and related technologies. With a collective 30 years of software experience, we are industry veterans with unmatched technical chops. In addition to helping businesses build new web apps and APIs, we solve problems with existing apps like scaling, testing and automating development operations.</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Thief card game]]></title>
+    <link href="http://username.github.com/jgarber/blog/2013/02/11/thief-card-game/"/>
+    <updated>2013-02-11T11:30:00-05:00</updated>
+    <id>http://username.github.com/jgarber/blog/2013/02/11/thief-card-game</id>
+    <content type="html"><![CDATA[<p>My extended family has been playing a card game called Thief for the past several years. It&#8217;s been passed along orally through the network of grandparents and retirees, but we cousins have really enjoyed playing it too! The stealing element is what makes it so competetive and fun. Trash talk is a key feature of the game.</p>
+<p>I can&#8217;t find the rules anywhere on the Web, so I asked my mom to write them down. Reply in the comments with questions or corrections to the rules. If you know this game by another name, I&#8217;d love to know and have some official rules to consult.</p>
+<p><!--more--></p>
+<h2>Object:</h2>
+<p>Have the highest number of points when all the cards are played.</p>
+<h2>Scoring:</h2>
+<table>
+	<tr>
+		<th>Card </th>
+		<th>Points </th>
+	</tr>
+	<tr>
+		<td> 3-9 </td>
+		<td> 5 </td>
+	</tr>
+	<tr>
+		<td> 10-King </td>
+		<td> 10 </td>
+	</tr>
+	<tr>
+		<td> Ace </td>
+		<td> 15 </td>
+	</tr>
+	<tr>
+		<td> 2 </td>
+		<td> 25 </td>
+	</tr>
+	<tr>
+		<td> Joker </td>
+		<td> 50 </td>
+	</tr>
+</table>
+<p>Deuces &amp; jokers are <strong>wild</strong>.</p>
+<h2>Playing:</h2>
+<p>Shuffle two decks of cards with jokers. Deal 3 cards per person. Stack the rest of the cards face down for the draw pile. Turn one face up for the discard pile.</p>
+<p>On your turn, make a pair from the cards in your hand or from one in your hand and one from the discard pile and lay the pair in front of you.  If you cannot make a pair, discard one card and draw a new card. You may then make a pair with the card you drew and one in your hand or the one you discarded. Continue making pairs as you are able, drawing as necessary to keep three cards in your hand at all times. Each new pair should be laid crosswise on top of your personal pile.</p>
+<p>At any time during your turn, you may steal the top set of cards from another player&#8217;s pile with a matching card or a wild card, but only if you didn&#8217;t have to discard to play. They may counter with a matching card or wild card to keep the set. Continue countering back and forth as long as you are able. Each card played to steal or keep is added to the set. With several steal attempts, what starts as a pair of threes may contain multiple wild cards, making the set highly desired. You&#8217;d probably want to steal this early in your turn and then cover it with other pairs to bury it.</p>
+<p>Your turn continues for as long as you can steal cards or make pairs. Then, indicate to the next player that it is their turn.</p>
+<p>Play ends when all the cards have been drawn from the pile. The game ends when each person has dealt one final hand. Each player adds up the points in her pile to determine the winner.</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby Programming Style and Your Brain]]></title>
+    <link href="http://username.github.com/jgarber/blog/2012/10/11/ruby-programming-style-and-your-brain/"/>
+    <updated>2012-10-11T08:01:00-04:00</updated>
+    <id>http://username.github.com/jgarber/blog/2012/10/11/ruby-programming-style-and-your-brain</id>
+    <content type="html"><![CDATA[<p>Last week someone was looking over my shoulder as I typed a command to run a script. It was something mundane, like <code>./script/test</code>. He said, &#8220;you know, you don&#8217;t have to type the dot slash,&#8221; and I thought, &#8220;Wow, he&#8217;s right; I&#8217;ve been typing those extra characters for years!&#8221;</p>
+<p>Just a little later, I ran a different command in the script directory and this time I didn&#8217;t use the dot slash. <code>sc</code> <code>Tab ↹</code></p>
+<pre><code>SCREEN_NO        scandeps.pl      schemagen        script         
+sc               scandeps5.12.pl  scp              scselect       
+sc_auth          sccmap           screen           scss           
+sc_usage         sched            screencapture    scutil </code></pre>
+<p>Oh, right! Tab completion works much better with just the tiniest bit of context, so if I use the dot slash and script is the only thing in that directory that starts with <code>sc</code>, I end up typing the whole command faster. Of course, by the time I realized this there was no longer someone looking over my shoulder!</p>
+<p>We programmers develop a million of these little tricks over the years and often don&#8217;t realize it when we do. At least I wasn&#8217;t aware enough at that particular moment to explain to my backseat driver why the dot slash flew off my fingers. Maybe I didn&#8217;t even come up with that trick on my own. Sometimes we inherit best practices from others&#8217; experience.</p>
+<p><strong>Ruby coding style is no exception.</strong> You don&#8217;t have to parenthesize your arguments when you call a method, but if you usually don&#8217;t, there will be some times when you do&#8212;method chaining, for instance&#8212;and you&#8217;ll have to go back and put them in. Or consider why we prefer <code>||</code> to <code>or</code> and <code>&amp;&amp;</code> to <code>and</code>. You can use <code>or</code> and <code>and</code>, but you have to keep the order of operations in your head, and that&#8217;s one more thing to keep track of. <code>&amp;&amp;</code> is generally the operator prescedence that you&#8217;re intending.</p>
+<p>Douglas Crockford talks about <a href="http://vimeo.com/25606006">Javascript Programming Style</a> (got to love the bit at 13:34!) and how there are some things the language allows that you just shouldn&#8217;t do. Though Ruby is a better-designed language and there are fewer dark, spooky corners than Javascript, there are best practices that will keep you out of trouble, or at least be more efficient and make changing the code easier. Thus, a canonical Ruby style has emerged over the last half-decade and, though there are variations here and there, it&#8217;s pretty much this: <a href="https://github.com/styleguide/ruby">GitHub&#8217;s Ruby Style Guide</a></p>
+<p>That&#8217;s not to say GitHub sets the standard for Ruby development. They just forked Bozhidar Batsov&#8217;s style guide, and he developed it out of his experience, various Ruby books, and no doubt reading thousands of programs over his career. If you had a thousand Ruby coders write style guides and then averaged them, I&#8217;d wager it would be very close to GitHub&#8217;s.</p>
+<p>I don&#8217;t know that we need a Ruby Lint analysis program like Javascript has. The pitfalls are less precipitous and you&#8217;re test-driving your code anyway, right? Still, hat tip to Codegram for <a href="http://codegram.github.com/pelusa/">Pelusa</a>. For me, embodying the canonical style is good enough. Just be aware of why each element of this style is better than the alternatives so you can defend and maintain the cohesive style that we&#8217;ve worked so hard to develop.</p>
+<p>Having a backseat driver isn&#8217;t all bad. I did a <code>cd ..</code> followed by <code>cd that-same-directory</code> to pick up some automatic per-directory settings (<span class="caps">RVM</span>, probably) and he suggested <code>cd .</code> instead. Great! An obviously possible combination, but something that han never occurred to me. Even spectator programming (as opposed to pair programming, which has been rocking my socks all year) has its advantages.</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Pair programming when you type on different keyboard layouts]]></title>
+    <link href="http://username.github.com/jgarber/blog/2012/09/22/pair-programming-when-you-type-on-different-keyboard-layouts/"/>
+    <updated>2012-09-22T09:00:00-04:00</updated>
+    <id>http://username.github.com/jgarber/blog/2012/09/22/pair-programming-when-you-type-on-different-keyboard-layouts</id>
+    <content type="html"><![CDATA[<p>At <a href="http://mashion.net">work</a> we&#8217;re often <a href="http://en.wikipedia.org/wiki/Pair_programming">pair programming</a> and we have the ideal <a href="http://matschaffer.com/2012/07/mashion-pairing-rig/">pairing rig</a>, but one thing wasn&#8217;t ideal: I&#8217;m the only one who types on the <a href="http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard">Dvorak keyboard layout</a>.</p>
+<p>Pairing with two different keyboard layouts means you have to switch input modes a lot. Usually it involves a little bewilderment as vim scrambles your code before you remember that you&#8217;re in the wrong mode.</p>
+<p>I hated that my choice of keyboard layout was a burden on my pairing partners, so eventually I found a software solution: <a href="http://pqrs.org/macosx/keyremap4macbook/">KeyRemap4MacBook</a></p>
+<p>I&#8217;ve dropped Dvorak-Qwerty ⌘, which <a href="http://username.github.com/jgarber/blog/2012/09/22/keyremap4macbook-fixes-the-broken-dvorak-qwerty-cmd-layout/">is broken</a>, and now just use the Dvorak input source with KeyRemap4MacBook converting my ⌘ keypresses.</p>
+<p>I also made one of the keyboards at each pairing station &#8220;mine&#8221; and then set KeyRemap4MacBook to convert the Qwerty keypresses of the others to Dvorak, but only when my computer is in Dvorak input mode.</p>
+<p><!--more--></p>
+<p>So I still have &#8220;U.S.&#8221; (Qwerty) as an input source on my computer, and in that case KeyRemap4MacBook does nothing, but when I switch it to Dvorak, my built-in keyboard and one keyboard at each pairing station act as Dvorak. The others act as Qwerty, so my pairing partners don&#8217;t even notice that my computer is set to Dvorak. In either mode, they type Qwerty.</p>
+<p>My <a href="https://gist.github.com/3494247">private.xml file</a>, which is how you make custom mappings in KeyRemap4Macbook, contains the device_only and device_not filters that limit the mappings to a certain set of keyboards at work, where our multitude of bluetooth devices are named after well-known Rubyists. These bluetooth keyboards are all identical models, so KeyRemap4MacBook couldn&#8217;t differentiate them until the author, Takayama Fumihiko, graciously added that feature.</p>
+<script src="https://gist.github.com/3494247.js?file=private.xml"></script><p>To restrict a remapping to a specific device among several identical ones, you need to find its location id by running <code>$ ioreg -rk "LocationID"</code>. DeviceLocation only works with KeyRemap4MacBook &gt;= <a href="http://pqrs.org/macosx/keyremap4macbook/files/KeyRemap4MacBook-7.8.13.dmg">7.8.13</a>. If your keyboards are different models, then you only need to specify the DeviceProduct, which is easier.</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[KeyRemap4MacBook fixes the broken 'Dvorak - Qwerty ⌘' layout]]></title>
+    <link href="http://username.github.com/jgarber/blog/2012/09/22/keyremap4macbook-fixes-the-broken-dvorak-qwerty-cmd-layout/"/>
+    <updated>2012-09-22T08:00:00-04:00</updated>
+    <id>http://username.github.com/jgarber/blog/2012/09/22/keyremap4macbook-fixes-the-broken-dvorak-qwerty-cmd-layout</id>
+    <content type="html"><![CDATA[<p>I switched to the <a href="http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard">Dvorak keyboard layout</a> over Christmas break in 2001, figuring that if I were to spend the next 80 years typing, a couple weeks re-learning to touch type would be worth it.</p>
+<p>And it has been. My hands just never get tired of typing, which is good because I spend all day at it. There are only two problems with being in the minority on this:</p>
+<ol>
+	<li>Shortcut keys are less convenient to use. Cut, copy, and paste are X, C, and V for a reason. You can get used to the new positions, but they never quite feel as handy.</li>
+	<li>Sharing or borrowing other computers becomes more difficult.</li>
+</ol>
+<p><!--more--></p>
+<p>The first problem I solved early on by using a keyboard layout that is Dvorak except when you&#8217;re holding down the command key. On a Mac, this is the &#8220;Dvorak &#8211; Qwerty ⌘&#8221; input source.</p>
+<p>Since I learned touch-typing on Qwerty, I can switch between the layouts in my head with some effort or just look at the keys as I type, so the second problem isn&#8217;t a very big one for infrequent and short-term Qwerty use. For the computer I shared with my wife for three or four years, we got used to switching input modes from the menubar or by shortcut key.</p>
+<p>This year, I almost quit Dvorak when I discovered <a href="https://groups.google.com/forum/#!msg/keyremap4macbook/QNZ3LGsKNFE/Yg-jlbAoL-QJ">Apple&#8217;s Dvorak &#8211; Qwerty ⌘ layout is broken</a> and there&#8217;s <a href="https://github.com/textmate/textmate/issues/241">no way to get to some shortcut keys</a>. That was a minor frustration compared to how it made <a href="http://username.github.com/jgarber/blog/2012/09/22/pair-programming-when-you-type-on-different-keyboard-layouts/">pair programming more complicated</a>.</p>
+<p><a href="http://pqrs.org/macosx/keyremap4macbook/">KeyRemap4MacBook</a> solved these problems. I&#8217;ve dropped Dvorak-Qwerty ⌘ and now just use the Dvorak input source with KeyRemap4MacBook converting my ⌘ keypresses.  ⌘ + and &#8211; makes my text bigger and smaller and I can <code>&lt;Ctrl-W&gt;</code> in vim again&#8212;two glitches peculiar to Dvorak &#8211; Qwerty ⌘.</p>
+<p>My <a href="https://gist.github.com/3494247">private.xml file</a>, which is how you make custom mappings in KeyRemap4Macbook, contains the mapping, along with some device_only and device_not filters that limit it to a certain set of keyboards at work, where our multitude of bluetooth devices are named after well-known Rubyists.</p>
+<script src="https://gist.github.com/3494247.js?file=private.xml"></script>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Connecting to HipChat from IRC]]></title>
+    <link href="http://username.github.com/jgarber/blog/2012/05/18/connecting-to-hipchat-from-irc/"/>
+    <updated>2012-05-18T12:39:00-04:00</updated>
+    <id>http://username.github.com/jgarber/blog/2012/05/18/connecting-to-hipchat-from-irc</id>
+    <content type="html"><![CDATA[<p>My friends at <a href="http://www.indyhall.org/">IndyHall</a> are always talking on HipChat, but I too often forget to open HipChat in my browser and I&#8217;m not interested in running their Adobe <span class="caps">AIR</span> app. I have been on <span class="caps">IRC</span> a lot lately thanks to the Philly Ruby community, so getting my IndyHall hipchats on <span class="caps">IRC</span> has been an itch I&#8217;ve needed to scratch for awhile.</p>
+<p><!--more--></p>
+<p><a href="http://treehouseagency.com/about-us/team/steven-merrill">Steven Merrill</a> has a nice <a href="http://treehouseagency.com/blog/steven-merrill/2011/12/15/using-hipchat-through-irc-client-bitlbee">writeup</a> on using HipChat with <span class="caps">IRC</span> through <a href="http://www.bitlbee.org/">BitlBee</a>. I started installing BitlBee to run on my Mac, but then realized there are <a href="http://www.bitlbee.org/main.php/servers.html">public servers running BitlBee</a> thanks to kind people around the world. I picked <a href="http://www.irc.net/"><span class="caps">IRC</span>.net</a> since Pittsburgh is close to Philly.</p>
+<p>Here&#8217;s how to set it up: (replace the words in <span class="caps">CAPS</span> with your info)</p>
+<ol>
+	<li>Connect to the <span class="caps">IRC</span> server: <code>irc.net:6667</code></li>
+	<li>Join the <code>&amp;bitlbee</code> room if you&#8217;re not already in it</li>
+	<li>Generate a secure password and register it with bitlbee: <code>register PASSWORD</code></li>
+	<li>In a browser tab, open the <a href="https://www.hipchat.com/account/xmpp"><span class="caps">XMPP</span> Account Settings</a> page in your HipChat account. You&#8217;ll need some of this information.</li>
+	<li>In your <span class="caps">IRC</span> client, send <code>account add jabber USERNAME@chat.hipchat.com 'PASSWORD'</code> using your HipChat Jabber ID and HipChat password</li>
+	<li><code>account hipchat set nick_source full_name</code></li>
+	<li><code>account hipchat set resource bot</code></li>
+	<li><code>account hipchat on</code></li>
+	<li><code>/join &amp;hipchat</code></li>
+	<li><code>chat add hipchat ROOM_JABBERNAME@CONFERENCE_SERVER #CHANNELNAME</code>. Conference Server will probably be <code>conf.hipchat.com</code>. Give it whatever channel name you want.</li>
+	<li>Before you can join, you must set your nick to match the Room Nickname setting in your HipChat <span class="caps">XMPP</span> settings.<code>channel #CHANNELNAME set nick 'ROOM_NICKNAME'</code></li>
+	<li><code>/join #CHANNELNAME</code></li>
+	<li>Start chatting!</li>
+	<li>When you&#8217;re ready to sign out of HipChat, use account off. <code>account hipchat off</code></li>
+</ol>
+<p>Thanks to Steven for the instructions. I wouldn&#8217;t have figured out BitlBee for a long time without his blog post.</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[I quit Backblaze]]></title>
+    <link href="http://username.github.com/jgarber/blog/2012/03/06/i-quit-backblaze/"/>
+    <updated>2012-03-06T08:34:00-05:00</updated>
+    <id>http://username.github.com/jgarber/blog/2012/03/06/i-quit-backblaze</id>
+    <content type="html"><![CDATA[<p>Three reasons I quit Backblaze, the cloud backup service that lets you back up an unlimited amount of data from a single computer:</p>
+<ol>
+	<li>Poor <a href="http://www.haystacksoftware.com/arq/backblaze-backup-bouncer-test.txt">Backup Bouncer test results</a>. When I restore files to my Mac, I want all the metadata too. I&#8217;m a programmer so ownership, permissions, timestamps, and symlinks are important to me on my development machine.</li>
+	<li>They say they won&#8217;t store my private key anywhere, but I have to enter it on their site in order to restore files. They may keep the files decrypted for up to 7 days. I don&#8217;t want decrypted files anywhere but my computer.</li>
+	<li>I&#8217;ve switched to SSDs and needed to move some infrequently-used photo libraries to an external hard drive. I can&#8217;t be sure I&#8217;ll plug it in every 30 days. The idea that my backup of those precious photos would be deleted if I forgot to plug it in scares me.</li>
+</ol>
+<p>I tried out <a href="http://www.haystacksoftware.com/arq/">Arq</a> and generally liked it. It has the benefits of Backblaze plus performs well in the above three areas. Amazon&#8217;s S3 reduced-redundancy pricing is a little more expensive for the amount of data that I have (85GB), but the improved peace-of-mind is worth it to me.</p>
+<p>If Backblaze ever fixed those things, I&#8217;d probably come back because it was otherwise a good service.</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby recruitment solution: Hire an expert to train developers you already have and like]]></title>
+    <link href="http://username.github.com/jgarber/blog/2012/02/20/rails-recruitment-solution-hire-an-expert-to-train-an-employee-you-already-like/"/>
+    <updated>2012-02-20T08:08:00-05:00</updated>
+    <id>http://username.github.com/jgarber/blog/2012/02/20/rails-recruitment-solution-hire-an-expert-to-train-an-employee-you-already-like</id>
+    <content type="html"><![CDATA[<p>Like most well-qualified Ruby developers, recruiters and hiring managers contact me frequently about their open web developer positions. The secret is out that you&#8217;ll get more bang for your buck with Ruby on Rails than the Java and .<span class="caps">NET</span> web frameworks, so small and large companies alike are clamoring for experienced Ruby developers. I read a year or more ago that there&#8217;s a shortage of at least 1,500 Ruby developers in the United States alone. That number has probably doubled or tripled by now. Everyone faces the same frustration: top Ruby talent is hard to come by.</p>
+<p><!--more--></p>
+<p>This works out well for someone like me who started with Ruby in 2005, when Rails was in its infancy. I have nearly seven years of experience with Rails, ten years of writing web applications, and 15 years of <span class="caps">HTML</span>, <span class="caps">CSS</span>, and Javascript. You can find workers aplenty who list Rails on their résumé but have really only dipped a toe in the water, which doesn&#8217;t cut it. There&#8217;s definitely a &#8220;Ruby way&#8221; and you can tell just by looking at someone&#8217;s code to what degree they get it. Even without looking at code samples, when I look through candidates on oDesk or eLance, I can safely assume the ones who title themselves things like &#8220;Senior Ruby/<span class="caps">PHP</span>/Java/Drupal/Coldfusion developer&#8221; are not competent Rubyists&#8212;probably not competent anythingists. I pass over candidates if they so much as mention <span class="caps">PHP</span> in their description.</p>
+<h2>Why is Ruby expertise so important?</h2>
+<p>Isn&#8217;t one of Ruby&#8217;s selling points that it&#8217;s easy to learn? Yes, but if you&#8217;re building anything that&#8217;s critical to your business, costs a significant amount, and that you want to have lasting value, <strong>you&#8217;d better build it right</strong>&#8212;not unlike constructing a new building. A good engineer is aware of a wide variety of resources (be it concrete and steel or full-text search and currency conversion libraries) and has worked with them enough to know their strengths and limitations. A good engineer builds things efficiently and follows convention. A good engineer has solved thousands of problems in this domain before, so when new ones appear, they know where to start looking. There&#8217;s no substitute for experience. A developer who has been in the Ruby trenches longer will have better solutions and come up with them more efficiently.</p>
+<h3>These are the experts; They&#8217;re not interested.</h3>
+<p>You can fairly easily find Ruby experts by:</p>
+<ul>
+	<li>looking for the authors of <a href="http://workingwithrails.com/browse/rubygems/usage">popular and mature open-source Ruby projects</a>,</li>
+	<li>tracking down the leaders of local Ruby meetups,</li>
+	<li>checking out who speaks at Ruby conferences, and</li>
+	<li>investigating who writes books for the Ruby community.</li>
+</ul>
+<p>Chances are, they&#8217;re unavailable, prohibitively expensive, and not interested in your job.</p>
+<h3>But they <em>can</em> be persuaded</h3>
+<p>What experts <strong>can&#8217;t resist</strong>, especially in the fanatical Ruby community, is <strong>proselytizing</strong>&#8212;disseminating information and winning others over to their side. They&#8217;re much more likely to take a gig that involves training other smart developers who just haven&#8217;t &#8220;seen the light&#8221; than they are to just take the job themselves.</p>
+<p><strong>If you already have developers that you like, hire an expert to train them on Ruby.</strong> That doesn&#8217;t mean three months of classes in the conference room. Experts like hands-on work and seeing that things are done right. That&#8217;s how they got to be the experts, after all! Put them on pair programming and code reviews to transfer their Ruby expertise to your best people. Develop Rubyists from within. You can always hire more Javaheads.</p>
+<h2>Ending up with talented, loyal Ruby developers and a successful project</h2>
+<p>Hire one or two Ruby experts to start your new project, apprentice your best developers, and after two or three months, taper off their involvement. They&#8217;ll have started the project with the right tools, set the standard for what good Ruby code looks like, solved the initial design problems, and equipped your developers to carry on. The project won&#8217;t be done&#8212;you might not even have a beta version deployed&#8212;but hopefully the project will be on-track for a solid finish and there will be good feelings all around.</p>
+<p>Speaking for myself, I love the initial design phase, love watching others catch the Ruby bug, and love leveraging collaboration to produce more than I could alone. Oh&#8212;and I like being in charge, getting paid well, and moving on when the novelty has worn off!</p>
+<p>So, recruiters, no more whining about how you can&#8217;t acquire top Ruby talent. It&#8217;s there and it&#8217;s available if you&#8217;re using the right bait. We&#8217;re not interested in full-time $120k + benefits because a.) we can probably do better freelancing, b.) who wants to work full-time?, and c.) <em>it&#8217;s not about the money!</em></p>
+<p>The company hired you to hire developers, but what they really need is successful projects. (The old selling drills vs. selling holes analogy.) Sell them on needing to invest in expertise, but say you&#8217;ll save them money by apprenticing existing developers and they&#8217;ll think you&#8217;re brilliant. (You don&#8217;t need to tell them where the idea came from!) You really are brilliant, because guess who gets to find the replacement for their Javahead-turned-Ruybist&#8230;</p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Benchmarking Ruby String Conversion]]></title>
+    <link href="http://username.github.com/jgarber/blog/2012/01/24/benchmarking-ruby-string-conversion/"/>
+    <updated>2012-01-24T11:14:00-05:00</updated>
+    <id>http://username.github.com/jgarber/blog/2012/01/24/benchmarking-ruby-string-conversion</id>
+    <content type="html"><![CDATA[<p>I have a class (<code>Parslet::Slice</code>, to be precise) that inherits from String but needs to be converted back to a string. Which is faster, <code>String#to_s</code> or <code>String()</code>? My hunch is the latter, but I can find out for sure in about a minute:</p>
+<p><!--more--></p>
+<div><script src='https://gist.github.com/1670877.js?file='></script><br />
+<noscript><pre><code>#!/usr/bin/env ruby
+require &amp;#39;benchmark&amp;#39;
+
+TIMES_TO_REPEAT = 10_000_000
+
+class SpecialString &amp;lt; String; end
+
+Benchmark.bmbm do|b|
+  b.report(&amp;quot;&amp;#39;&amp;#39;.to_s&amp;quot;) do
+    str = &amp;#39;&amp;#39;
+    TIMES_TO_REPEAT.times { str.to_s }
+  end
+  
+  b.report(&amp;#39;&amp;quot;&amp;quot;.to_s&amp;#39;) do
+    str = &amp;quot;&amp;quot;
+    TIMES_TO_REPEAT.times { str.to_s }
+  end
+  
+  b.report(&amp;quot;String(str)&amp;quot;) do
+    str = SpecialString.new(&amp;quot;&amp;quot;)
+    TIMES_TO_REPEAT.times { String(str) }
+  end
+
+  b.report(&amp;quot;str.to_s&amp;quot;) do
+    str = SpecialString.new(&amp;quot;&amp;quot;)
+    TIMES_TO_REPEAT.times { str.to_s }
+  end
+end</code></pre></noscript></div>
+<p>With Ruby 1.9:</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Results </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>ruby which_string_coercion_is_faster.rb ↵
+</span><span class='line'>Rehearsal -----------------------------------------------
+</span><span class='line'>''.to_s       0.970000   0.000000   0.970000 (  0.968759)
+</span><span class='line'>"".to_s       0.960000   0.000000   0.960000 (  0.960182)
+</span><span class='line'>String(str)   0.920000   0.000000   0.920000 (  0.920623)
+</span><span class='line'>str.to_s      2.250000   0.010000   2.260000 (  2.249877)
+</span><span class='line'>-------------------------------------- total: 5.110000sec
+</span><span class='line'>
+</span><span class='line'>                  user     system      total        real
+</span><span class='line'>''.to_s       0.930000   0.000000   0.930000 (  0.931371)
+</span><span class='line'>"".to_s       0.940000   0.000000   0.940000 (  0.934964)
+</span><span class='line'>String(str)   0.910000   0.000000   0.910000 (  0.913435)
+</span><span class='line'>str.to_s      2.250000   0.010000   2.260000 (  2.252326)</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<p>Similar results on 1.8:</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Results </span></figcaption>
+<div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Rehearsal -----------------------------------------------
+</span><span class='line'>''.to_s       1.470000   0.000000   1.470000 (  1.475513)
+</span><span class='line'>"".to_s       1.540000   0.000000   1.540000 (  1.540667)
+</span><span class='line'>String(str)   1.510000   0.000000   1.510000 (  1.509818)
+</span><span class='line'>str.to_s      2.710000   0.000000   2.710000 (  2.713870)
+</span><span class='line'>-------------------------------------- total: 7.230000sec
+</span><span class='line'>
+</span><span class='line'>                  user     system      total        real
+</span><span class='line'>''.to_s       1.500000   0.000000   1.500000 (  1.497413)
+</span><span class='line'>"".to_s       1.520000   0.000000   1.520000 (  1.512449)
+</span><span class='line'>String(str)   1.540000   0.000000   1.540000 (  1.536261)
+</span><span class='line'>str.to_s      2.690000   0.000000   2.690000 (  2.700433)</span></code></pre></td></tr></table></div></figure></div></notextile></p>]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Deploying Octopress to Heroku with a custom buildpack]]></title>
+    <link href="http://username.github.com/jgarber/blog/2012/01/10/deploying-octopress-to-heroku-with-a-custom-buildpack/"/>
+    <updated>2012-01-10T16:00:00-05:00</updated>
+    <id>http://username.github.com/jgarber/blog/2012/01/10/deploying-octopress-to-heroku-with-a-custom-buildpack</id>
+    <content type="html"><![CDATA[<p>I&#8217;ve had apps on Heroku since 2009, but over the last year or so I&#8217;ve been deploying apps there more and more. With the advent of the Cedar stack, there&#8217;s less and less you can&#8217;t do. Compared to provisioning a virtual server, even with the help of <a href="https://github.com/railsmachine/moonshine">moonshine</a>, you can&#8217;t beat <code>heroku create --stack cedar</code>: <strong>boom</strong>, you have a live site with backups, logging, release management and the running of migrations and asset compilation on deploy. In just another few minutes, you can have <span class="caps">SSL</span>, rotating database backups, NewRelic, HopToad, cron, <span class="caps">DNS</span>, monitoring, and myriad other addons.</p>
+<p>When I switched my blog from Radiant <span class="caps">CMS</span> to Octopress, I wanted to keep the site on Heroku. It&#8217;s free under normal scenarios and if I ever get on HackerNews or Reddit, I just have to scale up my web processes and pay a bit to keep the site responsive. If I were to be so fortunate,  I wouldn&#8217;t have to scramble to set up load balancing on Linode or even wait while my slice resized. Yay cloud!</p>
+<p>The <a href="http://octopress.org/docs/deploying/heroku/">standard method for deploying Octopress to Heroku</a> involves generating your site, checking in the generated contents (within the <code>public/</code> folder), and deploying to Heroku. As <a href="http://www.mwmanning.com/2011/11/29/Run-Your-Jekyll-Site-On-Heroku.html">Matthew Manning noted</a>, neither having to check in generated content nor having it generated on-the-fly is ideal. We really need to hook into Heroku&#8217;s build phase.</p>
+<p>The Cedar stack lets you provide a buildpack for generating the app. It&#8217;s how the stack can support Node.js, Python, <span class="caps">PHP</span>, etc. I forked Manning&#8217;s buildpack and customized it for Octopress. Here&#8217;s what you need to do to deploy your Octopress site to Heroku:</p>
+<p><!--more--></p>
+<h2>Get your repository ready for Heroku</h2>
+<p>Heroku needs to see the <code>plugins</code>, <code>sass</code>, and <code>source</code> directories, but they&#8217;re left out of the Heroku application slug unless you remove them from <code>.slugignore</code>.</p>
+<pre><code>echo '' &gt; .slugignore</code></pre>
+<h2>Fix Pygments</h2>
+<p>Pygments won&#8217;t work on Heroku&#8212;or at least I haven&#8217;t found a way&#8212;so let&#8217;s switch to a Pygments <span class="caps">API</span> hosted on Heroku.</p>
+<p>First, remove <code>pygments.rb</code> from the Gemfile. You&#8217;ll then need to patch <code>plugins/pygments_code.rb</code>, removing the require at the top and adding an <span class="caps">API</span> call instead of the Pygments library call in two places.</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Changes to plugins/pygments_code.rb (pygmentize.diff) </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+</pre></td><td class='code'><pre><code class='diff'><span class='line'><span class="gu">@@ -1,7 +1,9 @@</span>
+</span><span class='line'><span class="gd">-require &#39;pygments&#39;</span>
+</span><span class='line'><span class="gi">+require &#39;net/http&#39;</span>
+</span><span class='line'><span class="gi">+require &#39;uri&#39;</span>
+</span><span class='line'> require &#39;fileutils&#39;
+</span><span class='line'> require &#39;digest/md5&#39;
+</span><span class='line'>
+</span><span class='line'><span class="gi">+PYGMENTIZE_URL = URI.parse(&#39;http://pygmentize.herokuapp.com/&#39;)</span>
+</span><span class='line'> PYGMENTS_CACHE_DIR = File.expand_path(&#39;../../.pygments-cache&#39;, __FILE__)
+</span><span class='line'> FileUtils.mkdir_p(PYGMENTS_CACHE_DIR)
+</span><span class='line'>
+</span><span class='line'><span class="gu">@@ -21,11 +23,11 @@ module HighlightCode</span>
+</span><span class='line'>       if File.exist?(path)
+</span><span class='line'>         highlighted_code = File.read(path)
+</span><span class='line'>       else
+</span><span class='line'><span class="gd">-        highlighted_code = Pygments.highlight(code, :lexer =&gt; lang, :formatter =&gt; &#39;html&#39;, :options =&gt; {:encoding =&gt; &#39;ut</span>
+</span><span class='line'><span class="gi">+        highlighted_code = Net::HTTP.post_form(PYGMENTIZE_URL, {&#39;lang&#39;=&gt;lang, &#39;code&#39;=&gt;code}).body</span>
+</span><span class='line'>         File.open(path, &#39;w&#39;) {|f| f.print(highlighted_code) }
+</span><span class='line'>       end
+</span><span class='line'>     else
+</span><span class='line'><span class="gd">-      highlighted_code = Pygments.highlight(code, :lexer =&gt; lang, :formatter =&gt; &#39;html&#39;, :options =&gt; {:encoding =&gt; &#39;utf-</span>
+</span><span class='line'><span class="gi">+      highlighted_code = Net::HTTP.post_form(PYGMENTIZE_URL, {&#39;lang&#39;=&gt;lang, &#39;code&#39;=&gt;code}).body</span>
+</span><span class='line'>     end
+</span><span class='line'>     highlighted_code
+</span><span class='line'>   end
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<h2>Rearrange your Gemfile</h2>
+<p>When Jekyll builds your site, it needs the gems in the development group, but it&#8217;s assumed you&#8217;re generating your site before deploying, so you won&#8217;t need them in production. Since we&#8217;re pushing the generation step to Heroku and it uses <code>bundle install --without development:test</code>, it won&#8217;t have the gems it needs in the build phase. We&#8217;ll need to pull everything but <code>rb-fsevent</code> out into the default group.</p>
+<p>Also add <code>gem 'heroku'</code> inside the development group. If you like, you can add <code>gem 'thin'</code> to use thin for your server instead of WEBrick.</p>
+<p>Your Gemfile should now look like this:</p>
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Rearranged Gemfile (Gemfile.rb) </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="n">source</span> <span class="s2">&quot;http://rubygems.org&quot;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;rake&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;rack&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;jekyll&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;rdiscount&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;RedCloth&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;haml&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;= 3.1&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;compass&#39;</span><span class="p">,</span> <span class="s1">&#39;&gt;= 0.11&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;rubypants&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;stringex&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;liquid&#39;</span><span class="p">,</span> <span class="s1">&#39;2.2.2&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;sinatra&#39;</span><span class="p">,</span> <span class="s1">&#39;1.2.6&#39;</span>
+</span><span class='line'><span class="n">gem</span> <span class="s1">&#39;thin&#39;</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">group</span> <span class="ss">:development</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;rb-fsevent&#39;</span>
+</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;heroku&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure></div></notextile></p>
+<h2>Create the app on Heroku</h2>
+<pre><code>heroku create --stack cedar --buildpack git://github.com/jgarber/heroku-buildpack-ruby-octopress.git
+git push heroku master</code></pre>
+<p>The site should build cleanly and should work at the app <span class="caps">URL</span> given. If not, look at the build output when you pushed to Heroku and also check <code>heroku logs</code>.</p>
+<p>Let me know in the comments if it worked for you and feel free to fork the buildpack.</p>
+<hr />
+<h3 style="vertical-align:middle;">Update: Plain Jekyll supported by the buildpack as well.</h3>
+<p><a href="https://github.com/matschaffer">Mat Schaffer</a> added support for vanilla Jekyll sites as well. Very elegantly done.</p>]]></content>
+  </entry>
+  
+</feed>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: CMS | Jason Garber, Ruby developer in Philadelphia]]></title>
+  <link href="http://username.github.com/jgarber/blog/categories/cms/atom.xml" rel="self"/>
+  <link href="http://username.github.com/jgarber/"/>
+  <updated>2015-08-27T10:19:07-04:00</updated>
+  <id>http://username.github.com/jgarber/</id>
+  <author>
+    <name><![CDATA[Jason Garber]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Deploying Octopress to Heroku with a custom buildpack]]></title>
+    <link href="http://username.github.com/jgarber/blog/2012/01/10/deploying-octopress-to-heroku-with-a-custom-buildpack/"/>
+    <updated>2012-01-10T16:00:00-05:00</updated>
+    <id>http://username.github.com/jgarber/blog/2012/01/10/deploying-octopress-to-heroku-with-a-custom-buildpack</id>
+    <content type="html"><![CDATA[<p>I've had apps on Heroku since 2009, but over the last year or so I've been deploying apps there more and more. With the advent of the Cedar stack, there's less and less you can't do. Compared to provisioning a virtual server, even with the help of "moonshine":https://github.com/railsmachine/moonshine, you can't beat @heroku create --stack cedar@: <em>boom</em>, you have a live site with backups, logging, release management and the running of migrations and asset compilation on deploy. In just another few minutes, you can have SSL, rotating database backups, NewRelic, HopToad, cron, DNS, monitoring, and myriad other addons.</p>
+
+<p>When I switched my blog from Radiant CMS to Octopress, I wanted to keep the site on Heroku. It's free under normal scenarios and if I ever get on HackerNews or Reddit, I just have to scale up my web processes and pay a bit to keep the site responsive. If I were to be so fortunate,  I wouldn't have to scramble to set up load balancing on Linode or even wait while my slice resized. Yay cloud!</p>
+
+<p>The "standard method for deploying Octopress to Heroku":http://octopress.org/docs/deploying/heroku/ involves generating your site, checking in the generated contents (within the @public/@ folder), and deploying to Heroku. As "Matthew Manning noted":http://www.mwmanning.com/2011/11/29/Run-Your-Jekyll-Site-On-Heroku.html, neither having to check in generated content nor having it generated on-the-fly is ideal. We really need to hook into Heroku's build phase.</p>
+
+<p>The Cedar stack lets you provide a buildpack for generating the app. It's how the stack can support Node.js, Python, PHP, etc. I forked Manning's buildpack and customized it for Octopress. Here's what you need to do to deploy your Octopress site to Heroku:</p>
+
+<!--more-->
+
+
+<p>h2. Get your repository ready for Heroku</p>
+
+<p>Heroku needs to see the @plugins@, @sass@, and @source@ directories, but they're left out of the Heroku application slug unless you remove them from @.slugignore@.</p>
+
+<p>bc. echo '' > .slugignore</p>
+
+<p>h2. Fix Pygments</p>
+
+<p>Pygments won't work on Heroku--or at least I haven't found a way--so let's switch to a Pygments API hosted on Heroku.</p>
+
+<p>First, remove @pygments.rb@ from the Gemfile. You'll then need to patch @plugins/pygments_code.rb@, removing the require at the top and adding an API call instead of the Pygments library call in two places.</p>
+
+<p>Liquid error: undefined method `[]' for nil:NilClass</p>
+
+<p>h2. Rearrange your Gemfile</p>
+
+<p>When Jekyll builds your site, it needs the gems in the development group, but it's assumed you're generating your site before deploying, so you won't need them in production. Since we're pushing the generation step to Heroku and it uses @bundle install --without development:test@, it won't have the gems it needs in the build phase. We'll need to pull everything but @rb-fsevent@ out into the default group.</p>
+
+<p>Also add @gem 'heroku'@ inside the development group. If you like, you can add @gem 'thin'@ to use thin for your server instead of WEBrick.</p>
+
+<p>Your Gemfile should now look like this:</p>
+
+<p><div class='bogus-wrapper'><notextile><figure class='code'><figcaption><span>Rearranged Gemfile (Gemfile.rb) </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+</pre></td><td class='code'><pre><code class='rb'><span class='line'><span class="n">source</span> <span class="s2">&quot;http://rubygems.org&quot;</span><span class="o">&lt;</span><span class="sr">/p&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="sr">&lt;p&gt;gem &#39;rake&#39;</span>
+</span><span class='line'><span class="sr">gem &#39;rack&#39;</span>
+</span><span class='line'><span class="sr">gem &#39;jekyll&#39;</span>
+</span><span class='line'><span class="sr">gem &#39;rdiscount&#39;</span>
+</span><span class='line'><span class="sr">gem &#39;RedCloth&#39;</span>
+</span><span class='line'><span class="sr">gem &#39;haml&#39;, &#39;&gt;= 3.1&#39;</span>
+</span><span class='line'><span class="sr">gem &#39;compass&#39;, &#39;&gt;= 0.11&#39;</span>
+</span><span class='line'><span class="sr">gem &#39;rubypants&#39;</span>
+</span><span class='line'><span class="sr">gem &#39;stringex&#39;</span>
+</span><span class='line'><span class="sr">gem &#39;liquid&#39;, &#39;2.2.2&#39;</span>
+</span><span class='line'><span class="sr">gem &#39;sinatra&#39;, &#39;1.2.6&#39;</span>
+</span><span class='line'><span class="sr">gem &#39;thin&#39;&lt;/</span><span class="nb">p</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'><span class="o">&lt;</span><span class="nb">p</span><span class="o">&gt;</span><span class="n">group</span> <span class="ss">:development</span> <span class="k">do</span>
+</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;rb-fsevent&#39;</span>
+</span><span class='line'>  <span class="n">gem</span> <span class="s1">&#39;heroku&#39;</span>
+</span><span class='line'><span class="k">end</span>
+</span></code></pre></td></tr></table></div></figure></notextile></div></p>
+
+<p>h2. Create the app on Heroku</p>
+
+<p>bc. heroku create --stack cedar --buildpack git://github.com/jgarber/heroku-buildpack-ruby-octopress.git
+git push heroku master</p>
+
+<p>The site should build cleanly and should work at the app URL given. If not, look at the build output when you pushed to Heroku and also check @heroku logs@.</p>
+
+<p>Let me know in the comments if it worked for you and feel free to fork the buildpack.</p>
+
+<hr />
+
+<p>h3. Update: Plain Jekyll supported by the buildpack as well.</p>
+
+<p>"Mat Schaffer":https://github.com/matschaffer added support for vanilla Jekyll sites as well. Very elegantly done.</p>
+]]></content>
+  </entry>
+  
+</feed>

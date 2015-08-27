@@ -1,0 +1,462 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Slides from Writing DSLs with Parslet at Wicked Good Ruby Conference - Jason Garber, Ruby developer in Philadelphia</title>
+  <meta name="author" content="Jason Garber">
+
+  
+  <meta name="description" content="A well-designed DSL improves programmer productivity and communication with domain experts. The Ruby community has produced a number of very popular &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://username.github.com/jgarber/blog/2013/10/13/slides-from-writing-dsls-with-parslet-talk-at-wicked-good-ruby-conference">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Jason Garber, Ruby developer in Philadelphia" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Crimson+Text&text=Jason%20Garber' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700italic,700,400italic|PT+Sans:400italic,400,700,700italic' rel='stylesheet' type='text/css'>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-345379-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Jason Garber</a></h1>
+  
+    <h2>Tracking innovations in code and culture</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:username.github.com/jgarber" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/#home">Home</a></li>
+  <li><a href="/blog/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/ruby-developer/">Ruby Developer</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+    
+      <h1 class="entry-title">Slides From Writing DSLs With Parslet at Wicked Good Ruby Conference</h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-13T14:40:00-04:00" pubdate data-updated="true">Oct 13<span>th</span>, 2013</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>A well-designed <span class="caps">DSL</span> improves programmer productivity and communication with domain experts. The Ruby community has produced a number of very popular external DSLs&#8212;Coffeescript, <span class="caps">HAML</span>, <span class="caps">SASS</span>, and Cucumber to name a few.</p>
+<p>Parslet makes it easy to write these kinds of DSLs in pure Ruby. In this talk you’ll learn the basics, feel out the limitations of several approaches and find some common solutions. In no time, you’ll have the power to make a great new <span class="caps">DSL</span>, slurp in obscure file formats, modify or fork other people’s grammars (like Gherkin, <span class="caps">TOML</span>, or <span class="caps">JSON</span>), or even write your own programming language!</p>
+<script async class="speakerdeck-embed" data-id="441b68c016a7013186827a1b357e9aaa" data-ratio="1.77777777777778" src="//speakerdeck.com/assets/embed.js"></script><p><!--more--></p>
+<p>Hello, everyone. I’m Jason Garber and I’m an engineer and co-founder at PromptWorks in Philadelphia. We’re a Ruby and Javascript development consultancy and the three principals have been working with Ruby since 2005.<br />
+We practice test-driven development, we test all the effing time (cheers, Bryan), and all the other things that make us buzzword-compliant.</p>
+<p>It&#8217;s a great place to work and we have a fantastic team. You should ask us about our pairing setup. It’s awesome.</p>
+<p>The Ruby community is thriving in Philadelphia; We’ve doubled in size in the past year. We love having speakers and guests from other cities, so please come. The view from the 45th floor where we have our meetups is spectacular.</p>
+<p>This talk is about parsing, but first I’d like to frame it by talking about DSLs.<br />
+Domain-Specific Languages are those computer languages that are targeted to a particular problem domain rather than general-purpose languages that can be applied to any kind of software problem.</p>
+<p>People find DSLs valuable because a well-designed <span class="caps">DSL</span> can be much easier to program in, which improves your productivity, and much easier to read, which helps someone new understand your code more easily.</p>
+<p>In some cases it also improves communication with domain experts. If you’re doubtful that any non-programmer can read DSLs much less write code with them, that’s very understandable and I’d be glad to discuss it over a beer.</p>
+<p>About a decade ago, when Java and C# were dominant, developers found themselves writing a lot of <span class="caps">XML</span>. Despite its noisy syntax, it let them define their own vocabulary and provided a strong hierarchic structure. It was ugly, but obviously provided value to its host language.<br />
+Then Rails came along and blew everybody’s minds with its fluent, dynamic Ruby code. No more <span class="caps">XML</span> sit-ups, <span class="caps">DHH</span> proclaimed. It was like programming in a specialized language, almost to the point that saying you were a Rails developer didn’t necessarily mean you were any good at Ruby.<br />
+We talk a lot about Domain-Specific Languages in the Ruby community in part because Ruby is a language that facilitates writing them so well. You can express a lot of things, especially configuration, much better with a <span class="caps">DSL</span> than you could if you only had functions and primitives at your disposal. If you’ve ever tried to write a <span class="caps">DSL</span> in JavaScript, you can appreciate how nice Ruby is for making DSLs.<br />
+Let’s see if you can identify some Ruby DSLs. Let’s start with an easy one. Shout it out when you know it.<br />
+•	Rails Router<br />
+•	RSpec<br />
+•	Capybara<br />
+•	Rake<br />
+•	Sinatra<br />
+•	Parslet – the subject of this talk</p>
+<p>All of these are all what Martin Fowler calls internal DSLs. Some people also call them embedded DSLs. They use Ruby itself to make programming in Ruby easier and <span class="caps">DRY</span> up repetition.<br />
+There’s also something called external DSLs. External DSLs have their own custom syntax and you write a full parser to process them. Unix is full of external DSLs.<br />
+Let’s see which of these you recognize.<br />
+•	Nginx config<br />
+•	Regular expressions<br />
+•	<span class="caps">SQL</span><br />
+•	<span class="caps">AWK</span><br />
+•	<span class="caps">SLIM</span><br />
+•	Cucumber<br />
+•	Puppet<br />
+•	Markdown<br />
+•	<span class="caps">TOML</span> &#8211; Tom&#8217;s Obvious, Minimal Language<br />
+•	LilyPond<br />
+•	PostScript<br />
+•	<span class="caps">SCSS</span> – an excellent example of communicating with domain experts, most people who program <span class="caps">CSS</span> don&#8217;t consider themselves to be programming</p>
+<p>Can you imagine styling <span class="caps">HTML</span> elements without <span class="caps">CSS</span> syntax?<br />
+External DSLs have to be parsed, and the traditional solution is <span class="caps">ANTLR</span> or <span class="caps">YACC</span> or <span class="caps">RACC</span>. You write your grammar, then you compile it to a parser, then you test it on some input and see if it parses correctly.<br />
+How many people are familiar with Textile? It’s a <span class="caps">DSL</span> that’s a shortcut to <span class="caps">HTML</span>. It has most of the same elements as <span class="caps">HTML</span>, but in a format that’s easier to write and a little easier on the eyes too.<br />
+I worked for a number of years on the Ruby parser for Textile called RedCloth&#8230;<br />
+Why The Lucky Stiff started it in 2004 as a direct port from <span class="caps">PHP</span> Textile.<br />
+It was just basically a few hundred lines of gsubs. That was a mess and we all new it. It was a mess in <span class="caps">PHP</span>, of course, but _why gradually added tests and fixed bugs. Still, it was prone to regressions and was really unreliable from version to version.<br />
+Regular expressions aren’t designed for the kind of parsing that it was trying to do. And, they were slow. Each of the gsubs had to run over the input separately, which is obviously really inefficient.</p>
+<p>So, in 2007 he started a rewrite in Ragel and called it SuperRedCloth.<br />
+Here’s some Ragel from SuperRedCloth. Ragel is a language that generates finite state machines in C, Java, or Ruby. Zed Shaw famously used it to write Mongrel.<br />
+SuperRedCloth was compiled as a Ruby C extension and it was about 40 times faster than the previous RedCloth.<br />
+As _why’s commits started trailing off, I started contributing and after awhile,<br />
+he turned the project over to me. I released the rewrite as RedCloth version 4.0 and kept hacking on it for a few years, even long after _why disappeared.<br />
+The problem, though, was that it started out relatively clean (for C code) and fast, but got increasingly hard to add features, fix bugs, and not slow it down. Ragel didn’t handle the complexity I was throwing at it very well or maybe I just didn’t know what I was doing.<br />
+Either way, it wasn’t fun to figure out what was going on inside the generated state machine. The generated code is mostly just tables of numbers.<br />
+Worst of all, I had very few contributors. It’s been on GitHub since 2008, but hardly anyone ever sends me pull requests. A couple hundred people filed bugs, but only about a dozen made contributions. It’s just too hard to work with this stuff.<br />
+So, I set out to rewrite RedCloth. I wanted something that was native Ruby—no more waiting for the gem to compile; no more cross-compilation for Windows and JRuby—and I wanted something that people could contribute to more easily.<br />
+I experimented with a variety of approaches: Going back to regular expressions but doing it smarter; I toyed with a custom parser; and I spent the most time building a parser in Treetop.<br />
+Treetop was quite popular for awhile. Cucumber used it for parsing Gherkin syntax. It had its own <span class="caps">DSL</span> for the grammar, which it then parsed and generated a Ruby parser. I got quite a ways but discovered a couple of problems:</p>
+<p>One, it was slow. I contributed some patches to make it faster, but it still was nowhere near as fast as it needed to be.</p>
+<p>There were also some problems with parsing some edge cases. I just couldn’t figure out how to do it. And, since I could only test end-to-end, figuring out what the parser was doing was really difficult. Eventually, I gave up.</p>
+<p>I also looked at Citrus by Michael J. I. Jackson, which uses a similar grammar to Treetop but doesn’t generate the parser; it keeps it in memory. I had actually started a similar project, but didn’t make it very far.</p>
+<p>Then one evening I was checking my email from a café in Nicaragua, when I read about a new library from Kaspar Schiess called Parslet and I got very excited.<br />
+Parslet is an internal <span class="caps">DSL</span> to construct your parser. We just make a parser class that inherits from Parslet, then specify a rule with a block. In that block, we’re going to match a digit one or more times. We have to declare the root rule of the parser and we can use it right away. There’s no compilation, there’s no new syntax to learn. You just have to learn the Parslet <span class="caps">DSL</span>.</p>
+<p>The parsing <span class="caps">DSL</span> in Parslet consists of just three methods, which create instances of subclasses of Parslet::Atom. To match a string, you use str.<br />
+The atom is a parser, so you can just call the parse method on it.<br />
+The result is an object that looks like a string, but is actually a Parslet::Slice. It’s basically a string that knows its offset from the input string.<br />
+The second kind of Parslet atom matches a single character. It’s like a regular expression that only matches a single character. It can use regex metacharacters and <span class="caps">POSIX</span> bracket expressions as well.<br />
+And finally, there’s an atom that matches any character.<br />
+Parslet has defined methods for sequences and alternation.  The double greater-than means the one atom is followed by the other.<br />
+The vertical pipe means it first tries to match the expression on the left and if that fails, tries the expression on the right.<br />
+Precedence works logically. You can use parentheses to change it.<br />
+Atoms can be repeated. The default repeats 0 or more times.<br />
+The next one repeats foo one or more times.<br />
+The next one repeats one two three times.<br />
+This one is the same as the default<br />
+Maybe is just zero or one, but it returns nil instead of an empty array.<br />
+Parslet can also do positive and negative lookahead. Here we’re expecting to match the word Java, but we want to make sure it’s not Java all by itself; it has to have Script after it. We’re not, however, consuming those characters just yet.</p>
+<p>It’s just the opposite for absent?. This will match multiple digits, but only if it doesn’t start with zeroes.</p>
+<p>That was the first step: defining the grammar<br />
+Now we have to pick out the parts we want. Thankfully, it’s really easy.<br />
+By default, atoms just return their slice. If you want to annotate it, just use the as method on it. It makes the name you give it the key in the hash.<br />
+When you capture a repetition, you just get one slice in your hash.<br />
+When you repeat a capture, you get several hashes.<br />
+When you have multiple captures, they get combined into the same hash and the unlabeled strings are discarded.<br />
+Let’s practice reading an example of a Textile table parser.<br />
+If you’re not familiar with Textile, here’s how you make a table and beside it is the <span class="caps">HTML</span> it puts out. The first line is optional unless you need to specify a <span class="caps">CSS</span> id or class.<br />
+We start by making a rule for a table that starts with the word ‘table’, is potentially followed by some attributes, which get captured with a name, then that’s followed by a newline. Except, all of that is optional. Then it’s followed by one or more table rows, which are the content of the table.<br />
+You can do all the usual Ruby things in these parsers: method extraction, class inheritance, composition, duck punching…whatever. Here we’re making a method that takes an argument and wraps it in parentheses strings.<br />
+Here I have an <span class="caps">HTML</span> tag parser and then I make a subclass that only matches block <span class="caps">HTML</span> tags. It does it by overriding the :tag_name rule. And what constitutes an inline tag name? Well, we have a constant that contains an array of them, which we map and reduce into a set of all the possibilities for inline tags. Anything we can do in Ruby, we can do in Parslet because it’s an internal <span class="caps">DSL</span>.<br />
+Here’s something cool: pop open <span class="caps">IRB</span> and you can not only instantiate the <span class="caps">HTML</span> tag parser we just wrote, you can actually dive into it and introspect on its rules. And every Parslet atom is a parser in its own right, so I can try parsing something with just the open_tag rule. And if parsing fails, I get a nice error message telling me what it was trying to match at the time and what character caused it to fail.<br />
+I can dump out a tree of the failure for debugging purposes. So here I’m trying to parse an image tag with the block <span class="caps">HTML</span> tag parser. The error message tells me it has to be an open tag, a close tag, a self-closing tag, or a comment tag. All four options in the alternation failed and it shows me how it failed in each branch. Failure isn’t always a problem. For example, it’s not surprising that it failed to match the comment_tag rule at the bottom. The problem is it exhausted all its options, so it gives me this tree to help me decipher what should have parsed but didn’t and why.<br />
+So, it’s nice to have all of Ruby at our disposal as well as Parslet. It’s cool to get a <span class="caps">REPL</span> for free, and of course, I like writing Ruby, but there’s something more important happening here. Unlike the other <span class="caps">PEG</span> parsers I’d tried, because it’s Ruby, everything’s an object, objects send messages to other objects, methods return objects, and we can inspect those objects.<br />
+But what’s the awesome implication for all this. Something I couldn’t do with the other parsers? This is another time you can shout at me.<br />
+I’ll give you a hint: it’s big deal in the Ruby community.</p>
+<p>I can unit-test them! That’s amazing! For the first time, I have visibility into my parser at the atomic level. Debugging becomes orders of magnitude easier. I can <span class="caps">TDD</span> from the outside in! And with parsers, that’s super important because there can be some crazy unexpected complexity.<br />
+And when I run my specs, it shows me nice detail about my failures so I can fix them easily.<br />
+The last thing you do when you’re creating an external <span class="caps">DSL</span> is transforming the parse tree.<br />
+Honestly, Parslet Transformations are my least favorite part of it. They sure beat having to deal with deeply nested hashes manually, but something still doesn’t feel quite perfect.<br />
+Here we are transforming the numbers we captured into integers.<br />
+We can add a second rule that matches a plus, a left, and a right and adds them. One plus two is three.<br />
+Here’s what we’re doing in RedCloth. I’m transforming the parse tree into an <span class="caps">AST</span> using my own <span class="caps">AST</span> classes.<br />
+It’s pure ruby, so you might think that it’s slow. Well, I haven’t tested it extensively, but so far it’s pretty fast. Not as fast as the C code, of course, but it’s an acceptable tradeoff.<br />
+And probably, if your parser is slow, there are just a few bottlenecks. Parslet has a nice new feature to fix those called accelerators.<br />
+This line right here has to loop over every character to make sure it doesn’t contain the <span class="caps">ERB</span> end code.<br />
+But we can apply an Accelerator to the parser and any instance of repeatedly checking for absence followed by an any will be replaced with an optimized version. It’s nothing you have to replace in your parser; it find the applicable places for you.<br />
+Another way you can extend Parslet is with custom Atoms. You just have to pass a slice in and return whether it matched or not. I used this technique to parse questions like, “Who makes&#8230;?”<br />
+The code looked a little like this. Parsing natural language is really, really hard, but Parslet and my limited scope made it bearable.</p>
+<p>When Ruby isn’t quite fluent enough for you to build the <span class="caps">DSL</span> you really want, don’t be afraid to make your own. Parslet makes it easy.<br />
+ You could be the next Hampton Catlin or Jeremy Ashkenas!<br />
+So, in conclusion: DSLs are awesome. They help you write better code and communicate domain rules. Internal DSLs are great because you can use all the tools of the host language, but sometimes you need an external <span class="caps">DSL</span>.</p>
+<p>Parsing is another one of those dark corners where the light of automated testing and clean code has a hard time reaching. With Parslet, I think it’s possible to keep your parser from evolving into a bloated mess using the same tools and strategies you already use to keep your other Ruby code clean.</p>
+<p>When you need to parse some complex data, especially a <span class="caps">DSL</span>, stop and think before you reach for a regular expression.</p>
+<p>Thanks very much for listening. I hope you enjoyed it.<br />
+We have a few minutes for questions.</p></div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Jason Garber</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2013-10-13T14:40:00-04:00" pubdate data-updated="true">Oct 13<span>th</span>, 2013</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/ruby/'>Ruby</a>, <a class='category' href='/blog/categories/speaking/'>speaking</a>, <a class='category' href='/blog/categories/talks/'>talks</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://username.github.com/jgarber/blog/2013/10/13/slides-from-writing-dsls-with-parslet-talk-at-wicked-good-ruby-conference/" data-via="jasongarber" data-counturl="http://username.github.com/jgarber/blog/2013/10/13/slides-from-writing-dsls-with-parslet-talk-at-wicked-good-ruby-conference/" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2013/07/10/speaking-at-madison-ruby-in-august/" title="Previous Post: Speaking at Madison Ruby in August">&laquo; Speaking at Madison Ruby in August</a>
+      
+      
+        <a class="basic-alignment right" href="/blog/2013/10/29/video-of-conference-talk-on-small-time-automated-server-provisioning/" title="next Post: Video of Conference Talk on Small-Time Automated Server Provisioning">Video of Conference Talk on Small-Time Automated Server Provisioning &raquo;</a>
+      
+    </p>
+  </footer>
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Me</h1>
+
+  <p>I'm a <a href="/ruby-developer/">Ruby developer</a> at <a href="http://www.promptworks.com/">PromptWorks</a> in Philadelphia.</p>
+
+  <img src="/images/jason-garber.png" width="130" height="130" title="Jason Garber" >
+
+  <address>
+  <script type="text/javascript">
+  var x="function f(x){var i,o=\"\",l=x.length;for(i=l-1;i>=0;i--) {try{o+=x.c" +
+  "harAt(i);}catch(e){}}return o;}f(\")\\\"function f(x,y){var i,o=\\\"\\\\\\\""+
+  "\\\\,l=x.length;for(i=0;i<l;i++){if(i<97)y++;y%=127;o+=String.fromCharCode(" +
+  "x.charCodeAt(i)^(y++));}return o;}f(\\\"\\\\\\\\\\\\006\\\\\\\\013\\\\\\\\0" +
+  "05\\\\\\\\035\\\\\\\\007\\\\\\\\t\\\\\\\\000\\\\\\\\004\\\\\\\\\\\\\\\\\\\\" +
+  "\\\\003\\\\\\\\004\\\\\\\\021\\\\\\\\016\\\\\\\\031\\\\\\\\022o+';h+e}tu(K;" +
+  "v|vMWJ\\\\\\\\035CLmEP@ZY^ZO]$1k$&&\\\\\\\\021mq'<#5>`\\\\\\\\003C&\\\\\\\\" +
+  "010\\\\\\\\006\\\\\\\\000\\\\\\\\007M%\\\\\\\\020\\\\\\\\000\\\\\\\\032\\\\" +
+  "\\\\031Y<\\\\\\\\034r`atT(2dwR~wkuryAPF@T\\\\\\\\tKFG\\\\\\\\027\\\\\\\\003" +
+  "L\\\\\\\\020\\\\\\\\r\\\\\\\\031\\\\\\\\n\\\\\\\\002\\\\\\\\010\\\"\\\\,97)" +
+  "\\\"(f};)lo,0(rtsbus.o nruter};)i(tArahc.x=+o{)--i;0=>i;1-l=i(rof}}{)e(hcta" +
+  "c};l=+l;x=+x{yrt{)15=!)31/l(tAedoCrahc.x(elihw;lo=l,htgnel.x=lo,\\\"\\\"=o," +
+  "i rav{)x(f noitcnuf\")"                                                      ;
+  while(x=eval(x));
+  </script></address>
+
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/11/01/video-of-my-talk-on-writing-dsls-with-parslet/">Video of my talk on writing DSLs with Parslet</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/29/video-of-conference-talk-on-small-time-automated-server-provisioning/">Video of Conference Talk on Small-Time Automated Server Provisioning</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/13/slides-from-writing-dsls-with-parslet-talk-at-wicked-good-ruby-conference/">Slides from Writing DSLs with Parslet at Wicked Good Ruby Conference</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/10/speaking-at-madison-ruby-in-august/">Speaking at Madison Ruby in August</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/30/announcing-promptworks/">Announcing PromptWorks</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/jgarber">@jgarber</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'jgarber',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("jasongarber", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/jasongarber" class="twitter-follow-button" data-show-count="false">Follow @jasongarber</a>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/jasongarber?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/jasongarber">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/103555079958757329010?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Jason Garber -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'jgarber';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://username.github.com/jgarber/blog/2013/10/13/slides-from-writing-dsls-with-parslet-talk-at-wicked-good-ruby-conference/';
+        var disqus_url = 'http://username.github.com/jgarber/blog/2013/10/13/slides-from-writing-dsls-with-parslet-talk-at-wicked-good-ruby-conference/';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,370 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>convert-excel-to-csv - Jason Garber, Ruby developer in Philadelphia</title>
+  <meta name="author" content="Jason Garber">
+
+  
+  <meta name="description" content="Convert-excel-to-csv Jun 23rd, 2007 A little Applescript to batch convert xls files to csv: (xls_to_csv.applescript) 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13 &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://username.github.com/jgarber/articles/2007/06/23/convert-excel-to-csv">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="/javascripts/ender.js"></script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <link href="/atom.xml" rel="alternate" title="Jason Garber, Ruby developer in Philadelphia" type="application/atom+xml">
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href='http://fonts.googleapis.com/css?family=Crimson+Text&text=Jason%20Garber' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=PT+Serif:400,700italic,700,400italic|PT+Sans:400italic,400,700,700italic' rel='stylesheet' type='text/css'>
+
+  
+  <script type="text/javascript">
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-345379-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+  </script>
+
+
+</head>
+
+<body   >
+  <header role="banner"><hgroup>
+  <h1><a href="/">Jason Garber</a></h1>
+  
+    <h2>Tracking innovations in code and culture</h2>
+  
+</hgroup>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" rel="subscribe-rss" title="subscribe via RSS">RSS</a></li>
+  
+</ul>
+  
+<form action="http://google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:username.github.com/jgarber" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/#home">Home</a></li>
+  <li><a href="/blog/">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/ruby-developer/">Ruby Developer</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article role="article">
+  
+  <header>
+    <h1 class="entry-title">Convert-excel-to-csv</h1>
+    <p class="meta">
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-06-23T13:19:00-04:00" pubdate data-updated="true">Jun 23<span>rd</span>, 2007</time></p>
+  </header>
+  
+  A little Applescript to batch convert xls files to csv:
+
+<figure class='code'><figcaption><span>(xls_to_csv.applescript) </span></figcaption>
+ <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+</pre></td><td class='code'><pre><code class='applescript'><span class='line'><span class="k">set</span> <span class="nv">theFolder</span> <span class="k">to</span> <span class="nb">choose folder</span> <span class="nv">with</span> <span class="na">prompt</span> <span class="s2">&quot;Choose the folder that contains your Excel files&quot;</span>
+</span><span class='line'><span class="k">tell</span> <span class="nb">application</span> <span class="s2">&quot;Finder&quot;</span> <span class="k">to</span> <span class="k">set</span> <span class="nv">theFiles</span> <span class="k">to</span> <span class="p">(</span><span class="nv">files</span> <span class="k">of</span> <span class="nv">theFolder</span><span class="p">)</span>
+</span><span class='line'><span class="k">set</span> <span class="nv">fileCount</span> <span class="k">to</span> <span class="nb">count</span> <span class="nv">theFiles</span>
+</span><span class='line'><span class="k">repeat</span> <span class="nv">with</span> <span class="nv">i</span> <span class="k">from</span> <span class="mi">1</span> <span class="k">to</span> <span class="nv">fileCount</span>
+</span><span class='line'>    <span class="k">set</span> <span class="nv">fName</span> <span class="k">to</span> <span class="nb">text</span> <span class="mi">1</span> <span class="nb">thru</span> <span class="o">-</span><span class="mi">5</span> <span class="k">of</span> <span class="p">((</span><span class="na">name</span> <span class="k">of</span> <span class="nb">item</span> <span class="nv">i</span> <span class="k">of</span> <span class="nv">theFiles</span><span class="p">)</span> <span class="k">as </span><span class="nc">text</span><span class="p">)</span>
+</span><span class='line'>    <span class="k">if</span> <span class="p">((</span><span class="na">name</span> <span class="k">of</span> <span class="nb">item</span> <span class="nv">i</span> <span class="k">of</span> <span class="nv">theFiles</span><span class="p">)</span> <span class="k">as </span><span class="nc">text</span><span class="p">)</span> <span class="ow">ends with</span> <span class="s2">&quot;.xls&quot;</span> <span class="k">then</span>
+</span><span class='line'>        <span class="k">set</span> <span class="nv">tName</span> <span class="k">to</span> <span class="p">(</span><span class="nv">theFolder</span> <span class="k">as </span><span class="nc">text</span><span class="p">)</span> <span class="o">&amp;</span><span class="c">#38; fName &amp;#38; &quot;.csv&quot; </span>
+</span><span class='line'>        <span class="k">tell</span> <span class="nb">application</span> <span class="s2">&quot;Microsoft Excel&quot;</span>
+</span><span class='line'>            <span class="nb">activate</span>
+</span><span class='line'>            <span class="nb">open</span> <span class="p">(</span><span class="nb">item</span> <span class="nv">i</span> <span class="k">of</span> <span class="nv">theFiles</span><span class="p">)</span> <span class="k">as </span><span class="nc">text</span>
+</span><span class='line'>            <span class="nv">save</span> <span class="nv">fName</span> <span class="k">in</span> <span class="nv">tName</span> <span class="k">as</span> <span class="nv">CSV</span>
+</span><span class='line'>            <span class="nb">close</span> <span class="na">active</span> <span class="nv">workbook</span> <span class="nv">without</span> <span class="nv">saving</span>
+</span><span class='line'>        <span class="k">end</span> <span class="k">tell</span>
+</span><span class='line'>    <span class="k">end</span> <span class="k">if</span>
+</span><span class='line'><span class="k">end</span> <span class="k">repeat</span>
+</span></code></pre></td></tr></table></div></figure>
+  
+    <footer>
+      <p class="meta">
+        
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2007-06-23T13:19:00-04:00" pubdate data-updated="true">Jun 23<span>rd</span>, 2007</time>
+        
+      </p>
+      
+        <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://username.github.com/jgarber/articles/2007/06/23/convert-excel-to-csv/index.html" data-via="jasongarber" data-counturl="http://username.github.com/jgarber/articles/2007/06/23/convert-excel-to-csv/index.html" >Tweet</a>
+  
+  
+  
+    <div class="fb-like" data-send="true" data-width="450" data-show-faces="false"></div>
+  
+</div>
+
+      
+    </footer>
+  
+</article>
+
+  <section>
+    <h1>Comments</h1>
+    <div id="disqus_thread" aria-live="polite"><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</div>
+  </section>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>About Me</h1>
+
+  <p>I'm a <a href="/ruby-developer/">Ruby developer</a> at <a href="http://www.promptworks.com/">PromptWorks</a> in Philadelphia.</p>
+
+  <img src="/images/jason-garber.png" width="130" height="130" title="Jason Garber" >
+
+  <address>
+  <script type="text/javascript">
+  var x="function f(x){var i,o=\"\",l=x.length;for(i=l-1;i>=0;i--) {try{o+=x.c" +
+  "harAt(i);}catch(e){}}return o;}f(\")\\\"function f(x,y){var i,o=\\\"\\\\\\\""+
+  "\\\\,l=x.length;for(i=0;i<l;i++){if(i<97)y++;y%=127;o+=String.fromCharCode(" +
+  "x.charCodeAt(i)^(y++));}return o;}f(\\\"\\\\\\\\\\\\006\\\\\\\\013\\\\\\\\0" +
+  "05\\\\\\\\035\\\\\\\\007\\\\\\\\t\\\\\\\\000\\\\\\\\004\\\\\\\\\\\\\\\\\\\\" +
+  "\\\\003\\\\\\\\004\\\\\\\\021\\\\\\\\016\\\\\\\\031\\\\\\\\022o+';h+e}tu(K;" +
+  "v|vMWJ\\\\\\\\035CLmEP@ZY^ZO]$1k$&&\\\\\\\\021mq'<#5>`\\\\\\\\003C&\\\\\\\\" +
+  "010\\\\\\\\006\\\\\\\\000\\\\\\\\007M%\\\\\\\\020\\\\\\\\000\\\\\\\\032\\\\" +
+  "\\\\031Y<\\\\\\\\034r`atT(2dwR~wkuryAPF@T\\\\\\\\tKFG\\\\\\\\027\\\\\\\\003" +
+  "L\\\\\\\\020\\\\\\\\r\\\\\\\\031\\\\\\\\n\\\\\\\\002\\\\\\\\010\\\"\\\\,97)" +
+  "\\\"(f};)lo,0(rtsbus.o nruter};)i(tArahc.x=+o{)--i;0=>i;1-l=i(rof}}{)e(hcta" +
+  "c};l=+l;x=+x{yrt{)15=!)31/l(tAedoCrahc.x(elihw;lo=l,htgnel.x=lo,\\\"\\\"=o," +
+  "i rav{)x(f noitcnuf\")"                                                      ;
+  while(x=eval(x));
+  </script></address>
+
+</section>
+<section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2013/11/01/video-of-my-talk-on-writing-dsls-with-parslet/">Video of my talk on writing DSLs with Parslet</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/29/video-of-conference-talk-on-small-time-automated-server-provisioning/">Video of Conference Talk on Small-Time Automated Server Provisioning</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/10/13/slides-from-writing-dsls-with-parslet-talk-at-wicked-good-ruby-conference/">Slides from Writing DSLs with Parslet at Wicked Good Ruby Conference</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/07/10/speaking-at-madison-ruby-in-august/">Speaking at Madison Ruby in August</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2013/05/30/announcing-promptworks/">Announcing PromptWorks</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>Github Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/jgarber">@jgarber</a> on Github
+  
+  <script type="text/javascript">
+    $.domReady(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'jgarber',
+            count: 5,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+<section>
+  <h1>Latest Tweets</h1>
+  <ul id="tweets">
+    <li class="loading">Status updating...</li>
+  </ul>
+  <script type="text/javascript">
+    $.domReady(function(){
+      getTwitterFeed("jasongarber", 4, false);
+    });
+  </script>
+  <script src="/javascripts/twitter.js" type="text/javascript"> </script>
+  
+    <a href="http://twitter.com/jasongarber" class="twitter-follow-button" data-show-count="false">Follow @jasongarber</a>
+  
+</section>
+
+
+<section>
+  <h1>On Delicious</h1>
+  <div id="delicious"></div>
+  <script type="text/javascript" src="http://feeds.delicious.com/v2/json/jasongarber?count=3&amp;sort=date&amp;callback=renderDeliciousLinks"></script>
+  <p><a href="http://delicious.com/jasongarber">My Delicious Bookmarks &raquo;</a></p>
+</section>
+
+
+<section class="googleplus">
+  <h1>
+    <a href="https://plus.google.com/103555079958757329010?rel=author">
+      <img src="http://www.google.com/images/icons/ui/gprofile_button-32.png" width="32" height="32">
+      Google+
+    </a>
+  </h1>
+</section>
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2015 - Jason Garber -
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a></span>
+</p>
+
+</footer>
+  
+
+<script type="text/javascript">
+      var disqus_shortname = 'jgarber';
+      
+        
+        // var disqus_developer = 1;
+        var disqus_identifier = 'http://username.github.com/jgarber/articles/2007/06/23/convert-excel-to-csv/index.html';
+        var disqus_url = 'http://username.github.com/jgarber/articles/2007/06/23/convert-excel-to-csv/index.html';
+        var disqus_script = 'embed.js';
+      
+    (function () {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = 'http://' + disqus_shortname + '.disqus.com/' + disqus_script;
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    }());
+</script>
+
+
+
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) {return;}
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_US/all.js#appId=212934732101925&xfbml=1";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script>
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>

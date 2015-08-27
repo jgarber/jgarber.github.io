@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Dvorak | Jason Garber, Ruby developer in Philadelphia]]></title>
+  <link href="http://username.github.com/jgarber/blog/categories/dvorak/atom.xml" rel="self"/>
+  <link href="http://username.github.com/jgarber/"/>
+  <updated>2015-08-27T10:19:07-04:00</updated>
+  <id>http://username.github.com/jgarber/</id>
+  <author>
+    <name><![CDATA[Jason Garber]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Pair programming when you type on different keyboard layouts]]></title>
+    <link href="http://username.github.com/jgarber/blog/2012/09/22/pair-programming-when-you-type-on-different-keyboard-layouts/"/>
+    <updated>2012-09-22T09:00:00-04:00</updated>
+    <id>http://username.github.com/jgarber/blog/2012/09/22/pair-programming-when-you-type-on-different-keyboard-layouts</id>
+    <content type="html"><![CDATA[<p>At "work":http://mashion.net we're often "pair programming":http://en.wikipedia.org/wiki/Pair_programming and we have the ideal "pairing rig":http://matschaffer.com/2012/07/mashion-pairing-rig/, but one thing wasn't ideal: I'm the only one who types on the "Dvorak keyboard layout":http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard.</p>
+
+<p>Pairing with two different keyboard layouts means you have to switch input modes a lot. Usually it involves a little bewilderment as vim scrambles your code before you remember that you're in the wrong mode.</p>
+
+<p>I hated that my choice of keyboard layout was a burden on my pairing partners, so eventually I found a software solution: "KeyRemap4MacBook":http://pqrs.org/macosx/keyremap4macbook/</p>
+
+<p>I've dropped Dvorak-Qwerty ⌘, which "is broken":/blog/2012/09/22/keyremap4macbook-fixes-the-broken-dvorak-qwerty-cmd-layout/, and now just use the Dvorak input source with KeyRemap4MacBook converting my ⌘ keypresses.</p>
+
+<p>I also made one of the keyboards at each pairing station "mine" and then set KeyRemap4MacBook to convert the Qwerty keypresses of the others to Dvorak, but only when my computer is in Dvorak input mode.</p>
+
+<!--more-->
+
+
+<p>So I still have "U.S." (Qwerty) as an input source on my computer, and in that case KeyRemap4MacBook does nothing, but when I switch it to Dvorak, my built-in keyboard and one keyboard at each pairing station act as Dvorak. The others act as Qwerty, so my pairing partners don't even notice that my computer is set to Dvorak. In either mode, they type Qwerty.</p>
+
+<p>My "private.xml file":https://gist.github.com/3494247, which is how you make custom mappings in KeyRemap4Macbook, contains the device_only and device_not filters that limit the mappings to a certain set of keyboards at work, where our multitude of bluetooth devices are named after well-known Rubyists. These bluetooth keyboards are all identical models, so KeyRemap4MacBook couldn't differentiate them until the author, Takayama Fumihiko, graciously added that feature.</p>
+
+<script src="https://gist.github.com/3494247.js?file=private.xml"></script>
+
+
+<p>To restrict a remapping to a specific device among several identical ones, you need to find its location id by running @$ ioreg -rk "LocationID"@. DeviceLocation only works with KeyRemap4MacBook >= "7.8.13":http://pqrs.org/macosx/keyremap4macbook/files/KeyRemap4MacBook-7.8.13.dmg. If your keyboards are different models, then you only need to specify the DeviceProduct, which is easier.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[KeyRemap4MacBook fixes the broken 'Dvorak - Qwerty ⌘' layout]]></title>
+    <link href="http://username.github.com/jgarber/blog/2012/09/22/keyremap4macbook-fixes-the-broken-dvorak-qwerty-cmd-layout/"/>
+    <updated>2012-09-22T08:00:00-04:00</updated>
+    <id>http://username.github.com/jgarber/blog/2012/09/22/keyremap4macbook-fixes-the-broken-dvorak-qwerty-cmd-layout</id>
+    <content type="html"><![CDATA[<p>I switched to the "Dvorak keyboard layout":http://en.wikipedia.org/wiki/Dvorak_Simplified_Keyboard over Christmas break in 2001, figuring that if I were to spend the next 80 years typing, a couple weeks re-learning to touch type would be worth it.</p>
+
+<p>And it has been. My hands just never get tired of typing, which is good because I spend all day at it. There are only two problems with being in the minority on this:</p>
+
+<h1>Shortcut keys are less convenient to use. Cut, copy, and paste are X, C, and V for a reason. You can get used to the new positions, but they never quite feel as handy.</h1>
+
+<h1>Sharing or borrowing other computers becomes more difficult.</h1>
+
+<!--more-->
+
+
+<p>The first problem I solved early on by using a keyboard layout that is Dvorak except when you're holding down the command key. On a Mac, this is the "Dvorak - Qwerty ⌘" input source.</p>
+
+<p>Since I learned touch-typing on Qwerty, I can switch between the layouts in my head with some effort or just look at the keys as I type, so the second problem isn't a very big one for infrequent and short-term Qwerty use. For the computer I shared with my wife for three or four years, we got used to switching input modes from the menubar or by shortcut key.</p>
+
+<p>This year, I almost quit Dvorak when I discovered "Apple's Dvorak - Qwerty ⌘ layout is broken":https://groups.google.com/forum/#!msg/keyremap4macbook/QNZ3LGsKNFE/Yg-jlbAoL-QJ and there's "no way to get to some shortcut keys":https://github.com/textmate/textmate/issues/241. That was a minor frustration compared to how it made "pair programming more complicated":/blog/2012/09/22/pair-programming-when-you-type-on-different-keyboard-layouts/.</p>
+
+<p>"KeyRemap4MacBook":http://pqrs.org/macosx/keyremap4macbook/ solved these problems. I've dropped Dvorak-Qwerty ⌘ and now just use the Dvorak input source with KeyRemap4MacBook converting my ⌘ keypresses.  ⌘ + and - makes my text bigger and smaller and I can @<Ctrl-W>@ in vim again--two glitches peculiar to Dvorak - Qwerty ⌘.</p>
+
+<p>My "private.xml file":https://gist.github.com/3494247, which is how you make custom mappings in KeyRemap4Macbook, contains the mapping, along with some device_only and device_not filters that limit it to a certain set of keyboards at work, where our multitude of bluetooth devices are named after well-known Rubyists.</p>
+
+<script src="https://gist.github.com/3494247.js?file=private.xml"></script>
+
+]]></content>
+  </entry>
+  
+</feed>

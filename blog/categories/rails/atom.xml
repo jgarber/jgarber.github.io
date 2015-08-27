@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: Rails | Jason Garber, Ruby developer in Philadelphia]]></title>
+  <link href="http://username.github.com/jgarber/blog/categories/rails/atom.xml" rel="self"/>
+  <link href="http://username.github.com/jgarber/"/>
+  <updated>2015-08-27T10:19:07-04:00</updated>
+  <id>http://username.github.com/jgarber/</id>
+  <author>
+    <name><![CDATA[Jason Garber]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Announcing PromptWorks]]></title>
+    <link href="http://username.github.com/jgarber/blog/2013/05/30/announcing-promptworks/"/>
+    <updated>2013-05-30T16:52:00-04:00</updated>
+    <id>http://username.github.com/jgarber/blog/2013/05/30/announcing-promptworks</id>
+    <content type="html"><![CDATA[<p>I've joined "Mike Nicholaides":http://ablegray.com/ and "Greg Sterndale":http://gregsterndale.com/ to form a new consultancy:</p>
+
+<p><a href="http://www.promptworks.com/"><img src="http://username.github.com/jgarber/images/promptworks-logo.png" alt="PromptWorks" /></a></p>
+
+<p>"PromptWorks":http://www.promptworks.com/ is the premier Philadelphia software consulting shop, specializing in Ruby, JavaScript and related technologies. With a collective 30 years of software experience, we are industry veterans with unmatched technical chops. In addition to helping businesses build new web apps and APIs, we solve problems with existing apps like scaling, testing and automating development operations.</p>
+]]></content>
+  </entry>
+  
+  <entry>
+    <title type="html"><![CDATA[Ruby recruitment solution: Hire an expert to train developers you already have and like]]></title>
+    <link href="http://username.github.com/jgarber/blog/2012/02/20/rails-recruitment-solution-hire-an-expert-to-train-an-employee-you-already-like/"/>
+    <updated>2012-02-20T08:08:00-05:00</updated>
+    <id>http://username.github.com/jgarber/blog/2012/02/20/rails-recruitment-solution-hire-an-expert-to-train-an-employee-you-already-like</id>
+    <content type="html"><![CDATA[<p>Like most well-qualified Ruby developers, recruiters and hiring managers contact me frequently about their open web developer positions. The secret is out that you'll get more bang for your buck with Ruby on Rails than the Java and .NET web frameworks, so small and large companies alike are clamoring for experienced Ruby developers. I read a year or more ago that there's a shortage of at least 1,500 Ruby developers in the United States alone. That number has probably doubled or tripled by now. Everyone faces the same frustration: top Ruby talent is hard to come by.</p>
+
+<!--more-->
+
+
+<p>This works out well for someone like me who started with Ruby in 2005, when Rails was in its infancy. I have nearly seven years of experience with Rails, ten years of writing web applications, and 15 years of HTML, CSS, and Javascript. You can find workers aplenty who list Rails on their résumé but have really only dipped a toe in the water, which doesn't cut it. There's definitely a "Ruby way" and you can tell just by looking at someone's code to what degree they get it. Even without looking at code samples, when I look through candidates on oDesk or eLance, I can safely assume the ones who title themselves things like "Senior Ruby/PHP/Java/Drupal/Coldfusion developer" are not competent Rubyists--probably not competent anythingists. I pass over candidates if they so much as mention PHP in their description.</p>
+
+<p>h2. Why is Ruby expertise so important?</p>
+
+<p>Isn't one of Ruby's selling points that it's easy to learn? Yes, but if you're building anything that's critical to your business, costs a significant amount, and that you want to have lasting value, <em>you'd better build it right</em>--not unlike constructing a new building. A good engineer is aware of a wide variety of resources (be it concrete and steel or full-text search and currency conversion libraries) and has worked with them enough to know their strengths and limitations. A good engineer builds things efficiently and follows convention. A good engineer has solved thousands of problems in this domain before, so when new ones appear, they know where to start looking. There's no substitute for experience. A developer who has been in the Ruby trenches longer will have better solutions and come up with them more efficiently.</p>
+
+<p>h3. These are the experts; They're not interested.</p>
+
+<p>You can fairly easily find Ruby experts by:</p>
+
+<ul>
+<li>looking for the authors of "popular and mature open-source Ruby projects":http://workingwithrails.com/browse/rubygems/usage,</li>
+<li>tracking down the leaders of local Ruby meetups,</li>
+<li>checking out who speaks at Ruby conferences, and</li>
+<li>investigating who writes books for the Ruby community.</li>
+</ul>
+
+
+<p>Chances are, they're unavailable, prohibitively expensive, and not interested in your job.</p>
+
+<p>h3. But they <em>can</em> be persuaded</p>
+
+<p>What experts <em>can't resist</em>, especially in the fanatical Ruby community, is <em>proselytizing</em>--disseminating information and winning others over to their side. They're much more likely to take a gig that involves training other smart developers who just haven't "seen the light" than they are to just take the job themselves.</p>
+
+<p><em>If you already have developers that you like, hire an expert to train them on Ruby.</em> That doesn't mean three months of classes in the conference room. Experts like hands-on work and seeing that things are done right. That's how they got to be the experts, after all! Put them on pair programming and code reviews to transfer their Ruby expertise to your best people. Develop Rubyists from within. You can always hire more Javaheads.</p>
+
+<p>h2. Ending up with talented, loyal Ruby developers and a successful project</p>
+
+<p>Hire one or two Ruby experts to start your new project, apprentice your best developers, and after two or three months, taper off their involvement. They'll have started the project with the right tools, set the standard for what good Ruby code looks like, solved the initial design problems, and equipped your developers to carry on. The project won't be done--you might not even have a beta version deployed--but hopefully the project will be on-track for a solid finish and there will be good feelings all around.</p>
+
+<p>Speaking for myself, I love the initial design phase, love watching others catch the Ruby bug, and love leveraging collaboration to produce more than I could alone. Oh--and I like being in charge, getting paid well, and moving on when the novelty has worn off!</p>
+
+<p>So, recruiters, no more whining about how you can't acquire top Ruby talent. It's there and it's available if you're using the right bait. We're not interested in full-time $120k + benefits because a.) we can probably do better freelancing, b.) who wants to work full-time?, and c.) <em>it's not about the money!</em></p>
+
+<p>The company hired you to hire developers, but what they really need is successful projects. (The old selling drills vs. selling holes analogy.) Sell them on needing to invest in expertise, but say you'll save them money by apprenticing existing developers and they'll think you're brilliant. (You don't need to tell them where the idea came from!) You really are brilliant, because guess who gets to find the replacement for their Javahead-turned-Ruybist...</p>
+]]></content>
+  </entry>
+  
+</feed>
